@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     //Movement
     public float MoveSpeed;
+    float Gravity = -13;
+    float VelocityY = 0.0f;
 
     //Private
     float BodyRoationX;
@@ -65,7 +67,14 @@ public class PlayerMovement : MonoBehaviour
         Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         inputDir.Normalize();
 
-        Vector3 Velocity = (this.transform.forward * inputDir.y + this.transform.right * inputDir.x) * MoveSpeed;
+        if (Controller.isGrounded)
+        {
+            VelocityY = 0;
+        }
+
+        VelocityY += Gravity * Time.deltaTime;
+
+        Vector3 Velocity = (this.transform.forward * inputDir.y + this.transform.right * inputDir.x) * MoveSpeed + Vector3.up * VelocityY;
 
         Controller.Move(Velocity * Time.deltaTime);
     }
