@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Camera Camera;
-    public Rigidbody PlayerBody;
+    [HideInInspector] public Rigidbody PlayerBody;
 
     //Rotation
     public float RotationSpeed;
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         LookRotation();
         Movement();
@@ -66,13 +66,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         inputDir.Normalize();
+        
+        VelocityY += Gravity * Time.deltaTime;
 
         if (Controller.isGrounded)
         {
             VelocityY = 0;
         }
 
-        VelocityY += Gravity * Time.deltaTime;
+        
 
         Vector3 Velocity = (this.transform.forward * inputDir.y + this.transform.right * inputDir.x) * MoveSpeed + Vector3.up * VelocityY;
 
