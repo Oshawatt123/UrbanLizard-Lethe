@@ -38,12 +38,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/OpenDoor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/Player Interact.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OpenDoor.cs" />
       </list>
     </option>
   </component>
@@ -83,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603648669739</updated>
-      <workItem from="1603648704085" duration="4086000" />
+      <workItem from="1603648704085" duration="4394000" />
     </task>
     <servers />
   </component>
