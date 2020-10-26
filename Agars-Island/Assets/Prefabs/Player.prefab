@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6469119363987954542}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerBody: {fileID: 0}
-  RotationSpeed: 5
+  RotationSpeed: 10
   CamMinY: -60
   CamMaxY: 75
   RotSmoothSpeed: 10
@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc24a1c6a2f3923408c20d40f0427836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightScript: {fileID: 0}
 --- !u!1 &7714073899073714946
 GameObject:
   m_ObjectHideFlags: 0
