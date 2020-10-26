@@ -15,6 +15,17 @@ public class PlayerMovement : MonoBehaviour
 
     //Movement
     public float MoveSpeed;
+    //Sprinting
+    private bool IsSprinting;
+    public int Stamina;
+    public int MaxStamina;
+    //Stamina Drain
+    public int SprintDrainDelay;
+    private float NextDrainTime;
+    //Stamina Recovery
+    public int SprintRecoverDelay;
+    private float NextRecTime;
+    //Other Movement Related
     float Gravity = -13;
     float VelocityY = 0.0f;
 
@@ -35,6 +46,38 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         Controller = this.GetComponent<CharacterController>();
+        Stamina = MaxStamina;
+        NextDrainTime = Time.time + SprintDrainDelay;
+    }
+
+    private void Update()
+    {
+        //Check for sprint toggle
+        SprintToggle();
+
+        //Drain Sprint after delay
+        if (IsSprinting && Time.time >= NextDrainTime)
+        {
+            Stamina -= 5;
+            NextDrainTime = Time.time + SprintDrainDelay;
+            //Check if stamina is depleted
+            if(Stamina <= 0)
+            {
+                IsSprinting = false;
+                MoveSpeed /= 2;
+                NextRecTime = Time.time + SprintRecoverDelay;
+            }
+        }
+
+        //As long as not sprinting, recover stamina
+        else if (!IsSprinting && Time.time >= NextRecTime)
+        {
+            if(Stamina < MaxStamina)
+            {
+                Stamina += 5;
+                NextRecTime = Time.time + SprintRecoverDelay;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -79,5 +122,24 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Velocity = (this.transform.forward * inputDir.y + this.transform.right * inputDir.x) * MoveSpeed + Vector3.up * VelocityY;
 
         Controller.Move(Velocity * Time.deltaTime);
+    }
+
+    void SprintToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if (IsSprinting)
+            {
+                IsSprinting = false;
+                MoveSpeed /= 2;
+                NextRecTime = Time.time + SprintRecoverDelay;
+            }
+
+            else if(Stamina > 0)
+            {
+                IsSprinting = true;
+                MoveSpeed *= 2;
+            }
+        }
     }
 }
