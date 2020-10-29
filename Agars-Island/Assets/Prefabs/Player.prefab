@@ -139,8 +139,8 @@ MonoBehaviour:
   MoveSpeed: 5
   Stamina: 0
   MaxStamina: 100
-  SprintDrainDelay: 2
-  SprintRecoverDelay: 5
+  SprintDrainDelay: 1
+  SprintRecoverDelay: 3
 --- !u!114 &3660028597552631825
 MonoBehaviour:
   m_ObjectHideFlags: 0

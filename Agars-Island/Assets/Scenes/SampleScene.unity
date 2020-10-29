@@ -670,7 +670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272ef5e0450719b43ac948e6a8f590e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   SightRange: 30
   WanderDistance: 100
   MinDirTime: 2
