@@ -9,11 +9,17 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        Init();
     }
 
+    public void Init()
+    {
+        anim = GetComponent<Animator>();
+    }
+    
     virtual public void Interact()
     {
+        Debug.Log("Base Interact");
         if (anim)
             anim.SetTrigger("Interact");
     }

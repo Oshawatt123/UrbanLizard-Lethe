@@ -7,12 +7,34 @@
       <e p="Agars-Island.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_Flashlight PRO" t="Include">
+          <e p="_Assets" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Flashlight_PRO.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Door.cs" t="Include" />
+          <e p="DoorButton.cs" t="Include" />
+          <e p="Enemy Scripts" t="Include">
+            <e p="AITest.cs" t="Include" />
+          </e>
           <e p="Interactable.cs" t="Include" />
-          <e p="OpenDoor.cs" t="Include" />
           <e p="Player Scripts" t="Include">
             <e p="PlayerInteract.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
+            <e p="ToggleFlashlight.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Thirdparty" t="Include">
+          <e p="PolygonPrototype" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="Prototype_Glass_Global.shader" t="Include" />
+              <e p="Prototype_Glass_Object.shader" t="Include" />
+              <e p="Prototype_Global.shader" t="Include" />
+              <e p="Prototype_Object.shader" t="Include" />
+            </e>
           </e>
         </e>
       </e>
