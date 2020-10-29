@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AITest : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject Player;
     private NavMeshAgent Agent;
 
     public float SightRange;
@@ -20,7 +20,7 @@ public class AITest : MonoBehaviour
     {
         Agent = GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
-        NextDirTime = Time.time + Random.Range(MinDirTime, MaxDirTime);
+        NextDirTime = Time.time;
     }
 
     // Update is called once per frame
