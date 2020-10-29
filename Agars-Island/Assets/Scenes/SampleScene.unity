@@ -672,6 +672,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   SightRange: 30
+  WanderDistance: 100
+  MinDirTime: 2
+  MaxDirTime: 10
 --- !u!4 &428600619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7788149384880400623, guid: 44d2768fc2149ce4ebac2ad4a0347c48,

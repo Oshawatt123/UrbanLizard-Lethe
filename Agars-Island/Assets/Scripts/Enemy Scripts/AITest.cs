@@ -9,26 +9,40 @@ public class AITest : MonoBehaviour
     private NavMeshAgent Agent;
 
     public float SightRange;
+    public float WanderDistance;
+
+    public float MinDirTime;
+    public float MaxDirTime;
+    private float NextDirTime;
 
     // Start is called before the first frame update
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        NextDirTime = Time.time + Random.Range(MinDirTime, MaxDirTime);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Check distance to player and line of sight
         if (CheckForSight())
         {
-            ChasePlayer();
+            //Set Destination to be Player's location
+            SetDestination(Player.transform.position);
+        }
+
+        //If time has passed to change direction
+        else if(Time.time >= NextDirTime)
+        {
+            SetDestination(RandomMovement());
         }
     }
 
-    public void ChasePlayer()
+    public void SetDestination(Vector3 TargetPos)
     {
-        Agent.destination = Player.transform.position;
+        Agent.destination = TargetPos;
     }
 
     public bool CheckForSight()
@@ -42,8 +56,10 @@ public class AITest : MonoBehaviour
             if(Physics.Raycast(this.transform.position, VectToPlayer, out HitObject))
             {
                 Debug.DrawRay(this.transform.position, VectToPlayer, Color.blue);
+                //If Hit Player without interuption
                 if(HitObject.transform.gameObject.tag == "Player")
                 {
+                    //Line of sight established, return True
                     return true;
                 }
             }
@@ -51,5 +67,19 @@ public class AITest : MonoBehaviour
 
         //Else Return False
         return false;
+    }
+
+    public Vector3 RandomMovement()
+    {
+        NextDirTime = Time.time + Random.Range(MinDirTime, MaxDirTime);
+
+        Vector3 RandomDirection = Random.insideUnitSphere * WanderDistance;
+
+        RandomDirection += this.transform.position;
+
+        NavMeshHit NavHit;
+        NavMesh.SamplePosition(RandomDirection, out NavHit, WanderDistance, -1);
+
+        return NavHit.position;
     }
 }
