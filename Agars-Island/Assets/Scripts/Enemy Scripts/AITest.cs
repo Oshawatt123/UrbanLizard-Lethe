@@ -9,15 +9,19 @@ public class AITest : MonoBehaviour
     private NavMeshAgent Agent;
 
     public float SightRange;
-    public float WanderDistance;
 
+    //---------------------------------- Wander Variables ----------------------------
+    public float WanderDistance;
     public float MinDirTime;
     public float MaxDirTime;
     private float NextDirTime;
 
+    //----------------------------------- Ambush variables ---------------------------
     public GameObject[] AmbushPositions;
     private bool InAmbush;
     private bool MovingToAmbush;
+    public float AmbushWaitTime;
+    private float TimeToEndAmbush;
 
     // Start is called before the first frame update
     void Start()
@@ -99,7 +103,11 @@ public class AITest : MonoBehaviour
         if(InAmbush == true)
         {
             //Check if time has passed to leave ambush
-            Debug.Log("Waiting For Ambush");
+            if(Time.time >= TimeToEndAmbush)
+            {
+                InAmbush = false;
+                Debug.Log("Ambush End");
+            }
         }
 
         //If already moving to ambush position
@@ -111,6 +119,7 @@ public class AITest : MonoBehaviour
                 //Set InAmbush to true and MovingToAmbush to false
                 InAmbush = true;
                 MovingToAmbush = false;
+                TimeToEndAmbush = Time.time + AmbushWaitTime;
             }
 
         }
