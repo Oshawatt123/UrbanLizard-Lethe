@@ -106,7 +106,6 @@ public class AITest : MonoBehaviour
             if(Time.time >= TimeToEndAmbush)
             {
                 InAmbush = false;
-                Debug.Log("Ambush End");
             }
         }
 
@@ -156,7 +155,6 @@ public class AITest : MonoBehaviour
             //If Path is valid
             if (Path.status != NavMeshPathStatus.PathInvalid)
             {
-                Debug.Log("Valid Path");
                 for (int i = 1; i < Path.corners.Length; ++i)
                 {
                     PathLength += Vector3.Distance(Path.corners[i - 1], Path.corners[i]);
