@@ -38,7 +38,7 @@ public class AITest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*//Check distance to player and line of sight
+        //Check distance to player and line of sight
         if (CheckForSight())
         {
             //Set Destination to be Player's location
@@ -49,9 +49,9 @@ public class AITest : MonoBehaviour
         else if(Time.time >= NextDirTime)
         {
             SetDestination(RandomMovement());
-        }*/
+        }
 
-        AmbushBehaviour();
+        //AmbushBehaviour();
     }
 
     public void SetDestination(Vector3 TargetPos)
