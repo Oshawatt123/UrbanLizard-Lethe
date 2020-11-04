@@ -38,7 +38,7 @@ public class AITest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Check distance to player and line of sight
+        /*//Check distance to player and line of sight
         if (CheckForSight())
         {
             //Set Destination to be Player's location
@@ -49,9 +49,9 @@ public class AITest : MonoBehaviour
         else if(Time.time >= NextDirTime)
         {
             SetDestination(RandomMovement());
-        }
+        }*/
 
-        //AmbushBehaviour();
+        AmbushBehaviour();
     }
 
     public void SetDestination(Vector3 TargetPos)
@@ -105,20 +105,27 @@ public class AITest : MonoBehaviour
             //Check if time has passed to leave ambush
             if(Time.time >= TimeToEndAmbush)
             {
+                this.transform.GetChild(0).gameObject.SetActive(false);
                 InAmbush = false;
+                Debug.Log("Ambush Timer Complete");
+                //Agent will now choose another behaviour
+
             }
         }
 
         //If already moving to ambush position
         else if(MovingToAmbush == true)
         {
+            float dist = Agent.remainingDistance;
             //Check if arrived at ambush position
-            if (this.transform.position.x == Agent.destination.x && this.transform.position.z == Agent.destination.z)
+            if (dist != Mathf.Infinity && Agent.pathStatus == NavMeshPathStatus.PathComplete && Agent.remainingDistance == 0)
             {
                 //Set InAmbush to true and MovingToAmbush to false
                 InAmbush = true;
                 MovingToAmbush = false;
                 TimeToEndAmbush = Time.time + AmbushWaitTime;
+
+                this.transform.GetChild(0).gameObject.SetActive(true);
             }
 
         }
