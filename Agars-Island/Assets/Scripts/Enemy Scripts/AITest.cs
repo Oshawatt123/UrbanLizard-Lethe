@@ -107,6 +107,8 @@ public class AITest : MonoBehaviour
             {
                 this.transform.GetChild(0).gameObject.SetActive(false);
                 InAmbush = false;
+                Agent.enabled = true;
+                this.transform.position -= this.transform.up * 5;
                 Debug.Log("Ambush Timer Complete");
                 //Agent will now choose another behaviour
 
@@ -126,6 +128,8 @@ public class AITest : MonoBehaviour
                 TimeToEndAmbush = Time.time + AmbushWaitTime;
 
                 this.transform.GetChild(0).gameObject.SetActive(true);
+                Agent.enabled = false;
+                this.transform.position += this.transform.up * 5;
             }
 
         }
