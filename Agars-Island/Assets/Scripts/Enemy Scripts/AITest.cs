@@ -164,7 +164,7 @@ public class AITest : MonoBehaviour
         {
             float PathLength = 0;
             //If Path is valid
-            if (Path.status != NavMeshPathStatus.PathInvalid)
+            if (Path.status == NavMeshPathStatus.PathComplete)
             {
                 for (int i = 1; i < Path.corners.Length; ++i)
                 {
@@ -175,6 +175,7 @@ public class AITest : MonoBehaviour
             }
         }
         //If Calculation Fails or Path is incomplete
+        Debug.Log("Incomplete Path");
         return float.MaxValue;
 
     }
