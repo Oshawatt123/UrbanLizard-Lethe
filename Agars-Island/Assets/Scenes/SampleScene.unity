@@ -677,6 +677,7 @@ MonoBehaviour:
   MaxDirTime: 10
   AmbushPositions: []
   AmbushWaitTime: 5
+  AmbushRouteDelay: 0
 --- !u!4 &428600619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7788149384880400623, guid: 44d2768fc2149ce4ebac2ad4a0347c48,
@@ -1538,7 +1539,7 @@ Transform:
   m_Children:
   - {fileID: 1867384374}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &928962588
 PrefabInstance:
@@ -5101,6 +5102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874257008131080958, guid: 2fe1889d32b3e594a8917dfec052f09c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
