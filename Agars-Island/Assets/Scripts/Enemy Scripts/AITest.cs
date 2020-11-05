@@ -23,12 +23,17 @@ public class AITest : MonoBehaviour
     public float AmbushWaitTime;
     private float TimeToEndAmbush;
 
+    //---------------------------------- Ambush Movement Variables ------------------
+    private float NextAmbRouteCheck;
+    public float AmbushRouteDelay;
+
     // Start is called before the first frame update
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
         NextDirTime = Time.time;
+        NextAmbRouteCheck = Time.time;
 
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
         InAmbush = false;
@@ -116,8 +121,30 @@ public class AITest : MonoBehaviour
         }
 
         //If already moving to ambush position
-        else if(MovingToAmbush == true)
+        else
         {
+            //If small delay has past, recalculate routes to ensure still moving to closest
+            if(Time.time >= NextAmbRouteCheck)
+            {
+                GameObject ClosestPoint = null;
+                float ClosestDistance = float.MaxValue;
+
+                //Scan each ambush point for closest
+                foreach (GameObject Point in AmbushPositions)
+                {
+                    float PathDistance = CalculatePathDistance(Point);
+
+                    if (PathDistance < ClosestDistance)
+                    {
+                        ClosestDistance = PathDistance;
+                        ClosestPoint = Point;
+                    }
+                }
+                //Set Destination
+                SetDestination(ClosestPoint.transform.position);
+                NextAmbRouteCheck = Time.time + AmbushRouteDelay;
+            }
+
             float dist = Agent.remainingDistance;
             //Check if arrived at ambush position
             if (dist != Mathf.Infinity && Agent.pathStatus == NavMeshPathStatus.PathComplete && Agent.remainingDistance == 0)
@@ -132,27 +159,6 @@ public class AITest : MonoBehaviour
                 this.transform.position += this.transform.up * 5;
             }
 
-        }
-
-        //Else Find Closest Ambush point and begin move to
-        else
-        {
-            GameObject ClosestPoint = null;
-            float ClosestDistance = float.MaxValue;
-
-            //Scan each ambush point for closest
-            foreach (GameObject Point in AmbushPositions)
-            {
-                float PathDistance = CalculatePathDistance(Point);
-
-                if (PathDistance < ClosestDistance)
-                {
-                    ClosestDistance = PathDistance;
-                    ClosestPoint = Point;
-                }
-            }
-            SetDestination(ClosestPoint.transform.position);
-            MovingToAmbush = true;
         }
     }
 
