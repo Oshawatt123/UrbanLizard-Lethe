@@ -38,6 +38,8 @@ public class AITest : MonoBehaviour
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
         InAmbush = false;
         MovingToAmbush = false;
+
+        SetDestination(Player.transform.position);
     }
 
     // Update is called once per frame
@@ -107,6 +109,7 @@ public class AITest : MonoBehaviour
         //If waiting to Ambush
         if(InAmbush == true)
         {
+
             //Check if time has passed to leave ambush
             if(Time.time >= TimeToEndAmbush)
             {
@@ -129,6 +132,9 @@ public class AITest : MonoBehaviour
                 GameObject ClosestPoint = null;
                 float ClosestDistance = float.MaxValue;
 
+                //Enable Obstacle on player to prevent selecting ambush point in sight
+                Player.transform.GetChild(1).gameObject.SetActive(true);
+
                 //Scan each ambush point for closest
                 foreach (GameObject Point in AmbushPositions)
                 {
@@ -140,6 +146,7 @@ public class AITest : MonoBehaviour
                         ClosestPoint = Point;
                     }
                 }
+
                 //Set Destination
                 SetDestination(ClosestPoint.transform.position);
                 NextAmbRouteCheck = Time.time + AmbushRouteDelay;
@@ -157,6 +164,9 @@ public class AITest : MonoBehaviour
                 this.transform.GetChild(0).gameObject.SetActive(true);
                 Agent.enabled = false;
                 this.transform.position += this.transform.up * 5;
+
+                //Disable Cone
+                Player.transform.GetChild(1).gameObject.SetActive(false);
             }
 
         }
