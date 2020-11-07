@@ -105,7 +105,7 @@ public class AITest : MonoBehaviour
     public void AmbushBehaviour()
     {
         //If waiting to Ambush
-        if(InAmbush == true)
+        /*if(InAmbush == true)
         {
 
             //Check if time has passed to leave ambush
@@ -119,7 +119,7 @@ public class AITest : MonoBehaviour
                 //Agent will now choose another behaviour
 
             }
-        }
+        }*/
 
         //If already moving to ambush position
         else
