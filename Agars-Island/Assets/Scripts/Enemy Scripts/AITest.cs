@@ -19,7 +19,6 @@ public class AITest : MonoBehaviour
     //----------------------------------- Ambush variables ---------------------------
     public GameObject[] AmbushPositions;
     private bool InAmbush;
-    private bool MovingToAmbush;
     public float AmbushWaitTime;
     private float TimeToEndAmbush;
 
@@ -37,9 +36,8 @@ public class AITest : MonoBehaviour
 
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
         InAmbush = false;
-        MovingToAmbush = false;
 
-        SetDestination(Player.transform.position);
+        //SetDestination(Player.transform.position);
     }
 
     // Update is called once per frame
@@ -61,10 +59,10 @@ public class AITest : MonoBehaviour
         //AmbushBehaviour();
     }
 
-    public void SetDestination(Vector3 TargetPos)
+    /*public void SetDestination(Vector3 TargetPos)
     {
         Agent.destination = TargetPos;
-    }
+    }*/
 
     /*public bool CheckForSight()
     {
@@ -90,7 +88,7 @@ public class AITest : MonoBehaviour
         return false;
     }*/
 
-    public Vector3 RandomMovement()
+    /*public Vector3 RandomMovement()
     {
         NextDirTime = Time.time + Random.Range(MinDirTime, MaxDirTime);
 
@@ -102,7 +100,7 @@ public class AITest : MonoBehaviour
         NavMesh.SamplePosition(RandomDirection, out NavHit, WanderDistance, -1);
 
         return NavHit.position;
-    }
+    }*/
 
     public void AmbushBehaviour()
     {
@@ -158,7 +156,6 @@ public class AITest : MonoBehaviour
             {
                 //Set InAmbush to true and MovingToAmbush to false
                 InAmbush = true;
-                MovingToAmbush = false;
                 TimeToEndAmbush = Time.time + AmbushWaitTime;
 
                 this.transform.GetChild(0).gameObject.SetActive(true);

@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using BehaviourTree;
 
-public class AmbushWait : MonoBehaviour
+public class AmbushWait : BT_Behaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Transform Self;
+    private localTree localBB;
+    private NavMeshAgent agent;
+
+    public AmbushWait(Transform _self)
     {
-        
+        Self = _self;
+        localBB = Self.GetComponent<localTree>();
+        agent = Self.GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override NodeState tick()
     {
-        
+        return base.tick();
     }
 }
