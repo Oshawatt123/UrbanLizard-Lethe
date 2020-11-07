@@ -45,8 +45,8 @@ public class AITest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*//Check distance to player and line of sight
-        if (CheckForSight())
+        //Check distance to player and line of sight
+        /*if (CheckForSight())
         {
             //Set Destination to be Player's location
             SetDestination(Player.transform.position);
@@ -56,9 +56,9 @@ public class AITest : MonoBehaviour
         else if(Time.time >= NextDirTime)
         {
             SetDestination(RandomMovement());
-        }*/
+        } */
 
-        AmbushBehaviour();
+        //AmbushBehaviour();
     }
 
     public void SetDestination(Vector3 TargetPos)
@@ -66,7 +66,7 @@ public class AITest : MonoBehaviour
         Agent.destination = TargetPos;
     }
 
-    public bool CheckForSight()
+    /*public bool CheckForSight()
     {
         Vector3 VectToPlayer = Player.transform.position - this.transform.position;
         //Check if within range
@@ -88,7 +88,7 @@ public class AITest : MonoBehaviour
 
         //Else Return False
         return false;
-    }
+    }*/
 
     public Vector3 RandomMovement()
     {
