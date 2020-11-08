@@ -122,7 +122,7 @@ public class AITest : MonoBehaviour
         }*/
 
         //If already moving to ambush position
-        else
+        /*else
         {
             //If small delay has past, recalculate routes to ensure still moving to closest
             if(Time.time >= NextAmbRouteCheck)
@@ -166,10 +166,10 @@ public class AITest : MonoBehaviour
                 Player.transform.GetChild(1).gameObject.SetActive(false);
             }
 
-        }
+        }*/
     }
 
-    private float CalculatePathDistance(GameObject Point)
+    /*private float CalculatePathDistance(GameObject Point)
     {
         NavMeshPath Path = new NavMeshPath();
         //Calculate path to point
@@ -191,5 +191,5 @@ public class AITest : MonoBehaviour
         Debug.Log("Incomplete Path");
         return float.MaxValue;
 
-    }
+    }*/
 }
