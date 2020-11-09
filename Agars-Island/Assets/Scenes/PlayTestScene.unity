@@ -109,7 +109,7 @@ NavMeshSettings:
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ff4e9b4a8739db74e80e3accfdea2e43, type: 2}
 --- !u!4 &17482604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4400008515522110, guid: 84cd279dfc9ea0a4b8564030182915fa,
@@ -2774,6 +2774,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelGeometry
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718898270244864146, guid: 320b322c380c04b4ab27bb097702d3b3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718898270425112604, guid: 320b322c380c04b4ab27bb097702d3b3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3413906713948414463, guid: 320b322c380c04b4ab27bb097702d3b3,
         type: 3}
