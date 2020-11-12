@@ -18,6 +18,7 @@ public class ToggleFlashlight : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             LightScript.Switch();
+
         }
     }
 }
