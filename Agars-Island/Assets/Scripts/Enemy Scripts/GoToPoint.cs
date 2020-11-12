@@ -30,12 +30,16 @@ public class GoToPoint : BT_Behaviour
             Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.blue);
         }
 
-        if (!Agent.pathPending && Agent.remainingDistance < 1.0f)
+        /*if (!Agent.pathPending && Agent.remainingDistance < 1.0f)
         {
             nodeState = NodeState.NODE_SUCCESS;
             return NodeState.NODE_SUCCESS;
-        }
-        nodeState = NodeState.NODE_RUNNING;
-        return NodeState.NODE_RUNNING;
+        }*/
+
+        nodeState = NodeState.NODE_SUCCESS;
+        return NodeState.NODE_SUCCESS;
+
+        //nodeState = NodeState.NODE_RUNNING;
+        //return NodeState.NODE_RUNNING;
     }
 }
