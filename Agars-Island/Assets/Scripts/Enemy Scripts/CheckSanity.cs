@@ -24,9 +24,16 @@ public class CheckSanity : BT_Behaviour
 
     public override NodeState tick()
     {
-        if(Player.GetComponent<PlayerSanity>().Sanity < 50)
+        Vector3 DistToPlayer = Player.transform.position - Self.position;
+        if(DistToPlayer.magnitude < 30)
+        {
+            Player.transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+        else if(Player.GetComponent<PlayerSanity>().Sanity > 50)
         {
             Player.transform.GetChild(1).gameObject.SetActive(true);
+            return NodeState.NODE_SUCCESS;
         }
 
         return NodeState.NODE_FAILURE;
