@@ -38,7 +38,11 @@ public class RandomMovement : BT_Behaviour
             NavMesh.SamplePosition(RandomDirection, out NavHit, WanderDistance, -1);
 
             localBB.setMoveToLocation(NavHit.position);
+
+            Debug.Log("Point");
+            return NodeState.NODE_SUCCESS;
         }
-        return NodeState.NODE_SUCCESS;
+
+        return NodeState.NODE_FAILURE;
     }
 }

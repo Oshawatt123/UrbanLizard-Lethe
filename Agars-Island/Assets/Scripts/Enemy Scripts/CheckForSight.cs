@@ -19,6 +19,7 @@ public class CheckForSight : BT_Behaviour
         LocalBB = Self.GetComponent<localTree>();
 
         Agent = Self.GetComponent<NavMeshAgent>();
+
     }
 
     public override NodeState tick()
