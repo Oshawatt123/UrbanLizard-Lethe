@@ -10,18 +10,22 @@ public class RandomMovement : BT_Behaviour
     private localTree localBB;
     private NavMeshAgent agent;
 
-    public float WanderDistance;
-    public float MinDirTime;
-    public float MaxDirTime;
+    private float WanderDistance;
+    private float MinDirTime;
+    private float MaxDirTime;
     private float NextDirTime;
 
-    public RandomMovement(Transform _self)
+    public RandomMovement(Transform _self, float InMinDirTime, float InMaxDirTime, float InWanderRange)
     {
         Self = _self;
         localBB = Self.GetComponent<localTree>();
         agent = Self.GetComponent<NavMeshAgent>();
 
         NextDirTime = Time.time;
+
+        WanderDistance = InWanderRange;
+        MinDirTime = InMinDirTime;
+        MaxDirTime = InMaxDirTime;
     }
 
     public override NodeState tick()

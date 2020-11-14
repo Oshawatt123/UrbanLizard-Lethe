@@ -9,20 +9,16 @@ public class MoveToAmbush : BT_Behaviour
     private Transform Self;
     private localTree localBB;
     private NavMeshAgent agent;
-
     private GameObject Player;
 
-    //----------------------------------- Ambush variables ---------------------------
-    public GameObject[] AmbushPositions;
-    private bool InAmbush;
-    public float AmbushWaitTime;
-    private float TimeToEndAmbush;
+    //----------------------------------- Ambush positions ---------------------------
+    private GameObject[] AmbushPositions;
 
     //---------------------------------- Ambush Movement Variables ------------------
     private float NextAmbRouteCheck;
-    public float AmbushRouteDelay;
+    private float AmbushRouteDelay;
 
-    public MoveToAmbush(Transform _self)
+    public MoveToAmbush(Transform _self, float InRouteDelay)
     {
         Self = _self;
         localBB = Self.GetComponent<localTree>();
@@ -31,6 +27,8 @@ public class MoveToAmbush : BT_Behaviour
 
         NextAmbRouteCheck = Time.time;
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
+
+        AmbushRouteDelay = InRouteDelay;
     }
 
     public override NodeState tick()
@@ -65,10 +63,6 @@ public class MoveToAmbush : BT_Behaviour
         //Check if arrived at ambush position
         if (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
         {
-            //Set InAmbush to true and MovingToAmbush to false
-            InAmbush = true;
-            TimeToEndAmbush = Time.time + AmbushWaitTime;
-
             Self.transform.GetChild(0).gameObject.SetActive(true);
             agent.enabled = false;
             Self.transform.position += Self.transform.up * 5;

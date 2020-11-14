@@ -5,15 +5,27 @@ using BehaviourTree;
 
 public class AIControl : localTree
 {
+    //Move To Ambush Variables
+    public float AmbushRouteDelay;
 
+    //Check for sight variables
+    public float SightRange;
+
+    //Ambushing variables
+    public float AmbushTime;
+
+    //Random Movement variables
+    public float WanderDistance;
+    public float MinDirTime;
+    public float MaxDirTime;
 
     // Start is called before the first frame update
     void Start()
     {
         BT_Sequencer Seq1 = new BT_Sequencer();
         Seq1.AddNode(new CheckSanity(transform));
-        Seq1.AddNode(new MoveToAmbush(transform));
-        Seq1.AddNode(new AmbushWait(transform));
+        Seq1.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));
+        Seq1.AddNode(new AmbushWait(transform, AmbushTime));
 
         BT_Sequencer Seq2 = new BT_Sequencer();
         Seq2.AddNode(new DirectCharge(transform));
@@ -24,11 +36,11 @@ public class AIControl : localTree
         Sel1.AddNode(Seq2);
 
         BT_Sequencer Seq3 = new BT_Sequencer();
-        Seq3.AddNode(new CheckForSight(transform));
+        Seq3.AddNode(new CheckForSight(transform, SightRange));
         Seq3.AddNode(Sel1);
 
         BT_Sequencer Seq4 = new BT_Sequencer();
-        Seq4.AddNode(new RandomMovement(transform));
+        Seq4.AddNode(new RandomMovement(transform, MinDirTime, MaxDirTime, WanderDistance));
         Seq4.AddNode(new GoToPoint(transform));
 
         BT_Selector RootSel = new BT_Selector();

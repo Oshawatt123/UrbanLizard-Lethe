@@ -11,14 +11,16 @@ public class AmbushWait : BT_Behaviour
     private NavMeshAgent agent;
 
     private float TimeToEndAmbush;
-    public float AmbushTime;
+    private float AmbushTime;
 
-    public AmbushWait(Transform _self)
+    public AmbushWait(Transform _self, float InAmbushTime)
     {
         Self = _self;
         localBB = Self.GetComponent<localTree>();
         agent = Self.GetComponent<NavMeshAgent>();
         TimeToEndAmbush = int.MaxValue;
+
+        AmbushTime = InAmbushTime;
     }
 
     public override NodeState tick()

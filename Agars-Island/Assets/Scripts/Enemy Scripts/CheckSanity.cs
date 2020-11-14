@@ -9,7 +9,6 @@ public class CheckSanity : BT_Behaviour
     private Transform Self;
     private localTree LocalBB;
     private NavMeshAgent Agent;
-
     private GameObject Player;
 
     public CheckSanity(Transform _self)

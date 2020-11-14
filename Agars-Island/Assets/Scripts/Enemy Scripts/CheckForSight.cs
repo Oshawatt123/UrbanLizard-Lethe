@@ -9,17 +9,14 @@ public class CheckForSight : BT_Behaviour
     private Transform Self;
     private localTree LocalBB;
 
-    private NavMeshAgent Agent;
+    private float SightRange;
 
-    public float SightRange;
-
-    public CheckForSight(Transform _self)
+    public CheckForSight(Transform _self, float InSightRange)
     {
         Self = _self;
         LocalBB = Self.GetComponent<localTree>();
 
-        Agent = Self.GetComponent<NavMeshAgent>();
-
+        SightRange = InSightRange;
     }
 
     public override NodeState tick()
