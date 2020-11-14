@@ -9,13 +9,16 @@ public class GoToPoint : BT_Behaviour
     private Transform Self;
     private localTree LocalBB;
     private NavMeshAgent Agent;
+    private GameObject Player;
 
     public GoToPoint(Transform _self)
     {
         Self = _self;
         LocalBB = Self.GetComponent<localTree>();
 
-        Agent = Self.GetComponent<UnityEngine.AI.NavMeshAgent>();
+        Agent = Self.GetComponent<NavMeshAgent>();
+
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public override NodeState tick()
@@ -35,6 +38,8 @@ public class GoToPoint : BT_Behaviour
             nodeState = NodeState.NODE_SUCCESS;
             return NodeState.NODE_SUCCESS;
         }*/
+
+        Player.transform.GetChild(1).gameObject.SetActive(false);
 
         nodeState = NodeState.NODE_SUCCESS;
         return NodeState.NODE_SUCCESS;
