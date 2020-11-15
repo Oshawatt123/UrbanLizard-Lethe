@@ -15,9 +15,7 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
-        <e p="RadiatorGames" t="Include">
-          <e p="RadiatorGames.cs" t="Include" />
-        </e>
+        <e p="InventoryTracker.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CanvasManager.cs" t="Include" />
           <e p="Enemy Scripts" t="Include">
@@ -25,17 +23,21 @@
             <e p="AITest.cs" t="Include" />
             <e p="AmbushWait.cs" t="Include" />
             <e p="CheckForSight.cs" t="Include" />
+            <e p="CheckSanity.cs" t="Include" />
+            <e p="DirectCharge.cs" t="Include" />
             <e p="GoToPoint.cs" t="Include" />
             <e p="MoveToAmbush.cs" t="Include" />
             <e p="RandomMovement.cs" t="Include" />
           </e>
+          <e p="HUDManager.cs" t="Include" />
           <e p="Interaction" t="Include">
             <e p="Door.cs" t="Include" />
             <e p="DoorButton.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
+            <e p="ItemPickup.cs" t="Include" />
           </e>
-          <e p="InventoryOpen.cs" t="Include" />
           <e p="Player Scripts" t="Include">
+            <e p="PlayerCompass.cs" t="Include" />
             <e p="PlayerInteract.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerSanity.cs" t="Include" />
@@ -88,6 +90,9 @@
             <e p="Sprites" t="Include">
               <e p="EmojiOne Attribution.txt" t="Include" />
             </e>
+          </e>
+          <e p="Utils" t="Include">
+            <e p="RadiatorGames.cs" t="Include" />
           </e>
         </e>
       </e>

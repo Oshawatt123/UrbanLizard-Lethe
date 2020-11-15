@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -34,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     float CamRotationY;
     CharacterController Controller;
 
+    [SerializeField] private Slider staminaBar;
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +81,8 @@ public class PlayerMovement : MonoBehaviour
                 NextRecTime = Time.time + SprintRecoverDelay;
             }
         }
+        
+        staminaBar.value = (Stamina / (float)MaxStamina)*100.0f;
     }
 
     // Update is called once per frame

@@ -19,7 +19,7 @@ public class Interactable : MonoBehaviour
     
     virtual public void Interact()
     {
-        Debug.Log("Base Interact");
+        //Debug.Log("Base Interact");
         if (anim)
             anim.SetTrigger("Interact");
     }
