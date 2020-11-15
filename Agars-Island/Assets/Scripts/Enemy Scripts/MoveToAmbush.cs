@@ -11,6 +11,8 @@ public class MoveToAmbush : BT_Behaviour
     private NavMeshAgent agent;
     private GameObject Player;
 
+    bool DestSetFrame;
+
     //----------------------------------- Ambush positions ---------------------------
     private GameObject[] AmbushPositions;
 
@@ -29,6 +31,8 @@ public class MoveToAmbush : BT_Behaviour
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
 
         AmbushRouteDelay = InRouteDelay;
+
+        DestSetFrame = false;
     }
 
     public override NodeState tick()
@@ -36,6 +40,7 @@ public class MoveToAmbush : BT_Behaviour
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
         {
+            DestSetFrame = false;
             GameObject ClosestPoint = null;
             float ClosestDistance = float.MaxValue;
 
@@ -55,14 +60,18 @@ public class MoveToAmbush : BT_Behaviour
             }
 
             //Set Destination
-            localBB.setMoveToLocation(ClosestPoint.transform.position);
+            agent.SetDestination(ClosestPoint.transform.position);
+            //localBB.setMoveToLocation(ClosestPoint.transform.position);
             NextAmbRouteCheck = Time.time + AmbushRouteDelay;
+            DestSetFrame = true;
         }
+        Debug.Log(agent.remainingDistance);
 
         float dist = agent.remainingDistance;
         //Check if arrived at ambush position
-        if (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
+        if (dist <= 0 && !DestSetFrame)
         {
+            Debug.Log("Reached Point");
             Self.transform.GetChild(0).gameObject.SetActive(true);
             agent.enabled = false;
             Self.transform.position += Self.transform.up * 5;
@@ -71,6 +80,11 @@ public class MoveToAmbush : BT_Behaviour
             Player.transform.GetChild(1).gameObject.SetActive(false);
 
             return NodeState.NODE_SUCCESS;
+        }
+
+        if (DestSetFrame)
+        {
+            DestSetFrame = false;
         }
 
         return NodeState.NODE_RUNNING;
@@ -95,7 +109,6 @@ public class MoveToAmbush : BT_Behaviour
             }
         }
         //If Calculation Fails or Path is incomplete
-        Debug.Log("Incomplete Path");
         return float.MaxValue;
 
     }

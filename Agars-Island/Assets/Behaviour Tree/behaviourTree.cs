@@ -68,7 +68,6 @@ namespace BehaviourTree
             // if they're running still, then we say we're still running
             if (childNodeReturnValue == NodeState.NODE_RUNNING)
             {
-                Debug.Log("Selector RUNNING");
                 currentNodeIndex = 0;
                 nodeState = NodeState.NODE_RUNNING;
                 return NodeState.NODE_RUNNING;
@@ -84,19 +83,16 @@ namespace BehaviourTree
                 if (currentNodeIndex > childNodes.Count - 1)
                 {
                     currentNodeIndex = 0;
-                    Debug.Log("Selector FAILURE");
                     nodeState = NodeState.NODE_FAILURE;
                     return NodeState.NODE_FAILURE;
                 }
 
-                Debug.Log("Selector RUNNING");
                 nodeState = NodeState.NODE_RUNNING;
                 return NodeState.NODE_RUNNING;
             }
 
             // at this point, we know that a node has succeeded so we return a success
             currentNodeIndex = 0;
-            Debug.Log("Selector SUCCESS");
             nodeState = NodeState.NODE_SUCCESS;
             return NodeState.NODE_SUCCESS;
         }
@@ -139,7 +135,6 @@ namespace BehaviourTree
             // if they're running still, then we say we're still running
             if (childNodeReturnValue == NodeState.NODE_RUNNING)
             {
-                Debug.Log("Sequencer RUNNING");
                 nodeState = NodeState.NODE_RUNNING;
                 return NodeState.NODE_RUNNING;
             }
@@ -152,18 +147,15 @@ namespace BehaviourTree
                 if (currentNodeIndex >= childNodes.Count)
                 {
                     currentNodeIndex = 0;
-                    Debug.Log("Sequencer SUCCESS");
                     nodeState = NodeState.NODE_SUCCESS;
                     return NodeState.NODE_SUCCESS;
                 }
                 // if we've got more to process we continue running
-                Debug.Log("Sequencer RUNNING");
                 nodeState = NodeState.NODE_RUNNING;
                 return NodeState.NODE_RUNNING;
             }
 
             // if anything fails, we fail immediately
-            Debug.Log("Sequencer FAILURE");
             nodeState = NodeState.NODE_FAILURE;
             return NodeState.NODE_FAILURE;
         }

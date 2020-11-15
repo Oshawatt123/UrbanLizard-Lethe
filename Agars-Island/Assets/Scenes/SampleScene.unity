@@ -691,7 +691,6 @@ GameObject:
   - component: {fileID: 336766623}
   - component: {fileID: 336766622}
   - component: {fileID: 336766626}
-  - component: {fileID: 336766627}
   - component: {fileID: 336766628}
   m_Layer: 0
   m_Name: Enemy
@@ -769,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336766621}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.49, z: -44.98}
+  m_LocalPosition: {x: 0, y: 1.49, z: -37.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1125415219}
@@ -798,25 +797,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &336766627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336766621}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272ef5e0450719b43ac948e6a8f590e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SightRange: 30
-  WanderDistance: 100
-  MinDirTime: 2
-  MaxDirTime: 10
-  AmbushPositions: []
-  AmbushWaitTime: 5
-  AmbushRouteDelay: 1
 --- !u!114 &336766628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,12 +810,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveToLocation: {x: 0, y: 0, z: 0}
-  AmbushRouteDelay: 0
-  SightRange: 0
-  AmbushTime: 0
-  WanderDistance: 0
-  MinDirTime: 0
-  MaxDirTime: 0
+  AmbushRouteDelay: 1
+  SightRange: 30
+  AmbushTime: 5
+  WanderDistance: 100
+  MinDirTime: 3
+  MaxDirTime: 10
 --- !u!4 &428600619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7788149384880400623, guid: 44d2768fc2149ce4ebac2ad4a0347c48,
@@ -5220,6 +5200,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2045640523, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3660028597552631826, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_Name
@@ -5279,6 +5263,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874257008131080958, guid: 2fe1889d32b3e594a8917dfec052f09c,
+        type: 3}
+      propertyPath: RotationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087760156250480478, guid: 2fe1889d32b3e594a8917dfec052f09c,
+        type: 3}
+      propertyPath: Sanity
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
