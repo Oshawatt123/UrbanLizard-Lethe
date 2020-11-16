@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 32120555}
   - component: {fileID: 32120554}
   m_Layer: 5
-  m_Name: StamRegenText
+  m_Name: SanityMedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 1434603128}
   - component: {fileID: 1434603127}
   m_Layer: 5
-  m_Name: StamRegenNumber
+  m_Name: SanityMedNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1679,6 +1679,7 @@ GameObject:
   - component: {fileID: 8087760156250480478}
   - component: {fileID: 6469119363987954542}
   - component: {fileID: 4119657073525232358}
+  - component: {fileID: 2078106493}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1797,7 +1798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerBody: {fileID: 0}
-  RotationSpeed: 0
+  RotationSpeed: 10
   CamMinY: -60
   CamMaxY: 75
   RotSmoothSpeed: 10
@@ -1833,7 +1834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ee778f5b4a7dd4bb3d7c5280870d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanity: 100
+  Sanity: 20
   sanityBar: {fileID: 1480072834}
 --- !u!114 &6469119363987954542
 MonoBehaviour:
@@ -1861,6 +1862,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUD: {fileID: 1822202342705869}
   inventoryGroup: {fileID: 1514498075}
+--- !u!114 &2078106493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3660028597552631826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8652250564cb5e94dbfe2a6985395e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryText: {fileID: 704455526}
+  medsText: {fileID: 1434603127}
 --- !u!1 &6635144614236346951
 GameObject:
   m_ObjectHideFlags: 0
