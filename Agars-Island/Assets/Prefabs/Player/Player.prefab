@@ -1797,7 +1797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerBody: {fileID: 0}
-  RotationSpeed: 10
+  RotationSpeed: 0
   CamMinY: -60
   CamMaxY: 75
   RotSmoothSpeed: 10
@@ -1806,6 +1806,7 @@ MonoBehaviour:
   MaxStamina: 100
   SprintDrainDelay: 1
   SprintRecoverDelay: 3
+  staminaBar: {fileID: 1096811080}
 --- !u!114 &3660028597552631825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,7 +1833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ee778f5b4a7dd4bb3d7c5280870d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanity: 0
+  Sanity: 100
+  sanityBar: {fileID: 1480072834}
 --- !u!114 &6469119363987954542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1857,6 +1859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c295862378abb4a84dde35215492ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HUD: {fileID: 1822202342705869}
   inventoryGroup: {fileID: 1514498075}
 --- !u!1 &6635144614236346951
 GameObject:
