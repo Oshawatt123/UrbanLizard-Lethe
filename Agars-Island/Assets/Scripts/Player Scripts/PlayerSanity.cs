@@ -20,6 +20,11 @@ public class PlayerSanity : MonoBehaviour
     void Update()
     {
         sanityBar.value = (Sanity / maxSanity) * 100f;
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Sanity = 100;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
