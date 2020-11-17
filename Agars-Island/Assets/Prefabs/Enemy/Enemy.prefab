@@ -136,8 +136,8 @@ MonoBehaviour:
   SightRange: 60
   MinAmbushTime: 3
   MaxAmbushTime: 6
-  WanderDistance: 100
-  MinDirTime: 5
+  WanderDistance: 80
+  MinDirTime: 7.5
   MaxDirTime: 15
 --- !u!1 &3873757202860249297
 GameObject:

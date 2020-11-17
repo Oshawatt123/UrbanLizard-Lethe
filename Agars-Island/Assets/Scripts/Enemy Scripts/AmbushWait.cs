@@ -14,6 +14,9 @@ public class AmbushWait : BT_Behaviour
     private float MinAmbushTime;
     private float MaxAmbushTime;
 
+    private GameObject[] AmbushPositions;
+    private GameObject Player;
+
     public AmbushWait(Transform _self, float InMinAmbushTime, float InMaxAmbushTime)
     {
         Self = _self;
@@ -23,6 +26,9 @@ public class AmbushWait : BT_Behaviour
 
         MinAmbushTime = InMinAmbushTime;
         MaxAmbushTime = InMaxAmbushTime;
+
+        AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public override NodeState tick()
@@ -37,6 +43,16 @@ public class AmbushWait : BT_Behaviour
         //Check if time has passed to leave ambush
         else if (Time.time >= TimeToEndAmbush)
         {
+            foreach(GameObject Point in AmbushPositions)
+            {
+                Vector3 VectToPlayer = Player.transform.position - Self.position;
+                if(VectToPlayer.magnitude <= 40)
+                {
+                    Self.position = Point.transform.position;
+                    break;
+                }
+            }
+
             Self.transform.GetChild(0).gameObject.SetActive(false);
             agent.enabled = true;
             Self.transform.position -= Self.transform.up * 5;
