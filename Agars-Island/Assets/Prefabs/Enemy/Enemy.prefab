@@ -107,7 +107,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveToLocation: {x: 0, y: 0, z: 0}
   AmbushRouteDelay: 1
-  SightRange: 60
+  SightRange: 40
   MinAmbushTime: 3
   MaxAmbushTime: 6
   WanderDistance: 80
