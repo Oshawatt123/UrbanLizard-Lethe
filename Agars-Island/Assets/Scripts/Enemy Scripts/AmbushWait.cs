@@ -11,16 +11,18 @@ public class AmbushWait : BT_Behaviour
     private NavMeshAgent agent;
 
     private float TimeToEndAmbush;
-    private float AmbushTime;
+    private float MinAmbushTime;
+    private float MaxAmbushTime;
 
-    public AmbushWait(Transform _self, float InAmbushTime)
+    public AmbushWait(Transform _self, float InMinAmbushTime, float InMaxAmbushTime)
     {
         Self = _self;
         localBB = Self.GetComponent<localTree>();
         agent = Self.GetComponent<NavMeshAgent>();
         TimeToEndAmbush = int.MaxValue;
 
-        AmbushTime = InAmbushTime;
+        MinAmbushTime = InMinAmbushTime;
+        MaxAmbushTime = InMaxAmbushTime;
     }
 
     public override NodeState tick()
@@ -29,7 +31,7 @@ public class AmbushWait : BT_Behaviour
         if(TimeToEndAmbush == int.MaxValue)
         {
             //Start Timer
-            TimeToEndAmbush = Time.time + AmbushTime;
+            TimeToEndAmbush = Time.time + Random.Range(MinAmbushTime,MaxAmbushTime);
         }
         
         //Check if time has passed to leave ambush

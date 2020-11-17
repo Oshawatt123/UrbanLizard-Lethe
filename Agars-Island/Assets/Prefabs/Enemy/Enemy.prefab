@@ -134,7 +134,8 @@ MonoBehaviour:
   moveToLocation: {x: 0, y: 0, z: 0}
   AmbushRouteDelay: 1
   SightRange: 60
-  AmbushTime: 5
+  MinAmbushTime: 3
+  MaxAmbushTime: 6
   WanderDistance: 100
   MinDirTime: 5
   MaxDirTime: 15

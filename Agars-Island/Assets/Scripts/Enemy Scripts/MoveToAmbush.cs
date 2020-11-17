@@ -56,22 +56,20 @@ public class MoveToAmbush : BT_Behaviour
                 {
                     ClosestDistance = PathDistance;
                     ClosestPoint = Point;
+
+                    //Set Destination
+                    localBB.setMoveToLocation(ClosestPoint.transform.position);
+                    agent.SetDestination(ClosestPoint.transform.position);
+                    NextAmbRouteCheck = Time.time + AmbushRouteDelay;
+                    DestSetFrame = true;
                 }
             }
-
-            //Set Destination
-            agent.SetDestination(ClosestPoint.transform.position);
-            //localBB.setMoveToLocation(ClosestPoint.transform.position);
-            NextAmbRouteCheck = Time.time + AmbushRouteDelay;
-            DestSetFrame = true;
         }
-        Debug.Log(agent.remainingDistance);
 
         float dist = agent.remainingDistance;
         //Check if arrived at ambush position
         if (dist <= 0 && !DestSetFrame)
         {
-            Debug.Log("Reached Point");
             Self.transform.GetChild(0).gameObject.SetActive(true);
             agent.enabled = false;
             Self.transform.position += Self.transform.up * 5;

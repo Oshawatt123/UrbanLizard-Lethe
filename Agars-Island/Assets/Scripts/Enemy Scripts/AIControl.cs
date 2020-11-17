@@ -12,7 +12,8 @@ public class AIControl : localTree
     public float SightRange;
 
     //Ambushing variables
-    public float AmbushTime;
+    public float MinAmbushTime;
+    public float MaxAmbushTime;
 
     //Random Movement variables
     public float WanderDistance;
@@ -25,7 +26,7 @@ public class AIControl : localTree
         BT_Sequencer Seq1 = new BT_Sequencer();
         Seq1.AddNode(new CheckSanity(transform));
         Seq1.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));
-        Seq1.AddNode(new AmbushWait(transform, AmbushTime));
+        Seq1.AddNode(new AmbushWait(transform, MinAmbushTime, MaxAmbushTime));
 
         BT_Sequencer Seq2 = new BT_Sequencer();
         Seq2.AddNode(new DirectCharge(transform));
