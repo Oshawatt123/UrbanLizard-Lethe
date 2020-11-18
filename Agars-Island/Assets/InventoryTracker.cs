@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -14,6 +15,9 @@ public class InventoryTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int[] loadedData = LoadInventory.Load();
+        batteries = loadedData[0];
+        meds = loadedData[1];
         UpdateText();
     }
 
@@ -21,6 +25,13 @@ public class InventoryTracker : MonoBehaviour
     void Update()
     {
         
+    }
+
+    // TODO: Change this to call from a single object to avoid dependency issues
+    private void OnApplicationQuit()
+    {
+        int[] saveData = {batteries, meds};
+        LoadInventory.Save(saveData);
     }
 
     public void AddBattery(int number) { batteries += number; UpdateText(); }

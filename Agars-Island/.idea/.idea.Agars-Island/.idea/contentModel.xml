@@ -16,6 +16,10 @@
           <e p="localTree.cs" t="Include" />
         </e>
         <e p="InventoryTracker.cs" t="Include" />
+        <e p="PuzzleLogic.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="InventoryState.txt" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="CanvasManager.cs" t="Include" />
           <e p="Enemy Scripts" t="Include">
@@ -31,6 +35,7 @@
           </e>
           <e p="HUDManager.cs" t="Include" />
           <e p="Interaction" t="Include">
+            <e p="ActivatePuzzle.cs" t="Include" />
             <e p="Door.cs" t="Include" />
             <e p="DoorButton.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
@@ -42,6 +47,9 @@
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerSanity.cs" t="Include" />
             <e p="ToggleFlashlight.cs" t="Include" />
+          </e>
+          <e p="Saving" t="Include">
+            <e p="LoadInventory.cs" t="Include" />
           </e>
         </e>
         <e p="Thirdparty" t="Include">

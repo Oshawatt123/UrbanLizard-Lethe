@@ -34,11 +34,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/ac/e994a195/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PuzzleLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InventoryTracker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AITest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -54,12 +57,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryOpen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
-        <option value="$PROJECT_DIR$/Assets/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
+        <option value="$PROJECT_DIR$/Assets/InventoryTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/PuzzleLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
       </list>
     </option>
   </component>
@@ -103,6 +110,7 @@
       <workItem from="1603974656641" duration="3006000" />
       <workItem from="1605182506169" duration="1294000" />
       <workItem from="1605475170804" duration="2947000" />
+      <workItem from="1605709140250" duration="7254000" />
     </task>
     <servers />
   </component>
@@ -122,5 +130,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="628" y="311" width="928" height="816" key="dock-window-1" timestamp="1605717273706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="628" y="311" width="928" height="816" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1605717273706" />
   </component>
 </project>
