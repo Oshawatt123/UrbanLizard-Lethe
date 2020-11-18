@@ -31,10 +31,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/44/92859c07/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/ac/e994a195/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PuzzleLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AITest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GasPuzzleLogic.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -65,8 +67,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/PuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/PuzzleLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" />
+        <option value="$PROJECT_DIR$/Assets/GasPuzzleLogic.cs" />
       </list>
     </option>
   </component>
@@ -111,6 +115,7 @@
       <workItem from="1605182506169" duration="1294000" />
       <workItem from="1605475170804" duration="2947000" />
       <workItem from="1605709140250" duration="7254000" />
+      <workItem from="1605734501161" duration="3210000" />
     </task>
     <servers />
   </component>
@@ -132,6 +137,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="539" y="324" key="#Notifications" timestamp="1605735141587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="539" y="324" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1605735141587" />
     <state x="628" y="311" width="928" height="816" key="dock-window-1" timestamp="1605717273706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

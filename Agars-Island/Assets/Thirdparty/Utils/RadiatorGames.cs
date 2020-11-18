@@ -37,4 +37,24 @@ namespace RadiatorGames
             }
         }
     }
+
+    namespace Math
+    {
+        public class Mapping
+        {
+            /// <summary>
+            /// Maps value X between A and B, to a value (return value) between C and D
+            /// </summary>
+            /// <param name="A"></param> Start of 1st range
+            /// <param name="B"></param> End of 1st range
+            /// <param name="C"></param> Start of 2nd range
+            /// <param name="D"></param> End of 2nd range
+            /// <param name="X"></param> Value in 1st range
+            /// <returns></returns>
+            public static float Map(float A, float B, float C, float D, float X)
+            {
+                return (X - A) / (B - A) * (D - C) + C;
+            }
+        }
+    }
 }

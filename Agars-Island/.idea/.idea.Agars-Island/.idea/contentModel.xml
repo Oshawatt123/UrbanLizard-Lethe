@@ -15,8 +15,8 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
+        <e p="GasPuzzleLogic.cs" t="Include" />
         <e p="InventoryTracker.cs" t="Include" />
-        <e p="PuzzleLogic.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
