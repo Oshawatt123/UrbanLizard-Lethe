@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class DirectCharge : BT_Behaviour
 {
     private Transform Self;
-    private localTree LocalBB;
+    private localTree localBB;
     private NavMeshAgent Agent;
 
     private GameObject Player;
@@ -15,7 +15,7 @@ public class DirectCharge : BT_Behaviour
     public DirectCharge(Transform _self)
     {
         Self = _self;
-        LocalBB = Self.GetComponent<localTree>();
+        localBB = Self.GetComponent<localTree>();
 
         Agent = Self.GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -23,11 +23,16 @@ public class DirectCharge : BT_Behaviour
 
     public override NodeState tick()
     {
+        if (localBB.FixedMoveLocation)
+        {
+            localBB.FixedMoveLocation = false;
+        }
+
         //Disable Player Obstacle Cone
         Player.transform.GetChild(1).gameObject.SetActive(false);
 
         //Set move to location
-        LocalBB.setMoveToLocation(Player.transform.position);
+        localBB.setMoveToLocation(Player.transform.position);
 
         return NodeState.NODE_SUCCESS;
     }

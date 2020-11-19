@@ -34,6 +34,11 @@ public class RandomMovement : BT_Behaviour
 
     public override NodeState tick()
     {
+        if (localBB.FixedMoveLocation)
+        {
+            localBB.FixedMoveLocation = false;
+        }
+
         if (Time.time >= NextDirTime || agent.remainingDistance == 0)
         {
             NextDirTime = Time.time + Random.Range(MinDirTime, MaxDirTime);

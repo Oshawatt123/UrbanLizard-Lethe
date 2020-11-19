@@ -16,6 +16,8 @@ public class localTree : MonoBehaviour
     public BT_Tree tree = new BT_Tree();
 
     public Vector3 moveToLocation;
+    public bool FixedMoveLocation;
+    public Vector3 StoredPosition;
 
     public void setMoveToLocation(Vector3 location)
     {

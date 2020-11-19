@@ -36,6 +36,11 @@ public class AmbushWait : BT_Behaviour
         //Check if first frame in ambush
         if(TimeToEndAmbush == int.MaxValue)
         {
+            if (localBB.FixedMoveLocation)
+            {
+                localBB.FixedMoveLocation = false;
+            }
+
             //Start Timer
             TimeToEndAmbush = Time.time + Random.Range(MinAmbushTime,MaxAmbushTime);
         }

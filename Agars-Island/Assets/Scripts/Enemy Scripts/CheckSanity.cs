@@ -11,7 +11,9 @@ public class CheckSanity : BT_Behaviour
     private NavMeshAgent Agent;
     private GameObject Player;
 
-    public CheckSanity(Transform _self)
+    public float SanityLimit;
+
+    public CheckSanity(Transform _self, float InLimit)
     {
         Self = _self;
         LocalBB = Self.GetComponent<localTree>();
@@ -19,12 +21,13 @@ public class CheckSanity : BT_Behaviour
         Agent = Self.GetComponent<NavMeshAgent>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
+        SanityLimit = InLimit;
     }
 
     public override NodeState tick()
     {
-        Vector3 DistToPlayer = Player.transform.position - Self.position;
-        if(DistToPlayer.magnitude < 20 || Player.GetComponent<PlayerSanity>().Sanity < 50)
+        float DistToPlayer = Vector3.Distance(Player.transform.position, Self.position);
+        if(DistToPlayer < 20 || Player.GetComponent<PlayerSanity>().Sanity > SanityLimit)
         {
             Player.transform.GetChild(1).gameObject.SetActive(false);
             return NodeState.NODE_FAILURE;

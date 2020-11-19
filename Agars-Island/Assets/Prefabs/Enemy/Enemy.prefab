@@ -132,6 +132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveToLocation: {x: 0, y: 0, z: 0}
+  FixedMoveLocation: 0
+  StoredPosition: {x: 0, y: 0, z: 0}
   AmbushRouteDelay: 1
   SightRange: 40
   MinAmbushTime: 3
@@ -139,6 +141,10 @@ MonoBehaviour:
   WanderDistance: 80
   MinDirTime: 7.5
   MaxDirTime: 15
+  MovingToMarkedLocation: 0
+  MarkedLocation: {x: 0, y: 0, z: 0}
+  AmbushSanity: 50
+  AltRouteSanity: 75
 --- !u!1 &3873757202860249297
 GameObject:
   m_ObjectHideFlags: 0
