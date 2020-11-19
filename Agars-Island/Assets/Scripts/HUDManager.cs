@@ -19,6 +19,8 @@ public class HUDManager : MonoBehaviour
     private bool puzzleOpen = false;
     private CanvasGroup puzzleGroup = null;
 
+    private bool altUIOpen = false;
+
     private List<CanvasGroup> allCanvases = new List<CanvasGroup>();
 
     private static PlayerMovement playerMovement;
@@ -46,8 +48,9 @@ public class HUDManager : MonoBehaviour
                 GroupSwapper.HideCanvasGroup(inventoryGroup);
                 GroupSwapper.ShowCanvasGroup(HUD);
                 MouseModeGame();
+                inventoryOpen = !inventoryOpen;
             }
-            else if (puzzleOpen)
+            else if (puzzleOpen || altUIOpen)
             {
                 ResetHUD();
             }
@@ -57,9 +60,8 @@ public class HUDManager : MonoBehaviour
                 GroupSwapper.ShowCanvasGroup(inventoryGroup);
                 GroupSwapper.HideCanvasGroup(HUD);
                 MouseModeUI();
+                inventoryOpen = !inventoryOpen;
             }
-
-            inventoryOpen = !inventoryOpen;
         }
     }
 
@@ -67,15 +69,36 @@ public class HUDManager : MonoBehaviour
     /// Hides all the player's HUD canvas groups, and optionally shows another canvasgroup
     /// </summary>
     /// <param name="puzzleCanvasGroup">Optional: new canvas group to open</param>
-    public void HidePlayerHUDs(CanvasGroup puzzleCanvasGroup = null)
+    public void HidePlayerHUDs(CanvasGroup puzzleCanvasGroup)
     {
-        // this check here is allowed, as it won't be performed too often
-        this.puzzleOpen = puzzleCanvasGroup != null;
         puzzleGroup = puzzleCanvasGroup;
+        puzzleOpen = true;
+        
+        altUIOpen = false;
+        inventoryOpen = false;
+
+        if (puzzleOpen)
+            GroupSwapper.ShowCanvasGroup(puzzleCanvasGroup);
+
+        playerMovement.RotationSpeed = 0f;
+
+        foreach (CanvasGroup group in allCanvases)
+        {
+            GroupSwapper.HideCanvasGroup(group);
+        }
+        
+        MouseModeUI();
+    }
+
+    public void HidePlayerHUDs(bool altUIOpen = false)
+    {
+        puzzleOpen = false;
+        this.altUIOpen = altUIOpen;
+        puzzleGroup = null;
         inventoryOpen = false;
 
         playerMovement.RotationSpeed = 0f;
-        
+
         foreach (CanvasGroup group in allCanvases)
         {
             GroupSwapper.HideCanvasGroup(group);
@@ -86,7 +109,11 @@ public class HUDManager : MonoBehaviour
 
     public void ResetHUD()
     {
+        Debug.Log("Reset HUD");
         puzzleOpen = false;
+        altUIOpen = false;
+        inventoryOpen = false;
+        
         // hide puzzle group first otherwise it'll be set to null in HidePlayerHUDs
         if (puzzleGroup)
             GroupSwapper.HideCanvasGroup(puzzleGroup);
@@ -111,5 +138,19 @@ public class HUDManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         playerMovement.RotationSpeed = 0f;
+    }
+
+    public bool ShouldInteract()
+    {
+        Debug.Log(altUIOpen.ToString() + "||" + puzzleOpen.ToString());
+        
+        Debug.Log(((altUIOpen || puzzleOpen)).ToString());
+        
+        
+        if (altUIOpen || puzzleGroup)
+            Debug.Log("True");
+        
+        
+        return !(altUIOpen || puzzleOpen);
     }
 }

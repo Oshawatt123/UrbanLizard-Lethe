@@ -6,11 +6,12 @@ public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private Transform CamTransform;
     [SerializeField] private float InteractLength;
+    private HUDManager HUDmanager;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        HUDmanager = GetComponent<HUDManager>();
     }
 
     // Update is called once per frame
@@ -18,8 +19,15 @@ public class PlayerInteract : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("E");
-            Interact();
+            if (HUDmanager.ShouldInteract())
+            {
+                Debug.Log("E");
+                Interact();
+            }
+            else
+            {
+                HUDmanager.ResetHUD();
+            }
         }
     }
 

@@ -21,7 +21,6 @@ public class ActivatePuzzle : Interactable
     public override void Interact()
     {
         HUDmanager.HidePlayerHUDs(puzzleCanvas);
-        GroupSwapper.ShowCanvasGroup(puzzleCanvas);
         base.Interact();
     }
 
