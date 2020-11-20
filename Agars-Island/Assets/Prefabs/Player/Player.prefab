@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ee778f5b4a7dd4bb3d7c5280870d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanity: 74
+  Sanity: 49
   sanityBar: {fileID: 1480072834}
 --- !u!114 &6469119363987954542
 MonoBehaviour:

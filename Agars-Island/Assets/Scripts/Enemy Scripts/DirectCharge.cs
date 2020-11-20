@@ -23,16 +23,13 @@ public class DirectCharge : BT_Behaviour
 
     public override NodeState tick()
     {
-        if (localBB.FixedMoveLocation)
-        {
-            localBB.FixedMoveLocation = false;
-        }
-
+        Debug.Log("Charging!");
         //Disable Player Obstacle Cone
         Player.transform.GetChild(1).gameObject.SetActive(false);
 
         //Set move to location
-        localBB.setMoveToLocation(Player.transform.position);
+        localBB.setMoveToLocation(localBB.StoredPosition);
+        localBB.FixedMoveLocation = true;
 
         return NodeState.NODE_SUCCESS;
     }

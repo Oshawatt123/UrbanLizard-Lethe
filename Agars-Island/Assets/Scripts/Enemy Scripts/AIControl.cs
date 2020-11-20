@@ -23,23 +23,23 @@ public class AIControl : localTree
     public bool MovingToMarkedLocation;
     public Vector3 MarkedLocation;
 
-    public float AmbushSanity;
+    public float ChargeSanity;
     public float AltRouteSanity;
 
     // Start is called before the first frame update
     void Start()
     {
         BT_Sequencer Seq1 = new BT_Sequencer();
-        Seq1.AddNode(new CheckSanity(transform, AmbushSanity));
+        Seq1.AddNode(new CheckSanity(transform, AltRouteSanity));
         Seq1.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));
         Seq1.AddNode(new AmbushWait(transform, MinAmbushTime, MaxAmbushTime));
 
         BT_Sequencer Seq2 = new BT_Sequencer();
+        Seq2.AddNode(new CheckSanity(transform, ChargeSanity));
         Seq2.AddNode(new DirectCharge(transform));
         Seq2.AddNode(new GoToPoint(transform));
 
         BT_Sequencer Seq5 = new BT_Sequencer();
-        Seq5.AddNode(new CheckSanity(transform, AltRouteSanity));
         Seq5.AddNode(new StoreLastPosition(transform));
         Seq5.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));
         Seq5.AddNode(new AmbushBehind(transform));
@@ -47,12 +47,13 @@ public class AIControl : localTree
         Seq5.AddNode(new GoToPoint(transform));
 
         BT_Selector Sel1 = new BT_Selector();
+        Sel1.AddNode(Seq2);
         Sel1.AddNode(Seq1);
         Sel1.AddNode(Seq5);
-        Sel1.AddNode(Seq2);
 
         BT_Sequencer Seq3 = new BT_Sequencer();
         Seq3.AddNode(new CheckForSight(transform, SightRange));
+        Seq3.AddNode(new StoreLastPosition(transform));
         Seq3.AddNode(Sel1);
 
         BT_Sequencer Seq4 = new BT_Sequencer();

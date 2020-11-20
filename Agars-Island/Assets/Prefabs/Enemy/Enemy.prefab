@@ -143,7 +143,7 @@ MonoBehaviour:
   MaxDirTime: 15
   MovingToMarkedLocation: 0
   MarkedLocation: {x: 0, y: 0, z: 0}
-  AmbushSanity: 50
+  ChargeSanity: 50
   AltRouteSanity: 75
 --- !u!1 &3873757202860249297
 GameObject:
