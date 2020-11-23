@@ -10,6 +10,9 @@ public class CheckForSight : BT_Behaviour
     private localTree LocalBB;
 
     private float SightRange;
+    private GameObject Player;
+    private PlayerMovement PlayerMove;
+
 
     public CheckForSight(Transform _self, float InSightRange)
     {
@@ -17,13 +20,16 @@ public class CheckForSight : BT_Behaviour
         LocalBB = Self.GetComponent<localTree>();
 
         SightRange = InSightRange;
+
+        Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerMove = Player.GetComponent<PlayerMovement>();
     }
 
     public override NodeState tick()
     {
         Vector3 VectToPlayer = GetPlayerPosition() - Self.position;
         //Check if within range
-        if (VectToPlayer.magnitude <= SightRange)
+        if (VectToPlayer.magnitude <= SightRange && !PlayerMove.IsHiding)
         {
             //Check for line of sight
             RaycastHit HitObject;

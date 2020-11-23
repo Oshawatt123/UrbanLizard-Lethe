@@ -31,12 +31,15 @@ public class PlayerMovement : MonoBehaviour
     float Gravity = -13;
     float VelocityY = 0.0f;
 
-    //Private
-    float BodyRoationX;
-    float CamRotationY;
-    CharacterController Controller;
+    //Rotations
+    private float BodyRoationX;
+    private float CamRotationY;
+
+    private CharacterController Controller;
 
     [SerializeField] private Slider staminaBar;
+
+    public bool IsHiding;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         Controller = this.GetComponent<CharacterController>();
         Stamina = MaxStamina;
         NextDrainTime = Time.time + SprintDrainDelay;
+        IsHiding = false;
     }
 
     private void Update()
