@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1808,6 +1808,7 @@ MonoBehaviour:
   SprintDrainDelay: 1
   SprintRecoverDelay: 3
   staminaBar: {fileID: 1096811080}
+  IsHiding: 0
 --- !u!114 &3660028597552631825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1834,7 +1835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ee778f5b4a7dd4bb3d7c5280870d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sanity: 49
+  Sanity: 100
+  DrainDistance: 75
+  DrainSpeed: 2
   sanityBar: {fileID: 1480072834}
 --- !u!114 &6469119363987954542
 MonoBehaviour:

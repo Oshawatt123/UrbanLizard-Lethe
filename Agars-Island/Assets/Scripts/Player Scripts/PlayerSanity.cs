@@ -7,13 +7,18 @@ using UnityEngine.UI;
 public class PlayerSanity : MonoBehaviour
 {
     public float Sanity;
+    public float DrainDistance;
+    public float DrainSpeed;
+
     private float maxSanity = 100f;
     [SerializeField] private Slider sanityBar;
+
+    private GameObject Enemy;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
     // Update is called once per frame
@@ -21,9 +26,25 @@ public class PlayerSanity : MonoBehaviour
     {
         sanityBar.value = (Sanity / maxSanity) * 100f;
 
-        if (Input.GetKeyDown(KeyCode.K))
+        float DistToEnemy = Vector3.Distance(this.transform.position, Enemy.transform.position);
+        //If enemy is close enough to drain sanity
+        if(DistToEnemy <= DrainDistance)
         {
-            Sanity = 100;
+            Vector3 VectToEnemy = Enemy.transform.position - this.transform.position;
+            RaycastHit Hit;
+
+            //Check if in Viewport
+            if (Enemy.GetComponent<MeshRenderer>().isVisible)
+            {
+                if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit))
+                {
+                    if (Hit.transform.CompareTag("Enemy"))
+                    {
+                        //Drain Sanity
+                        Sanity -= DrainSpeed * Time.deltaTime;
+                    }
+                }
+            }
         }
     }
 
@@ -32,6 +53,7 @@ public class PlayerSanity : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Contact");
+            Time.timeScale = 0;
         }
     }
 }
