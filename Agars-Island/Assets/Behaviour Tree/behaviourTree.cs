@@ -62,7 +62,6 @@ namespace BehaviourTree
         public override NodeState tick()
         {
             // tick the node we are on
-            Debug.Log("Selector child index : " + currentNodeIndex);
             childNodeReturnValue = childNodes[currentNodeIndex].tick();
 
             // if they're running still, then we say we're still running

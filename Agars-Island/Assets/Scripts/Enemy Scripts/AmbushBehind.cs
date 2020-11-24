@@ -60,6 +60,7 @@ public class AmbushBehind : BT_Behaviour
             }
         }
 
+        localBB.ForceCharge = true;
         Self.transform.position = ClosestPoint.transform.position;
         agent.enabled = true;
 

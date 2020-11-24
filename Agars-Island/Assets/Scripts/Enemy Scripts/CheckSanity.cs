@@ -27,15 +27,20 @@ public class CheckSanity : BT_Behaviour
     public override NodeState tick()
     {
         float DistToPlayer = Vector3.Distance(Player.transform.position, Self.position);
-        if(DistToPlayer < 20 || Player.GetComponent<PlayerSanity>().Sanity > SanityLimit)
+        //Check if AI is forcing a direct charge
+        if (LocalBB.ForceCharge || DistToPlayer < 22)
         {
-            Player.transform.GetChild(1).gameObject.SetActive(false);
+            return NodeState.NODE_SUCCESS;
+        }
+
+        //Otherwise compare sanity to threshold for this behaviour
+        if(Player.GetComponent<PlayerSanity>().Sanity > SanityLimit)
+        {
             return NodeState.NODE_FAILURE;
         }
 
         else
         {
-            Player.transform.GetChild(1).gameObject.SetActive(true);
             return NodeState.NODE_SUCCESS;
         }
     }

@@ -18,6 +18,7 @@ public class localTree : MonoBehaviour
     public Vector3 moveToLocation;
     public bool FixedMoveLocation;
     public Vector3 StoredPosition;
+    public bool ForceCharge;
 
     public void setMoveToLocation(Vector3 location)
     {

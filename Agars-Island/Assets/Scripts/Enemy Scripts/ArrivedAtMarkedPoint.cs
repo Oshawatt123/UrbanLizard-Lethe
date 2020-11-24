@@ -22,6 +22,10 @@ public class ArrivedAtMarkedPoint : BT_Behaviour
         //Check Distance on route to point
         if (agent.remainingDistance == 0)
         {
+            if (localBB.ForceCharge)
+            {
+                localBB.ForceCharge = false;
+            }
             //Set moving to preset point to false
             localBB.FixedMoveLocation = false;
         }

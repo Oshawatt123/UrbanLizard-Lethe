@@ -37,6 +37,7 @@ public class MoveToAmbush : BT_Behaviour
 
     public override NodeState tick()
     {
+        Player.transform.GetChild(1).gameObject.SetActive(true);
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
         {
