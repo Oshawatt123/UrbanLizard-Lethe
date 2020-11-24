@@ -22,6 +22,8 @@ public class GasPuzzleLogic : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI timerText;
 
+    public BoxCollider gasArea;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,27 +33,34 @@ public class GasPuzzleLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fillDelta = playerSlider.value;
-
-        gasFillAmount += fillDelta * Time.deltaTime;
-
-        gasFullSlider.value = gasFillAmount;
-
-        if (fillDelta >= pressureMax)
+        if (gasFullSlider.value < gasFullSlider.maxValue)
         {
-            timeAtPressureMax = Mathf.Clamp(timeAtPressureMax + Time.deltaTime, 0, pressureSustainTime);
+            fillDelta = playerSlider.value;
+
+            gasFillAmount += fillDelta * Time.deltaTime;
+
+            gasFullSlider.value = gasFillAmount;
+
+            if (fillDelta >= pressureMax)
+            {
+                timeAtPressureMax = Mathf.Clamp(timeAtPressureMax + Time.deltaTime, 0, pressureSustainTime);
+            }
+            else
+            {
+                timeAtPressureMax = Mathf.Clamp(timeAtPressureMax - Time.deltaTime, 0, pressureSustainTime);
+            }
+
+            float R = Mapping.Map(0, pressureSustainTime, 0, 1, timeAtPressureMax);
+            float A = Mapping.Map(0, pressureSustainTime, 0, 1, timeAtPressureMax);
+
+            timerText.color = new Color(R, 0, 0, A);
+            timerText.text = timeAtPressureMax.ToString("0.00");
+
+            gasSliderBGImage.color = new Color(R, 0, 0, A);
         }
         else
         {
-            timeAtPressureMax = Mathf.Clamp(timeAtPressureMax - Time.deltaTime, 0, pressureSustainTime);
+            gasArea.isTrigger = true;
         }
-
-        float R = Mapping.Map(0, pressureSustainTime, 0, 1, timeAtPressureMax);
-        float A = Mapping.Map(0, pressureSustainTime, 0, 1, timeAtPressureMax);
-
-        timerText.color = new Color(R, 0, 0, A);
-        timerText.text = timeAtPressureMax.ToString("0.00");
-
-        gasSliderBGImage.color = new Color(R, 0, 0, A);
     }
 }

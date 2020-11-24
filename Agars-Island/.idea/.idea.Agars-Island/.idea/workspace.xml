@@ -69,10 +69,10 @@
         <option value="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" />
         <option value="$PROJECT_DIR$/Assets/GasPuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GasPuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GasPuzzleLogic.cs" />
       </list>
     </option>
   </component>
@@ -118,7 +118,8 @@
       <workItem from="1605475170804" duration="2947000" />
       <workItem from="1605709140250" duration="7254000" />
       <workItem from="1605734501161" duration="3210000" />
-      <workItem from="1605799634104" duration="4225000" />
+      <workItem from="1605799634104" duration="4226000" />
+      <workItem from="1606157757179" duration="843000" />
     </task>
     <servers />
   </component>
