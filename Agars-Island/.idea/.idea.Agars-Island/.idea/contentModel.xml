@@ -18,6 +18,7 @@
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
+        <e p="ScrewTurnOnClick.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemy Scripts" t="Include">
             <e p="AIControl.cs" t="Include" />
@@ -60,6 +61,7 @@
             <e p="LoadInventory.cs" t="Include" />
           </e>
         </e>
+        <e p="ShortWiresPuzzleManager.cs" t="Include" />
         <e p="Thirdparty" t="Include">
           <e p="_Flashlight PRO" t="Include">
             <e p="_Assets" t="Include">

@@ -60,7 +60,7 @@ public class GasPuzzleLogic : MonoBehaviour
         }
         else
         {
-            gasArea.isTrigger = true;
+            gasArea.enabled = false;
         }
     }
 }
