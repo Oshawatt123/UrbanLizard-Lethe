@@ -33,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/44/92859c07/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MoveWire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/ac/e994a195/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GasPuzzleLogic.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,12 +72,13 @@
         <option value="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" />
         <option value="$PROJECT_DIR$/Assets/GasPuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GasPuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/ShortWiresPuzzleManager.cs" />
         <option value="$PROJECT_DIR$/Assets/ScrewTurnOnClick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/MoveWire.cs" />
       </list>
     </option>
   </component>
@@ -124,7 +126,8 @@
       <workItem from="1605734501161" duration="3210000" />
       <workItem from="1605799634104" duration="4226000" />
       <workItem from="1606157757179" duration="843000" />
-      <workItem from="1606240099005" duration="3310000" />
+      <workItem from="1606240099005" duration="3571000" />
+      <workItem from="1606304466101" duration="12743000" />
     </task>
     <servers />
   </component>

@@ -14,7 +14,7 @@ public class ActivateWorldCanvas : Interactable
     
     public override void Interact()
     {
-        HUDmanager.HidePlayerHUDs(true);
+        HUDmanager.HidePlayerHUDs(true, GetComponent<Collider>());
         base.Interact();
     }
 

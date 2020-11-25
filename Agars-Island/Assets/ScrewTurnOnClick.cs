@@ -30,7 +30,7 @@ public class ScrewTurnOnClick : MonoBehaviour
     {
         if (pressed)
         {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - screwSpeed);
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - (screwSpeed));
             angleChange += screwSpeed;
         }
 
@@ -60,6 +60,21 @@ public class ScrewTurnOnClick : MonoBehaviour
     private void Fall()
     {
         if (transform.position.y > -1000)
-            transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y - (fallSpeed*Time.deltaTime), transform.position.z);
+    }
+
+    private void OnMouseDown()
+    {
+        pressed = true;
+    }
+
+    private void OnMouseUp()
+    {
+        pressed = false;
+    }
+
+    private void OnMouseExit()
+    {
+        pressed = false;
     }
 }

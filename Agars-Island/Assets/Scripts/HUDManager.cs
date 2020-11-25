@@ -20,6 +20,7 @@ public class HUDManager : MonoBehaviour
     private CanvasGroup puzzleGroup = null;
 
     private bool altUIOpen = false;
+    private Collider altCollider;
 
     private List<CanvasGroup> allCanvases = new List<CanvasGroup>();
 
@@ -90,10 +91,11 @@ public class HUDManager : MonoBehaviour
         MouseModeUI();
     }
 
-    public void HidePlayerHUDs(bool altUIOpen = false)
+    public void HidePlayerHUDs(bool altUIOpen = false, Collider altCollider = null)
     {
         puzzleOpen = false;
         this.altUIOpen = altUIOpen;
+        this.altCollider = altCollider;
         puzzleGroup = null;
         inventoryOpen = false;
 
@@ -103,12 +105,18 @@ public class HUDManager : MonoBehaviour
         {
             GroupSwapper.HideCanvasGroup(group);
         }
+
+        if (altUIOpen)
+            altCollider.enabled = false;
         
         MouseModeUI();
     }
 
     public void ResetHUD()
     {
+        if (altUIOpen)
+            altCollider.enabled = true;
+        
         Debug.Log("Reset HUD");
         puzzleOpen = false;
         altUIOpen = false;
