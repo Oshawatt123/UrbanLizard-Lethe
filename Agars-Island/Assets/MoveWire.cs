@@ -10,20 +10,24 @@ public class MoveWire : MonoBehaviour
 
     private Vector3 startPoint;
 
-    [SerializeField] private Transform wireBox;
+    public Transform wireBox;
 
 
     private float originalSize;
     
     private Vector3 wireBoxScale;
 
-    [SerializeField] private Transform wireBegin;
+    public Transform wireBegin;
 
-    [SerializeField] private GameObject wireEnd;
+    public GameObject wireEnd;
 
     public LayerMask wireEndLayer;
 
+    private BoxCollider collider;
+    private Vector3 originalColliderSize;
+
     private bool wireComplete;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,10 @@ public class MoveWire : MonoBehaviour
         wireBoxScale = wireBox.localScale;
 
         originalSize = wireBox.GetComponent<Renderer>().bounds.size.z; // this is the size of the object's DEPTH (what looks to be its length from the player's POV)
+
+        collider = GetComponent<BoxCollider>();
+
+        originalColliderSize = collider.size;
     }
 
     // Update is called once per frame
@@ -55,31 +63,14 @@ public class MoveWire : MonoBehaviour
         //Debug.Log(newLocation);
 
         // update our location
-        transform.position = newLocation;
+        SetPosition(newLocation);
 
-        // set out local Z position to 0, so we are still flush with the box behind
-        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
-        //move to new position
-        newLocation = transform.position;
-        
-        
-        // Calculate rotation
-        Vector3 direction = newLocation - wireBegin.position;
-        transform.right = direction;
-
-        
-        // Make the wire as long as it needs to be
-        float dist = direction.magnitude;
-        
-        Vector3 rescale = wireBox.localScale;
-        rescale.x = getScaleFromSize(dist);
-        
-
-        wireBox.localScale = rescale;
+        collider.size = originalColliderSize * 2;
     }
 
     private void OnMouseUpAsButton()
     {
+        wireComplete = false;
         //RaycastHit hitEnd;
         //bool atEnd = Physics.SphereCast(transform.position, 1f, transform.up, out hitEnd, 1f, wireEndLayer);
 
@@ -93,48 +84,16 @@ public class MoveWire : MonoBehaviour
             {
                 Debug.Log("Wire complete!");
                 wireComplete = true;
-                transform.position = wireEnd.transform.position;
-
-                // set out local Z position to 0, so we are still flush with the box behind
-                transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
-
-                // Calculate rotation
-                Vector3 direction = wireEnd.transform.position - wireBegin.position;
-                transform.right = direction;
-
-        
-                // Make the wire as long as it needs to be
-                float dist = direction.magnitude;
-        
-                Vector3 rescale = wireBox.localScale;
-                rescale.x = getScaleFromSize(dist);
-        
-
-                wireBox.localScale = rescale;
+                SetPosition(wireEnd.transform.position);
             }
         }
         
-        if (hits.Length == 0)
+        if (hits.Length == 0 || wireComplete == false)
         {
-            transform.position = startPoint;
-
-            // set out local Z position to 0, so we are still flush with the box behind
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
-
-            // Calculate rotation
-            Vector3 direction = startPoint - wireBegin.position;
-            transform.right = direction;
-
-        
-            // Make the wire as long as it needs to be
-            float dist = direction.magnitude;
-        
-            Vector3 rescale = wireBox.localScale;
-            rescale.x = getScaleFromSize(dist);
-        
-
-            wireBox.localScale = rescale;
+            SetPosition(startPoint);
         }
+
+        collider.size = originalColliderSize;
     }
 
     float getScaleFromSize(float newSize)
@@ -149,5 +108,30 @@ public class MoveWire : MonoBehaviour
         //Debug.LogWarning(bounds.size.y.ToString());
 
         Gizmos.DrawWireSphere(transform.position, 0.1f);
+    }
+
+    private void SetPosition(Vector3 position)
+    {
+        //move to new position
+        transform.position = position;
+        
+        // set out local Z position to 0, so we are still flush with the box behind
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
+
+        position = transform.position;
+        
+        // Calculate rotation
+        Vector3 direction = position - wireBegin.position;
+        transform.right = direction;
+
+        
+        // Make the wire as long as it needs to be
+        float dist = direction.magnitude;
+        
+        Vector3 rescale = wireBox.localScale;
+        rescale.x = getScaleFromSize(dist);
+        
+
+        wireBox.localScale = rescale;
     }
 }

@@ -15,6 +15,7 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
+        <e p="DrawLine.cs" t="Include" />
         <e p="MoveWire.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
@@ -114,6 +115,7 @@
             <e p="RadiatorGames.cs" t="Include" />
           </e>
         </e>
+        <e p="UpdateWireMaterials.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
