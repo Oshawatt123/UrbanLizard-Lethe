@@ -16,7 +16,10 @@
           <e p="localTree.cs" t="Include" />
         </e>
         <e p="DrawLine.cs" t="Include" />
+        <e p="MorseCodeReader.cs" t="Include" />
+        <e p="MorseCodeSwitch.cs" t="Include" />
         <e p="MoveWire.cs" t="Include" />
+        <e p="ResetMorsePuzzle.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
@@ -64,6 +67,8 @@
           </e>
         </e>
         <e p="ShortWiresPuzzleManager.cs" t="Include" />
+        <e p="SpaceMorseButton.cs" t="Include" />
+        <e p="Switch.cs" t="Include" />
         <e p="Thirdparty" t="Include">
           <e p="_Flashlight PRO" t="Include">
             <e p="_Assets" t="Include">
