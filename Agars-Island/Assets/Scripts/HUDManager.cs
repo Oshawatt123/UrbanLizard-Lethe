@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using RadiatorGames.UI.SwapCanvasGroup;
+using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class HUDManager : MonoBehaviour
     private List<CanvasGroup> allCanvases = new List<CanvasGroup>();
 
     private static PlayerMovement playerMovement;
+    private static ToggleFlashlight TF;
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,7 @@ public class HUDManager : MonoBehaviour
         allCanvases.Add(inventoryGroup);
 
         playerMovement = GetComponent<PlayerMovement>();
+        TF = GetComponent<ToggleFlashlight>();
     }
 
     // Update is called once per frame
@@ -139,6 +142,7 @@ public class HUDManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         playerMovement.RotationSpeed = 10f;
+        TF.canToggle = true;
     }
 
     public static void MouseModeUI()
@@ -146,6 +150,7 @@ public class HUDManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         playerMovement.RotationSpeed = 0f;
+        TF.canToggle = false;
     }
 
     public bool ShouldInteract()

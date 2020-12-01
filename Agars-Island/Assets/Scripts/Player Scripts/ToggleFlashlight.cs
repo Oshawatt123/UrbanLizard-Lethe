@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToggleFlashlight : MonoBehaviour
 {
     private Flashlight_PRO LightScript;
+    [HideInInspector] public bool canToggle = true;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class ToggleFlashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canToggle)
         {
             LightScript.Switch();
 

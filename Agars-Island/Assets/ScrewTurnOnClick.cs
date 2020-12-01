@@ -39,6 +39,7 @@ public class ScrewTurnOnClick : MonoBehaviour
             if (!complete)
             {
                 manager.ScrewComplete();
+                GetComponent<BoxCollider>().enabled = false;
                 complete = true;
             }
 

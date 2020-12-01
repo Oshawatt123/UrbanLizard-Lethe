@@ -37,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Switch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScrewTurnOnClick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ResetMorsePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,7 +85,6 @@
         <option value="$PROJECT_DIR$/Assets/ShortWiresPuzzleManager.cs" />
         <option value="$PROJECT_DIR$/Assets/ScrewTurnOnClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/MoveWire.cs" />
         <option value="$PROJECT_DIR$/Assets/UpdateWireMaterials.cs" />
         <option value="$PROJECT_DIR$/Assets/DrawLine.cs" />
@@ -93,6 +93,8 @@
         <option value="$PROJECT_DIR$/Assets/SpaceMorseButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Switch.cs" />
         <option value="$PROJECT_DIR$/Assets/MorseCodeSwitch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
       </list>
     </option>
   </component>
@@ -144,6 +146,7 @@
       <workItem from="1606304466101" duration="13319000" />
       <workItem from="1606393198909" duration="6857000" />
       <workItem from="1606738229004" duration="3205000" />
+      <workItem from="1606759837930" duration="390000" />
     </task>
     <servers />
   </component>
