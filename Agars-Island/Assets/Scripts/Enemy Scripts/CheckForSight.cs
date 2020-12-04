@@ -35,7 +35,7 @@ public class CheckForSight : BT_Behaviour
             RaycastHit HitObject;
             if (Physics.Raycast(Self.position, VectToPlayer, out HitObject))
             {
-                Debug.DrawRay(Self.position, VectToPlayer, Color.blue);
+                //Debug.DrawRay(Self.position, VectToPlayer, Color.blue);
                 //If Hit Player without interuption
                 if (HitObject.transform.gameObject.tag == "Player")
                 {

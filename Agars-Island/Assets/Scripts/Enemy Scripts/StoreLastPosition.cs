@@ -21,9 +21,7 @@ public class StoreLastPosition : BT_Behaviour
 
     public override NodeState tick()
     {
-        Player.transform.GetChild(1).gameObject.SetActive(true);
         localBB.StoredPosition = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
-        Debug.Log("Stored");
         return NodeState.NODE_SUCCESS;
     }
 

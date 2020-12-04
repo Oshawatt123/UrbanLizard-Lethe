@@ -165,7 +165,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.85
+  m_fontSize: 40.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -406,7 +406,7 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &171491403
+--- !u!1 &305196718
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,22 +414,67 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 171491404}
-  - component: {fileID: 171491405}
+  - component: {fileID: 305196719}
+  - component: {fileID: 305196720}
   m_Layer: 8
-  m_Name: TestCone
+  m_Name: AttackCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &171491404
+  m_IsActive: 1
+--- !u!4 &305196719
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171491403}
+  m_GameObject: {fileID: 305196718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.939, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7714073899440218715}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &305196720
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305196718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 6
+  m_Height: 10
+  m_Direction: 0
+  m_Center: {x: 5, y: 0, z: 0}
+--- !u!1 &373322689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373322690}
+  - component: {fileID: 373322691}
+  m_Layer: 8
+  m_Name: TestCone (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &373322690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373322689}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -437,13 +482,13 @@ Transform:
   m_Father: {fileID: 4392052437701796766}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!208 &171491405
+--- !u!208 &373322691
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171491403}
+  m_GameObject: {fileID: 373322689}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
@@ -692,7 +737,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.5
+  m_fontSize: 43.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1171,7 +1216,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.6
+  m_fontSize: 42.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1304,7 +1349,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.5
+  m_fontSize: 42.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1680,6 +1725,7 @@ GameObject:
   - component: {fileID: 6469119363987954542}
   - component: {fileID: 4119657073525232358}
   - component: {fileID: 2078106493}
+  - component: {fileID: 2750013172553713569}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1699,7 +1745,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7714073899073714951}
-  - {fileID: 171491404}
+  - {fileID: 373322690}
   - {fileID: 2045640523}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1830,7 +1876,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3660028597552631826}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4ee778f5b4a7dd4bb3d7c5280870d66, type: 3}
   m_Name: 
@@ -1851,6 +1897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc24a1c6a2f3923408c20d40f0427836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canToggle: 1
+  Battery: 100
+  DrainSpeed: 1
 --- !u!114 &4119657073525232358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,6 +1928,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batteryText: {fileID: 704455526}
   medsText: {fileID: 1434603127}
+--- !u!114 &2750013172553713569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3660028597552631826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e67c4dae4cf7904e864589fcd713399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackRange: 15
+  DrainAmount: 15
+  ActivationCooldown: 5
+  Mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &6635144614236346951
 GameObject:
   m_ObjectHideFlags: 0

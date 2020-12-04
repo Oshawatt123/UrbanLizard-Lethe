@@ -70,13 +70,13 @@ public class MoveToAmbush : BT_Behaviour
         float dist = agent.remainingDistance;
         //Check if arrived at ambush position
         if (dist <= 0 && !DestSetFrame)
-        {
+        {            
+            //Disable Cone
+            Player.transform.GetChild(1).gameObject.SetActive(false);
+
             Self.transform.GetChild(0).gameObject.SetActive(true);
             agent.enabled = false;
             Self.transform.position += Self.transform.up * 5;
-
-            //Disable Cone
-            Player.transform.GetChild(1).gameObject.SetActive(false);
 
             return NodeState.NODE_SUCCESS;
         }

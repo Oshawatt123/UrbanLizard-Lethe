@@ -104,7 +104,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3873757201971433342}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 4
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3873757201971433342}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a335aede9ae7e84f8fdc4df4b48727b, type: 3}
   m_Name: 
@@ -134,8 +134,9 @@ MonoBehaviour:
   moveToLocation: {x: 0, y: 0, z: 0}
   FixedMoveLocation: 0
   StoredPosition: {x: 0, y: 0, z: 0}
+  ForceCharge: 0
   AmbushRouteDelay: 1
-  SightRange: 40
+  SightRange: 50
   MinAmbushTime: 3
   MaxAmbushTime: 6
   WanderDistance: 80

@@ -23,7 +23,6 @@ public class DirectCharge : BT_Behaviour
 
     public override NodeState tick()
     {
-        Debug.Log("Charging!");
         //Disable Player Obstacle Cone
         Player.transform.GetChild(1).gameObject.SetActive(false);
 

@@ -28,8 +28,10 @@ public class CheckSanity : BT_Behaviour
     {
         float DistToPlayer = Vector3.Distance(Player.transform.position, Self.position);
         //Check if AI is forcing a direct charge
-        if (LocalBB.ForceCharge || DistToPlayer < 22)
+        if (LocalBB.ForceCharge || DistToPlayer < 25)
         {
+            //Disable Cone
+            Player.transform.GetChild(1).gameObject.SetActive(false);
             return NodeState.NODE_SUCCESS;
         }
 
