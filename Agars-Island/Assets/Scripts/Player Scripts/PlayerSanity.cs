@@ -33,15 +33,20 @@ public class PlayerSanity : MonoBehaviour
             Vector3 VectToEnemy = Enemy.transform.position - this.transform.position;
             RaycastHit Hit;
 
-            //Check if in Viewport
-            if (Enemy.GetComponent<MeshRenderer>().isVisible)
+            Vector3 MyPosition = Camera.main.WorldToViewportPoint(Enemy.transform.position);
+            Debug.Log(MyPosition);
+            if (MyPosition.x >= 0.0f && MyPosition.x <= 1.0f)
             {
-                if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit))
+                if (MyPosition.y >= 0.0f && MyPosition.y <= 1.0f)
                 {
-                    if (Hit.transform.CompareTag("Enemy"))
+                    Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
+                    if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit))
                     {
-                        //Drain Sanity
-                        Sanity -= DrainSpeed * Time.deltaTime;
+                        if (Hit.transform.CompareTag("Enemy"))
+                        {
+                            //Drain Sanity
+                            Sanity -= DrainSpeed * Time.deltaTime;
+                        }
                     }
                 }
             }
