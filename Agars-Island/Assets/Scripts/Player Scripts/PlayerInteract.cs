@@ -7,6 +7,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Transform CamTransform;
     [SerializeField] private float InteractLength;
     private HUDManager HUDmanager;
+    [SerializeField] private LayerMask layers;
     
     // Start is called before the first frame update
     void Start()
@@ -38,8 +39,8 @@ public class PlayerInteract : MonoBehaviour
         
         // cast a ray
         RaycastHit rayInfo;
-        Debug.DrawRay(CamTransform.position, rayDirection, Color.magenta, 2.0f);
-        if (Physics.Raycast(CamTransform.position, rayDirection, out rayInfo))
+        Debug.DrawRay(CamTransform.position, rayDirection, Color.magenta, 10.0f);
+        if (Physics.Raycast(CamTransform.position, rayDirection, out rayInfo, layers))
         {
             Debug.Log("Ray hit " + rayInfo.transform.name);
             // check tag on object
