@@ -40,7 +40,7 @@ public class PlayerInteract : MonoBehaviour
         // cast a ray
         RaycastHit rayInfo;
         Debug.DrawRay(CamTransform.position, rayDirection, Color.magenta, 10.0f);
-        if (Physics.Raycast(CamTransform.position, rayDirection, out rayInfo, layers))
+        if (Physics.Raycast(CamTransform.position, rayDirection, out rayInfo, InteractLength, ~layers))
         {
             Debug.Log("Ray hit " + rayInfo.transform.name);
             // check tag on object

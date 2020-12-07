@@ -20,7 +20,7 @@ public class FlashlightAttack : MonoBehaviour
     void Start()
     {
         ThisToggle = this.GetComponent<ToggleFlashlight>();
-        EnemyInCone = false;
+        EnemyInCone = true;
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
     }
@@ -45,8 +45,10 @@ public class FlashlightAttack : MonoBehaviour
                     RaycastHit HitObject;
                     Vector3 VectToEnemy = Enemy.transform.position - this.transform.position;
                     //Check for line of sight
+                    Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
                     if (Physics.Raycast(this.transform.position, VectToEnemy, out HitObject, 100f, ~Mask))
                     {
+                        Debug.Log(HitObject.transform.name);
                         if(HitObject.transform.gameObject == Enemy)
                         {
                             //Play Dispersal Animation
