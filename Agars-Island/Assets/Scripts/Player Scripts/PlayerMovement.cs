@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private float BodyRoationX;
     private float CamRotationY;
 
-    private CharacterController Controller;
+    //private CharacterController Controller;
 
     [SerializeField] private Slider staminaBar;
 
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        Controller = this.GetComponent<CharacterController>();
+        //Controller = this.GetComponent<CharacterController>();
         Stamina = MaxStamina;
         NextDrainTime = Time.time + SprintDrainDelay;
         IsHiding = false;
@@ -60,30 +60,21 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Check for sprint toggle
-        SprintToggle();
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            SprintToggle();
+        }
 
         //Drain Sprint after delay
         if (IsSprinting && Time.time >= NextDrainTime)
         {
-            Stamina -= 5;
-            NextDrainTime = Time.time + SprintDrainDelay;
-            //Check if stamina is depleted
-            if(Stamina <= 0)
-            {
-                IsSprinting = false;
-                MoveSpeed /= 2;
-                NextRecTime = Time.time + SprintRecoverDelay;
-            }
+            DrainSprint();
         }
 
         //As long as not sprinting, recover stamina
         else if (!IsSprinting && Time.time >= NextRecTime)
         {
-            if(Stamina < MaxStamina)
-            {
-                Stamina += 5;
-                NextRecTime = Time.time + SprintRecoverDelay;
-            }
+            RecoverSprint();
         }
         
         staminaBar.value = (Stamina / (float)MaxStamina)*100.0f;
@@ -113,42 +104,55 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, BodyRotationTarget, Time.deltaTime * RotSmoothSpeed);
         Camera.transform.localRotation = Quaternion.Lerp(Camera.transform.localRotation, CamTargetRotation, Time.deltaTime * RotSmoothSpeed);
     }
-
     void Movement()
     {
-        Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        inputDir.Normalize();
-        
-        VelocityY += Gravity * Time.deltaTime;
+        float MoveH = Input.GetAxisRaw("Horizontal");
+        float MoveV = Input.GetAxisRaw("Vertical");
 
-        if (Controller.isGrounded)
+        Vector3 MoveDir = new Vector3(MoveH, 0, MoveV) * MoveSpeed;
+
+        Vector3 NewPos = PlayerBody.position + PlayerBody.transform.TransformDirection(MoveDir);
+
+        PlayerBody.MovePosition(NewPos);
+
+        if(MoveDir == Vector3.zero && IsSprinting)
         {
-            VelocityY = 0;
+            SprintToggle();
         }
-
-        
-
-        Vector3 Velocity = (this.transform.forward * inputDir.y + this.transform.right * inputDir.x) * MoveSpeed + Vector3.up * VelocityY;
-
-        Controller.Move(Velocity * Time.deltaTime);
     }
-
     void SprintToggle()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (IsSprinting)
         {
-            if (IsSprinting)
-            {
-                IsSprinting = false;
-                MoveSpeed /= 2;
-                NextRecTime = Time.time + SprintRecoverDelay;
-            }
+            IsSprinting = false;
+            MoveSpeed /= 2;
+            NextRecTime = Time.time + SprintRecoverDelay;
+        }
 
-            else if(Stamina > 0)
-            {
-                IsSprinting = true;
-                MoveSpeed *= 2;
-            }
+        else if (Stamina > 0)
+        {
+            IsSprinting = true;
+            MoveSpeed *= 2;
+        }
+    }
+    void DrainSprint()
+    {
+        Stamina -= 5;
+        NextDrainTime = Time.time + SprintDrainDelay;
+        //Check if stamina is depleted
+        if (Stamina <= 0)
+        {
+            IsSprinting = false;
+            MoveSpeed /= 2;
+            NextRecTime = Time.time + SprintRecoverDelay;
+        }
+    }
+    void RecoverSprint()
+    {
+        if (Stamina < MaxStamina)
+        {
+            Stamina += 5;
+            NextRecTime = Time.time + SprintRecoverDelay;
         }
     }
 }

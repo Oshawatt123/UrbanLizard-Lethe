@@ -1643,7 +1643,6 @@ GameObject:
   - component: {fileID: 2981057861823472789}
   - component: {fileID: 6201239093581621549}
   - component: {fileID: 4874257008131080959}
-  - component: {fileID: 4874257008131080957}
   - component: {fileID: 4874257008131080958}
   - component: {fileID: 3660028597552631825}
   - component: {fileID: 8087760156250480478}
@@ -1651,6 +1650,7 @@ GameObject:
   - component: {fileID: 4119657073525232358}
   - component: {fileID: 2078106493}
   - component: {fileID: 2750013172553713569}
+  - component: {fileID: 7714073899872226177}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1734,28 +1734,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 16
   m_CollisionDetection: 0
---- !u!143 &4874257008131080957
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3660028597552631826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4874257008131080958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,7 +1755,7 @@ MonoBehaviour:
   CamMinY: -60
   CamMaxY: 75
   RotSmoothSpeed: 10
-  MoveSpeed: 5
+  MoveSpeed: 0.1
   Stamina: 0
   MaxStamina: 100
   SprintDrainDelay: 1
@@ -1871,9 +1853,24 @@ MonoBehaviour:
   AttackRange: 15
   DrainAmount: 15
   ActivationCooldown: 5
+  EnemyInCone: 0
   Mask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!136 &7714073899872226177
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3660028597552631826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6635144614236346951
 GameObject:
   m_ObjectHideFlags: 0
