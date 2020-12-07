@@ -14,18 +14,18 @@ public class PlayerSanity : MonoBehaviour
     [SerializeField] private Slider sanityBar;
 
     private GameObject Enemy;
+    private InventoryTracker Inventory;
 
     // Start is called before the first frame update
     void Start()
     {
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
+        Inventory = this.GetComponent<InventoryTracker>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        sanityBar.value = (Sanity / maxSanity) * 100f;
-
         float DistToEnemy = Vector3.Distance(this.transform.position, Enemy.transform.position);
         //If enemy is close enough to drain sanity
         if(DistToEnemy <= DrainDistance)
@@ -51,6 +51,15 @@ public class PlayerSanity : MonoBehaviour
                 }
             }
         }
+        sanityBar.value = (Sanity / maxSanity) * 100f;
+
+        if(Input.GetKeyDown(KeyCode.M) && Inventory.meds > 0)
+        {
+            Inventory.RemoveMeds(1);
+            Sanity += 25f;
+            Mathf.Clamp(Sanity, 0, 100);
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -6,9 +6,9 @@ using TMPro;
 
 public class InventoryTracker : MonoBehaviour
 {
-    private int batteries;
+    public int batteries;
 
-    private int meds;
+    public int meds;
 
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
