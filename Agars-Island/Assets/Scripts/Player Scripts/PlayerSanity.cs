@@ -15,6 +15,7 @@ public class PlayerSanity : MonoBehaviour
 
     private GameObject Enemy;
     private InventoryTracker Inventory;
+    public LayerMask Mask;
 
     // Start is called before the first frame update
     void Start()
@@ -34,14 +35,14 @@ public class PlayerSanity : MonoBehaviour
             RaycastHit Hit;
 
             Vector3 MyPosition = Camera.main.WorldToViewportPoint(Enemy.transform.position);
-            //Debug.Log(MyPosition);
             if (MyPosition.x >= 0.0f && MyPosition.x <= 1.0f)
             {
                 if (MyPosition.y >= 0.0f && MyPosition.y <= 1.0f)
                 {
-                    //Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
-                    if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit))
+                    Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
+                    if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit, 75f, ~Mask))
                     {
+                        Debug.Log("Here");
                         if (Hit.transform.CompareTag("Enemy"))
                         {
                             //Drain Sanity
