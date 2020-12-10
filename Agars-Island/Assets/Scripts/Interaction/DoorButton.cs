@@ -7,22 +7,31 @@ public class DoorButton : Interactable
     public Door door;
 
     private bool pressedOnce = false;
+
+    private InventoryTracker playerInv;
+    [SerializeField] private int clearanceLevel = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
         Init();
         // add this button to the door
         door.AddInteract();
+
+        playerInv = GameObject.Find("Player").GetComponent<InventoryTracker>();
     }
 
     public override void Interact()
     {
-        base.Interact();
-
-        if (!pressedOnce)
+        if (playerInv.GetKeycardLevel() >= clearanceLevel)
         {
-            pressedOnce = true;
-            door.Interact();
+            base.Interact();
+
+            if (!pressedOnce)
+            {
+                pressedOnce = true;
+                door.Interact();
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ public static class LoadInventory
             CreateSaveFile();
         }
 
-        int[] returnable = new int[2];
+        int[] returnable = new int[3];
         int index = 0;
         StreamReader sr = File.OpenText(FilePath);
         while (!sr.EndOfStream)

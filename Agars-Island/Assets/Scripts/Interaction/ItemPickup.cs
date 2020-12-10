@@ -31,6 +31,9 @@ public class ItemPickup : Interactable
             case "Meds":
                 playerInventory.AddMeds(1);
                 break;
+            case "Keycard1":
+                playerInventory.SetKeycardLevel(1);
+                break;
         }
 
         Destroy(gameObject);

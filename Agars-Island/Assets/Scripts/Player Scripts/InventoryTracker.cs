@@ -10,6 +10,8 @@ public class InventoryTracker : MonoBehaviour
 
     private int meds;
 
+    private int keycardLevel= 0;
+
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
     // Start is called before the first frame update
@@ -18,6 +20,7 @@ public class InventoryTracker : MonoBehaviour
         int[] loadedData = LoadInventory.Load();
         batteries = loadedData[0];
         meds = loadedData[1];
+        keycardLevel = loadedData[2];
         UpdateText();
     }
 
@@ -30,7 +33,7 @@ public class InventoryTracker : MonoBehaviour
     // TODO: Change this to call from a single object to avoid dependency issues
     private void OnApplicationQuit()
     {
-        int[] saveData = {batteries, meds};
+        int[] saveData = {batteries, meds, keycardLevel};
         LoadInventory.Save(saveData);
     }
 
@@ -41,6 +44,10 @@ public class InventoryTracker : MonoBehaviour
     public void AddMeds(int number) { meds += number; UpdateText(); }
     
     public void RemoveMeds(int number) { meds -= number; UpdateText(); }
+
+    public void SetKeycardLevel(int level) { keycardLevel = level; }
+
+    public int GetKeycardLevel() { return keycardLevel; }
 
     private void UpdateText()
     {

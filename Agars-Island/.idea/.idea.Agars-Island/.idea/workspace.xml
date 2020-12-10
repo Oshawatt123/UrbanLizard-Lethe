@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RandomTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RandomTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/ac/e994a195/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,9 +52,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/SpaceMorseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AITest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/ResetMorsePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeSwitch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/64/ec60fc76/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeReader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -68,10 +74,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryOpen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
         <option value="$PROJECT_DIR$/Assets/InventoryTracker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" />
         <option value="$PROJECT_DIR$/Assets/PuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" />
@@ -93,6 +97,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
       </list>
     </option>
   </component>
@@ -147,7 +155,7 @@
       <workItem from="1606759837930" duration="390000" />
       <workItem from="1607031797369" duration="2024000" />
       <workItem from="1607262116291" duration="30000" />
-      <workItem from="1607336181465" duration="2413000" />
+      <workItem from="1607336181465" duration="5571000" />
     </task>
     <servers />
   </component>
@@ -173,6 +181,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="539" y="324" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1605735141587" />
+    <state x="953" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607340647932">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="953" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607340647932" />
     <state x="628" y="311" width="928" height="816" key="dock-window-1" timestamp="1605717273706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
