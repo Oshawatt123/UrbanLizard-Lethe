@@ -20,9 +20,7 @@ public class GasPuzzleLogic : MonoBehaviour
     [SerializeField] private float pressureSustainTime;
     private float timeAtPressureMax;
 
-    [SerializeField] private TextMeshProUGUI timerText;
-
-    public BoxCollider gasArea;
+    public Transform gasArea;
 
     private bool dumpingPressure = false;
     public float pressureDumpTime = 0f;
@@ -78,14 +76,12 @@ public class GasPuzzleLogic : MonoBehaviour
                 float R = Mapping.Map(0, pressureSustainTime, 0, 1, timeAtPressureMax);
                 float A = Mapping.Map(0, pressureSustainTime, 0, 1, timeAtPressureMax);
 
-                timerText.color = new Color(R, 0, 0, A);
-                timerText.text = timeAtPressureMax.ToString("0.00");
-
                 gasSliderBGImage.color = new Color(R, 0, 0, A);
             }
             else
             {
-                gasArea.enabled = false;
+                // puzzle is complete!
+                gasArea.GetComponent<EditParticleScale>().TurnOff();
             }
         }
         else

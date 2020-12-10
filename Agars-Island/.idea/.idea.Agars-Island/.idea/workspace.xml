@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PuzzlePrefabs/GasPuzzlePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PuzzlePrefabs/GasPuzzlePrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/44/92859c07/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditParticleScale.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/SpaceMorseButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GasParticleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/ResetMorsePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -95,12 +96,14 @@
         <option value="$PROJECT_DIR$/Assets/MorseCodeSwitch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HUDManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/GasParticleScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/EditParticleScale.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" />
       </list>
     </option>
   </component>
@@ -156,6 +159,8 @@
       <workItem from="1607031797369" duration="2024000" />
       <workItem from="1607262116291" duration="30000" />
       <workItem from="1607336181465" duration="5571000" />
+      <workItem from="1607605962677" duration="3221000" />
+      <workItem from="1607610011315" duration="1985000" />
     </task>
     <servers />
   </component>
