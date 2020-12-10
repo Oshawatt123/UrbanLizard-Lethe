@@ -8,7 +8,7 @@ public class FlashlightAttack : MonoBehaviour
     public float AttackRange;
     public float DrainAmount;
     public float ActivationCooldown;
-    bool EnemyInCone;
+    public bool EnemyInCone;
 
     private ToggleFlashlight ThisToggle;
     private GameObject Enemy;
@@ -20,7 +20,7 @@ public class FlashlightAttack : MonoBehaviour
     void Start()
     {
         ThisToggle = this.GetComponent<ToggleFlashlight>();
-        EnemyInCone = true;
+        EnemyInCone = false;
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
     }

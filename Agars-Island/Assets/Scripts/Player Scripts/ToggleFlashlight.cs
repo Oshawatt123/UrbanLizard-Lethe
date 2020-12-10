@@ -8,12 +8,14 @@ public class ToggleFlashlight : MonoBehaviour
     [HideInInspector] public bool canToggle = true;
     public float Battery;
     public float DrainSpeed;
+    private InventoryTracker Inventory;
 
     // Start is called before the first frame update
     void Start()
     {
         LightScript = this.GetComponentInChildren<Flashlight_PRO>();
         Battery = 100f;
+        Inventory = this.GetComponent<InventoryTracker>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,12 @@ public class ToggleFlashlight : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canToggle && Battery > 0)
         {
             LightScript.Switch();
+        }
+
+        if (Input.GetKeyDown(KeyCode.L) && Inventory.batteries > 0)
+        {
+            Inventory.RemoveBattery(1);
+            Battery = 100f;
         }
     }
 }

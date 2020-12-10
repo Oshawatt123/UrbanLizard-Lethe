@@ -33,6 +33,8 @@ public class MoveToAmbush : BT_Behaviour
         AmbushRouteDelay = InRouteDelay;
 
         DestSetFrame = false;
+        Self.transform.GetChild(0).gameObject.SetActive(false);
+
     }
 
     public override NodeState tick()
