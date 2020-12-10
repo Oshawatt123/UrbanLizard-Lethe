@@ -102,8 +102,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
         <option value="$PROJECT_DIR$/Assets/GasParticleScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/EditParticleScale.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/EditParticleScale.cs" />
       </list>
     </option>
   </component>
@@ -160,7 +160,7 @@
       <workItem from="1607262116291" duration="30000" />
       <workItem from="1607336181465" duration="5571000" />
       <workItem from="1607605962677" duration="3221000" />
-      <workItem from="1607610011315" duration="1985000" />
+      <workItem from="1607610011315" duration="2698000" />
     </task>
     <servers />
   </component>
