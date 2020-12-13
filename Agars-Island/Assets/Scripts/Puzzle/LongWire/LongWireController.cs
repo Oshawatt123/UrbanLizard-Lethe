@@ -20,22 +20,27 @@ public class LongWireController : MonoBehaviour
         for (int i = 0; i < WireTiles.Count; i++)
         {
             GameObject Tile = WireTiles[i];
-            //Get Desired Tile Rotation
-            int TileRot = Tile.GetComponent<TileScript>().DesiredRotation;
-            //If rotation is equal to desired tile rotation
-            if (TileRot == Tile.transform.localRotation.y)
+            TileScript CurrentTileScript = Tile.GetComponent<TileScript>();
+            //Get each Desired Tile Rotation
+            for (int r = 0; r < CurrentTileScript.DesiredRotations.Count; r++)
             {
-                //Check if on final tile
-                if (i == WireTiles.Count - 1)
+                int TileRot = CurrentTileScript.DesiredRotations[r];
+                //If rotation is equal to desired tile rotation
+                if (TileRot == Tile.transform.localRotation.y)
                 {
-                    PuzzleComplete = true;
+                    //Check if on final tile
+                    if (i == WireTiles.Count - 1)
+                    {
+                        PuzzleComplete = true;
+                        return;
+                    }
                 }
-            }
-            //If tile is not in correct rotation, stop checking puzzle as impossible to be completed
-            else
-            {
-                PuzzleComplete = false;
-                break;
+                //If tile is last desired rotation, stop checking puzzle as impossible to be completed
+                else if(r == CurrentTileScript.DesiredRotations.Count - 1)
+                {
+                    PuzzleComplete = false;
+                    return;
+                }
             }
         }
     }
