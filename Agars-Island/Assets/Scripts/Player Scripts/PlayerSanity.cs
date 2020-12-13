@@ -35,19 +35,16 @@ public class PlayerSanity : MonoBehaviour
             RaycastHit Hit;
 
             Vector3 MyPosition = Camera.main.WorldToViewportPoint(Enemy.transform.position);
-            if (MyPosition.x >= 0.0f && MyPosition.x <= 1.0f)
+            if ((MyPosition.x >= 0.0f && MyPosition.x <= 1.0f) && (MyPosition.y >= 0.0f && MyPosition.y <= 1.0f) && MyPosition.z >= 0)
             {
-                if (MyPosition.y >= 0.0f && MyPosition.y <= 1.0f)
+                Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
+                if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit, 75f, ~Mask))
                 {
-                    Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
-                    if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit, 75f, ~Mask))
+                    Debug.Log("Here");
+                    if (Hit.transform.CompareTag("Enemy"))
                     {
-                        Debug.Log("Here");
-                        if (Hit.transform.CompareTag("Enemy"))
-                        {
-                            //Drain Sanity
-                            Sanity -= DrainSpeed * Time.deltaTime;
-                        }
+                        //Drain Sanity
+                        Sanity -= DrainSpeed * Time.deltaTime;
                     }
                 }
             }
