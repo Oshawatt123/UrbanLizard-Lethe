@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RadiatorGames.UI.SwapCanvasGroup;
 
+[RequireComponent(typeof(Collider))]
 public class ActivateWorldCanvas : Interactable
 {
     private HUDManager HUDmanager;

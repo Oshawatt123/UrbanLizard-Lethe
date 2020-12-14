@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/RandomTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RandomTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/TileScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,7 +88,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GasPuzzleLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/ShortWiresPuzzleManager.cs" />
         <option value="$PROJECT_DIR$/Assets/ScrewTurnOnClick.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/MoveWire.cs" />
         <option value="$PROJECT_DIR$/Assets/UpdateWireMaterials.cs" />
         <option value="$PROJECT_DIR$/Assets/DrawLine.cs" />
@@ -107,6 +108,7 @@
         <option value="$PROJECT_DIR$/Assets/EditParticleScale.cs" />
         <option value="$PROJECT_DIR$/Assets/BlockVertical.cs" />
         <option value="$PROJECT_DIR$/Assets/BlockHorizontal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" />
       </list>
     </option>
@@ -166,6 +168,7 @@
       <workItem from="1607605962677" duration="3221000" />
       <workItem from="1607610011315" duration="3293000" />
       <workItem from="1607899848418" duration="3265000" />
+      <workItem from="1607939274661" duration="4184000" />
     </task>
     <servers />
   </component>
