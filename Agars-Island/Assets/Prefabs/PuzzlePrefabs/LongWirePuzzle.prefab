@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7352507433499316568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4679152395567455862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bebb5d6b2d933f4fb2eb469c121a0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredRotations: 
 --- !u!1 &7352507434508449520
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,9 +22,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7352507434508449521}
+  - component: {fileID: 7352507433499316570}
+  - component: {fileID: 7352507433499316571}
   m_Layer: 0
   m_Name: LongWirePuzzle
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +49,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7352507433499316570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352507434508449520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85909f725dc2f5a419ae230087227d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WireTiles: []
+  PuzzleComplete: 0
+--- !u!114 &7352507433499316571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352507434508449520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6033f87f6083db840a69aedd7ace0e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4939545181175023828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,6 +154,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb9cb109ad22be94db4ef612ca865181, type: 3}
+--- !u!1 &4679152395567455862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 316231071309584034, guid: eb9cb109ad22be94db4ef612ca865181,
+    type: 3}
+  m_PrefabInstance: {fileID: 4939545181175023828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4679152395567455861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 316231071309584033, guid: eb9cb109ad22be94db4ef612ca865181,
