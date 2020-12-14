@@ -7,12 +7,9 @@ public class TileScript : MonoBehaviour
     public List<int> DesiredRotations;
 
     //Set Up Rotation
-    private void Update()
+    private void OnMouseDown()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            RotateTile();
-        }
+        RotateTile();
     }
 
     public void RotateTile()
