@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 9092779982253920376}
   - component: {fileID: 9092779982253920377}
   - component: {fileID: 9092779982253920390}
+  - component: {fileID: -202569329428745678}
   m_Layer: 0
   m_Name: '- Panel'
   m_TagString: Untagged
@@ -331,3 +332,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-202569329428745678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9092779982253920388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bebb5d6b2d933f4fb2eb469c121a0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DesiredRotations: 

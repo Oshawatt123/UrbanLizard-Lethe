@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7352507433499316568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4679152395567455862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bebb5d6b2d933f4fb2eb469c121a0fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DesiredRotations: 
 --- !u!1 &7352507434508449520
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,6 +11,7 @@ GameObject:
   - component: {fileID: 7352507434508449521}
   - component: {fileID: 7352507433499316570}
   - component: {fileID: 7352507433499316571}
+  - component: {fileID: 433358495}
   m_Layer: 0
   m_Name: LongWirePuzzle
   m_TagString: Interactable
@@ -75,6 +63,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6033f87f6083db840a69aedd7ace0e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &433358495
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352507434508449520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.5, z: 0.8}
+  m_Center: {x: -0.2, y: 0, z: 0.2}
 --- !u!1001 &4939545181175023828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,12 +155,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb9cb109ad22be94db4ef612ca865181, type: 3}
---- !u!1 &4679152395567455862 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 316231071309584034, guid: eb9cb109ad22be94db4ef612ca865181,
-    type: 3}
-  m_PrefabInstance: {fileID: 4939545181175023828}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4679152395567455861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 316231071309584033, guid: eb9cb109ad22be94db4ef612ca865181,
@@ -331,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 3993476930893444947, guid: e9811a8a6e7246a47819b1a78492c57d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3993476930893444947, guid: e9811a8a6e7246a47819b1a78492c57d,
         type: 3}
