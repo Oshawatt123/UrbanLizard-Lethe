@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileScript : MonoBehaviour
 {
-    public List<int> DesiredRotations;
+    public List<float> DesiredRotations;
     public Quaternion StartRotation;
 
     private void Start()

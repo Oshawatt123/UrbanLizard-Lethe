@@ -8,6 +8,7 @@ public class LongWireController : MonoBehaviour
     public List<GameObject> KeyWireTiles;
     public List<GameObject> AllWireTiles;
     public bool PuzzleComplete;
+    public GameObject CompleteIndic; 
 
     public void CheckPuzzle()
     {
@@ -19,14 +20,16 @@ public class LongWireController : MonoBehaviour
             //Get each Desired Tile Rotation
             for (int r = 0; r < CurrentTileScript.DesiredRotations.Count; r++)
             {
-                int TileRot = CurrentTileScript.DesiredRotations[r];
+                float TileRot = CurrentTileScript.DesiredRotations[r];
+                Debug.Log("Tile" + i + "= " + TileRot);
                 //If rotation is equal to desired tile rotation
-                if (TileRot == Tile.transform.localRotation.y)
+                if (TileRot == Tile.transform.localRotation.eulerAngles.y)
                 {
                     //Check if on final tile
                     if (i == KeyWireTiles.Count - 1)
                     {
                         PuzzleComplete = true;
+                        CompleteIndic.SetActive(true);
                         return;
                     }
                 }
@@ -34,6 +37,7 @@ public class LongWireController : MonoBehaviour
                 else if(r == CurrentTileScript.DesiredRotations.Count - 1)
                 {
                     PuzzleComplete = false;
+                    CompleteIndic.SetActive(false);
                     return;
                 }
             }
