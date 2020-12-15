@@ -5,21 +5,16 @@ using UnityEngine;
 public class LongWireController : MonoBehaviour
 {
     //List of all Key tiles
-    public List<GameObject> WireTiles;
+    public List<GameObject> KeyWireTiles;
+    public List<GameObject> AllWireTiles;
     public bool PuzzleComplete;
-
-    // Update is called once per frame
-    void Update()
-    { 
-
-    }
 
     public void CheckPuzzle()
     {
         //Check each important tile in puzzle
-        for (int i = 0; i < WireTiles.Count; i++)
+        for (int i = 0; i < KeyWireTiles.Count; i++)
         {
-            GameObject Tile = WireTiles[i];
+            GameObject Tile = KeyWireTiles[i];
             TileScript CurrentTileScript = Tile.GetComponent<TileScript>();
             //Get each Desired Tile Rotation
             for (int r = 0; r < CurrentTileScript.DesiredRotations.Count; r++)
@@ -29,7 +24,7 @@ public class LongWireController : MonoBehaviour
                 if (TileRot == Tile.transform.localRotation.y)
                 {
                     //Check if on final tile
-                    if (i == WireTiles.Count - 1)
+                    if (i == KeyWireTiles.Count - 1)
                     {
                         PuzzleComplete = true;
                         return;
@@ -42,6 +37,14 @@ public class LongWireController : MonoBehaviour
                     return;
                 }
             }
+        }
+    }
+
+    public void ResetPuzzle()
+    {
+        foreach(GameObject Tile in AllWireTiles)
+        {
+            Tile.GetComponent<TileScript>().ResetTile();
         }
     }
 }
