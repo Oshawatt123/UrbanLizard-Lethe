@@ -68,6 +68,7 @@
             </e>
             <e p="LongWire" t="Include">
               <e p="LongWireController.cs" t="Include" />
+              <e p="ResetTiles.cs" t="Include" />
               <e p="TileScript.cs" t="Include" />
             </e>
             <e p="MorseCode" t="Include">

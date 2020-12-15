@@ -12,6 +12,8 @@ public class LongWireController : MonoBehaviour
 
     public void CheckPuzzle()
     {
+        int tilesCorrect = 0;
+        
         //Check each important tile in puzzle
         for (int i = 0; i < KeyWireTiles.Count; i++)
         {
@@ -21,7 +23,16 @@ public class LongWireController : MonoBehaviour
             for (int r = 0; r < CurrentTileScript.DesiredRotations.Count; r++)
             {
                 float TileRot = CurrentTileScript.DesiredRotations[r];
-                Debug.Log("Tile" + i + "= " + TileRot);
+                Debug.Log("Tile" + i + "= " + TileRot.ToString());
+
+                // tile is in correct rotation
+                if (Tile.transform.localEulerAngles.y == TileRot)
+                {
+                    tilesCorrect++;
+                }
+
+                /*
+                 This will only work if the final tile is correct, irrespective of the other tiles
                 //If rotation is equal to desired tile rotation
                 if (TileRot == Tile.transform.localRotation.eulerAngles.y)
                 {
@@ -32,7 +43,8 @@ public class LongWireController : MonoBehaviour
                         CompleteIndic.SetActive(true);
                         return;
                     }
-                }
+                }*/
+                
                 //If tile is last desired rotation, stop checking puzzle as impossible to be completed
                 else if(r == CurrentTileScript.DesiredRotations.Count - 1)
                 {
@@ -41,6 +53,14 @@ public class LongWireController : MonoBehaviour
                     return;
                 }
             }
+        }
+        
+        
+        // check if we have enough correct tiles as we need
+        if (tilesCorrect == KeyWireTiles.Count)
+        {
+            PuzzleComplete = true;
+            CompleteIndic.SetActive(true);
         }
     }
 
