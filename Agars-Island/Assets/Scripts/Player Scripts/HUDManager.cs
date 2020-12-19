@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -39,6 +40,11 @@ public class HUDManager : MonoBehaviour
 
         playerMovement = GetComponent<PlayerMovement>();
         TF = GetComponent<ToggleFlashlight>();
+
+        if (!playerMovement || !TF)
+        {
+            Debug.LogAssertion("COULD NOT GET PLAYER OR FLASHLIGHT. SCRIPT WILL NOT WORK");
+        }
     }
 
     // Update is called once per frame
@@ -155,9 +161,9 @@ public class HUDManager : MonoBehaviour
 
     public bool ShouldInteract()
     {
-        Debug.Log(altUIOpen.ToString() + "||" + puzzleOpen.ToString());
+        Debug.Log("!" + altUIOpen.ToString() + "||" + puzzleOpen.ToString());
         
-        Debug.Log(((altUIOpen || puzzleOpen)).ToString());
+        Debug.Log((!(altUIOpen || puzzleOpen)).ToString());
         
         
         if (altUIOpen || puzzleGroup)

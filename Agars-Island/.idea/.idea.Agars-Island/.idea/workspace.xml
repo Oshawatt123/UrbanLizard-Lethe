@@ -22,7 +22,9 @@
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RandomTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RandomTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +42,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/ac/e994a195/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///ActivateWorldCanvas.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BlockVertical.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///ActivateWorldCanvas.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BlockHorizontal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GasParticleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,7 +59,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/TileScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DragObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/SpaceMorseButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,6 +118,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/DragObject.cs" />
       </list>
     </option>
   </component>
@@ -171,7 +180,8 @@
       <workItem from="1607899848418" duration="3265000" />
       <workItem from="1607939274661" duration="4184000" />
       <workItem from="1607953983176" duration="599000" />
-      <workItem from="1608062297141" duration="1167000" />
+      <workItem from="1608062297141" duration="1293000" />
+      <workItem from="1608385147101" duration="4546000" />
     </task>
     <servers />
   </component>

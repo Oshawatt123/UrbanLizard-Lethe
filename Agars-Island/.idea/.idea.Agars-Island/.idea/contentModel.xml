@@ -17,6 +17,7 @@
         </e>
         <e p="BlockHorizontal.cs" t="Include" />
         <e p="BlockVertical.cs" t="Include" />
+        <e p="DragObject.cs" t="Include" />
         <e p="EditParticleScale.cs" t="Include" />
         <e p="GasParticleScript.cs" t="Include" />
         <e p="Resources" t="Include">
