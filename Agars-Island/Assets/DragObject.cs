@@ -12,7 +12,7 @@ public class DragObject : MonoBehaviour
 
     [SerializeField] private LayerMask boundsLayer;
 
-    private Vector2 xBounds, yBounds;
+    private float xBounds, yBounds;
 
     private Vector3 mouseDelta;
     private Vector3 prevMouse;
@@ -123,7 +123,7 @@ public class DragObject : MonoBehaviour
             if (Physics.Raycast(transform.position, direction, out hitInfo, Mathf.Infinity, boundsLayer))
             {
                 Debug.DrawRay(transform.position, direction, Color.green);
-                float xStop = hitInfo.transform.position.x;
+                xBounds = hitInfo.transform.position.x;
 
                 // Debug
                 rayHitPosition = hitInfo.transform.position;
@@ -137,7 +137,7 @@ public class DragObject : MonoBehaviour
     
     void ClampPosition()
     {
-        
+        float direction = (mouseDelta.x > 0 ? -1 : 1);
     }
 
     private void OnDrawGizmosSelected()
