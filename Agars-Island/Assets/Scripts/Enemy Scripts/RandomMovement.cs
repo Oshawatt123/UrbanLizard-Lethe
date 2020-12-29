@@ -34,6 +34,7 @@ public class RandomMovement : BT_Behaviour
 
     public override NodeState tick()
     {
+        bool SuitablePoint = false;
         if (localBB.FixedMoveLocation)
         {
             localBB.FixedMoveLocation = false;
@@ -41,18 +42,27 @@ public class RandomMovement : BT_Behaviour
 
         if (Time.time >= NextDirTime || agent.remainingDistance == 0)
         {
+            NavMeshHit NavHit;
             NextDirTime = Time.time + Random.Range(MinDirTime, MaxDirTime);
 
-            Vector3 RandomDirection = Random.insideUnitSphere * Random.Range(10, WanderDistance);
+            while(SuitablePoint == false)
+            {
+                Vector3 RandomDirection = Random.insideUnitSphere * Random.Range(10, WanderDistance);
 
-            RandomDirection += Player.transform.position;
+                RandomDirection += Player.transform.position;
 
-            NavMeshHit NavHit;
-            NavMesh.SamplePosition(RandomDirection, out NavHit, WanderDistance, -1);
+                NavMesh.SamplePosition(RandomDirection, out NavHit, WanderDistance, -1);
 
-            localBB.setMoveToLocation(NavHit.position);
+                NavMeshPath Path = new NavMeshPath();
+                agent.CalculatePath(NavHit.position, Path);
+                if (Path.status == NavMeshPathStatus.PathComplete)
+                {
+                    localBB.setMoveToLocation(NavHit.position);
+                    SuitablePoint = true;
+                    Debug.Log("Suitable Path");
+                }
+            }
 
-            Debug.Log("Point");
             return NodeState.NODE_SUCCESS;
         }
 
