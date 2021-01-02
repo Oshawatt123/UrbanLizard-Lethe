@@ -9,6 +9,7 @@ public class ToggleFlashlight : MonoBehaviour
     public float Battery;
     public float DrainSpeed;
     private InventoryTracker Inventory;
+    [HideInInspector] public bool hasFlashlight = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class ToggleFlashlight : MonoBehaviour
             Battery -= DrainSpeed * Time.deltaTime;
         }
 
-        if (Input.GetMouseButtonDown(0) && canToggle && Battery > 0)
+        if (Input.GetMouseButtonDown(0) && canToggle && Battery > 0 && hasFlashlight)
         {
             LightScript.Switch();
         }

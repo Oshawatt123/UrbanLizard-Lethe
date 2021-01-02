@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class InventoryTracker : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class InventoryTracker : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
+
+    private ToggleFlashlight TF;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,8 @@ public class InventoryTracker : MonoBehaviour
         meds = loadedData[1];
         keycardLevel = loadedData[2];
         UpdateText();
+
+        TF = GetComponent<ToggleFlashlight>();
     }
 
     // Update is called once per frame
@@ -54,4 +60,12 @@ public class InventoryTracker : MonoBehaviour
         batteryText.text = batteries.ToString();
         medsText.text = meds.ToString();
     }
+
+    public void GiveFlashlight()
+    {
+        TF.hasFlashlight = true;
+        TF.canToggle = true;
+        Debug.Log("Player given flashlight");
+    }
+
 }

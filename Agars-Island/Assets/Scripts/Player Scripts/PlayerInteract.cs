@@ -8,6 +8,9 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float InteractLength;
     private HUDManager HUDmanager;
     [SerializeField] private LayerMask layers;
+
+    private bool lookingAtInteractable = false;
+    private Transform focusInteractable;
     
     // Start is called before the first frame update
     void Start()
@@ -30,10 +33,9 @@ public class PlayerInteract : MonoBehaviour
                 HUDmanager.ResetHUD();
             }
         }
-    }
-
-    private void Interact()
-    {
+        
+        // ### check if we're looking at an interactable ###
+        lookingAtInteractable = false;
         // get forward from camera
         Vector3 rayDirection = CamTransform.forward * InteractLength;
         
@@ -47,12 +49,28 @@ public class PlayerInteract : MonoBehaviour
             Transform hitObj = rayInfo.transform;
             if (hitObj.CompareTag("Interactable"))
             {
-                Debug.Log("Ray hit interactable");
-                // get interact script and call Ineract()
-                hitObj.GetComponent<Interactable>().Interact();
+                focusInteractable = hitObj;
+                lookingAtInteractable = true;
             }
         }
 
-        
+        if (lookingAtInteractable)
+        {
+            HUDmanager.ShowInteractHint();
+        }
+        else
+        {
+            HUDmanager.HideInteractHint();
+        }
+    }
+
+    private void Interact()
+    {
+        if (lookingAtInteractable)
+        {
+            Debug.Log("Ray hit interactable");
+            // get interact script and call Ineract()
+            focusInteractable.GetComponent<Interactable>().Interact();
+        }
     }
 }

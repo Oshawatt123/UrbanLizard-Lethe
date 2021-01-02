@@ -28,6 +28,11 @@ public class HUDManager : MonoBehaviour
 
     private static PlayerMovement playerMovement;
     private static ToggleFlashlight TF;
+
+
+    [Header("Hints")]
+    [SerializeField] private CanvasGroup InteractHint;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -171,5 +176,20 @@ public class HUDManager : MonoBehaviour
         
         
         return !(altUIOpen || puzzleOpen);
+    }
+
+    public void ShowPickUpHint()
+    {
+        
+    }
+
+    public void ShowInteractHint()
+    {
+        GroupSwapper.ShowCanvasGroup(InteractHint);
+    }
+
+    public void HideInteractHint()
+    {
+        GroupSwapper.HideCanvasGroup(InteractHint);
     }
 }

@@ -34,6 +34,9 @@ public class ItemPickup : Interactable
             case "Keycard1":
                 playerInventory.SetKeycardLevel(1);
                 break;
+            case "Flashlight":
+                playerInventory.GiveFlashlight();
+                break;
         }
 
         Destroy(gameObject);
