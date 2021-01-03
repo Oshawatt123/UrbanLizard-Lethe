@@ -27,6 +27,9 @@ public class MoveWire : MonoBehaviour
     private Vector3 originalColliderSize;
 
     private bool wireComplete;
+
+    [SerializeField] private ShortWiresPuzzleManager manager;
+    [SerializeField] private int wireNumber;
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,8 @@ public class MoveWire : MonoBehaviour
         collider = GetComponent<BoxCollider>();
 
         originalColliderSize = collider.size;
+
+        manager = transform.parent.parent.GetComponent<ShortWiresPuzzleManager>();
     }
 
     // Update is called once per frame
@@ -85,12 +90,14 @@ public class MoveWire : MonoBehaviour
                 Debug.Log("Wire complete!");
                 wireComplete = true;
                 SetPosition(wireEnd.transform.position);
+                manager.CompleteWire(wireNumber);
             }
         }
         
         if (hits.Length == 0 || wireComplete == false)
         {
             SetPosition(startPoint);
+            manager.FailWire(wireNumber);
         }
 
         collider.size = originalColliderSize;

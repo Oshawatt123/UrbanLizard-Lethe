@@ -15,11 +15,8 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
-        <e p="BlockHorizontal.cs" t="Include" />
-        <e p="BlockVertical.cs" t="Include" />
-        <e p="DragObject.cs" t="Include" />
-        <e p="EditParticleScale.cs" t="Include" />
         <e p="GasParticleScript.cs" t="Include" />
+        <e p="LightFlicker.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
@@ -49,7 +46,11 @@
             <e p="ItemPickup.cs" t="Include" />
             <e p="Switch.cs" t="Include" />
           </e>
+          <e p="Menu" t="Include">
+            <e p="MainMenu.cs" t="Include" />
+          </e>
           <e p="Other" t="Include">
+            <e p="EditParticleScale.cs" t="Include" />
             <e p="HidingSpot.cs" t="Include" />
           </e>
           <e p="Player Scripts" t="Include">
@@ -63,6 +64,7 @@
             <e p="ToggleFlashlight.cs" t="Include" />
           </e>
           <e p="Puzzle" t="Include">
+            <e p="DragObject.cs" t="Include" />
             <e p="DrawLine.cs" t="Include" />
             <e p="GasPuzzle" t="Include">
               <e p="GasPuzzleLogic.cs" t="Include" />
@@ -143,6 +145,7 @@
             <e p="RadiatorGames.cs" t="Include" />
           </e>
         </e>
+        <e p="WireEnd.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
