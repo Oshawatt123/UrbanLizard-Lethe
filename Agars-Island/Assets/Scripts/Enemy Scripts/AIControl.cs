@@ -32,8 +32,8 @@ public class AIControl : localTree
         BT_Sequencer Seq1 = new BT_Sequencer();
         Seq1.AddNode(new CheckSanity(transform, AltRouteSanity));
         Seq1.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));
-        Seq1.AddNode(new AmbushWait(transform, MinAmbushTime, MaxAmbushTime));
         Seq1.AddNode(new DisableObstacleCone(transform));
+        Seq1.AddNode(new AmbushWait(transform, MinAmbushTime, MaxAmbushTime));
 
         BT_Sequencer Seq2 = new BT_Sequencer();
         Seq2.AddNode(new CheckSanity(transform, ChargeSanity));
@@ -42,7 +42,6 @@ public class AIControl : localTree
         Seq2.AddNode(new DisableObstacleCone(transform));
 
         BT_Sequencer Seq5 = new BT_Sequencer();
-        Seq5.AddNode(new StoreLastPosition(transform));
         Seq5.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));
         Seq5.AddNode(new AmbushBehind(transform));
         Seq5.AddNode(new SetToMarkedPos(transform));
