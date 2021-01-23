@@ -8,32 +8,32 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Canteen
-    second: {fileID: 2100000, guid: 4d682cef2405f714e9d61500d3c4ffe3, type: 2}
+    second: {fileID: 2100000, guid: 1e1f152826db76646b3a0ed39bf94ada, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ceiling
-    second: {fileID: 2100000, guid: 02f56146063e3754d98f35d908485dee, type: 2}
+    second: {fileID: 2100000, guid: 074d8fbc2b6317842af0e9366aa5e5d2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: First_area_floor
-    second: {fileID: 2100000, guid: 9af53f7f7d5a1e249a45a061a0a80d17, type: 2}
+    second: {fileID: 2100000, guid: d3b5260b03f286f4bbff35752df3b602, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wall_Main
-    second: {fileID: 2100000, guid: 84876882d6a3c1c4cbae52e9296c621c, type: 2}
+    second: {fileID: 2100000, guid: 6ca2896ccece7a54582778a3b5751e97, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window_Glass
-    second: {fileID: 2100000, guid: 689aaf1c968423a48a61c56aec8a299b, type: 2}
+    second: {fileID: 2100000, guid: 3c7947b4b94adce48ae51149cea57639, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window_sill
-    second: {fileID: 2100000, guid: d84b439b71b9fb0458fd329d9f7c714e, type: 2}
+    second: {fileID: 2100000, guid: 60393fe9eec49214499bd846aee02def, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -92,11 +92,11 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 0
+    blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1

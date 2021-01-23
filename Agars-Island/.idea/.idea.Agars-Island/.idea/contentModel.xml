@@ -91,6 +91,12 @@
           <e p="Saving" t="Include">
             <e p="LoadInventory.cs" t="Include" />
           </e>
+          <e p="Tools" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ToggleFloorInspector.cs" t="Include" />
+            </e>
+            <e p="ToggleFloor.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="DragUIObject.cs" t="Include" />
           </e>
