@@ -34,6 +34,12 @@ public class ItemPickup : Interactable
             case "Keycard1":
                 playerInventory.SetKeycardLevel(1);
                 break;
+            case "Keycard2":
+                playerInventory.SetKeycardLevel(2);
+                break;
+            case "Keycard3":
+                playerInventory.SetKeycardLevel(3);
+                break;
             case "Flashlight":
                 playerInventory.GiveFlashlight();
                 break;
