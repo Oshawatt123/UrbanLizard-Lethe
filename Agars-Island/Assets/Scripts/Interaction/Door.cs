@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
 
-
+    [SerializeField] private bool singleInteract;
     private int interactsToOpen = 0;
     private int interactions = 0;
 
@@ -34,9 +34,9 @@ public class Door : MonoBehaviour
         interactions++;
         
         Debug.Log(interactions.ToString() + " out of " + interactsToOpen.ToString() + " to open door");
-        if (interactions >= interactsToOpen)
+        if (interactions >= interactsToOpen || singleInteract)
         {
-            Debug.Log("Opening door");
+            Debug.Log("Opening door {singleInteract:" + singleInteract.ToString() + "}");
             Open();
         }
     }

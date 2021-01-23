@@ -44,7 +44,7 @@ public class PlayerInteract : MonoBehaviour
         Debug.DrawRay(CamTransform.position, rayDirection, Color.magenta, 10.0f);
         if (Physics.Raycast(CamTransform.position, rayDirection, out rayInfo, InteractLength, ~layers))
         {
-            Debug.Log("Ray hit " + rayInfo.transform.name);
+            //Debug.Log("Ray hit " + rayInfo.transform.name);
             // check tag on object
             Transform hitObj = rayInfo.transform;
             if (hitObj.CompareTag("Interactable"))
