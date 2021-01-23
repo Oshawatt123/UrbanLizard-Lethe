@@ -30,6 +30,7 @@
             <e p="CheckForSight.cs" t="Include" />
             <e p="CheckSanity.cs" t="Include" />
             <e p="DirectCharge.cs" t="Include" />
+            <e p="DisableObstacleCone.cs" t="Include" />
             <e p="GoToPoint.cs" t="Include" />
             <e p="MoveToAmbush.cs" t="Include" />
             <e p="MovingToMarkedPos.cs" t="Include" />
@@ -100,6 +101,31 @@
               <e p="Scripts" t="Include">
                 <e p="Flashlight_PRO.cs" t="Include" />
               </e>
+            </e>
+          </e>
+          <e p="LowPolyOfficeProps_LITE" t="Include">
+            <e p="About.txt" t="Include" />
+          </e>
+          <e p="OBJImport" t="Include">
+            <e p="CharWordReader.cs" t="Include" />
+            <e p="MTLLoader.cs" t="Include" />
+            <e p="OBJLoader.cs" t="Include" />
+            <e p="OBJLoaderHelper.cs" t="Include" />
+            <e p="OBJObjectBuilder.cs" t="Include" />
+            <e p="Samples" t="Include">
+              <e p="ObjFromFile.cs" t="Include" />
+              <e p="ObjFromStream.cs" t="Include" />
+            </e>
+            <e p="StringExtensions.cs" t="Include" />
+            <e p="TextureLoader" t="Include">
+              <e p="BinaryExtensions.cs" t="Include" />
+              <e p="BMPLoader.cs" t="Include" />
+              <e p="ColorExtensions.cs" t="Include" />
+              <e p="DDSLoader.cs" t="Include" />
+              <e p="ImageLoader.cs" t="Include" />
+              <e p="ImageLoaderHelper.cs" t="Include" />
+              <e p="ImageUtils.cs" t="Include" />
+              <e p="TGALoader.cs" t="Include" />
             </e>
           </e>
           <e p="PolygonPrototype" t="Include">
