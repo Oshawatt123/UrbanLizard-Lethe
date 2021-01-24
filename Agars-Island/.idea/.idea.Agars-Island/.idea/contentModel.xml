@@ -15,7 +15,6 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
-        <e p="CopyTextColour.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
@@ -48,13 +47,14 @@
             <e p="ItemPickup.cs" t="Include" />
             <e p="Switch.cs" t="Include" />
           </e>
-          <e p="LightFlicker.cs" t="Include" />
           <e p="Menu" t="Include">
             <e p="MainMenu.cs" t="Include" />
           </e>
           <e p="Other" t="Include">
+            <e p="CopyTextColour.cs" t="Include" />
             <e p="EditParticleScale.cs" t="Include" />
             <e p="HidingSpot.cs" t="Include" />
+            <e p="LightFlicker.cs" t="Include" />
           </e>
           <e p="Player Scripts" t="Include">
             <e p="FlashlightAttack.cs" t="Include" />
@@ -101,6 +101,7 @@
             </e>
             <e p="ToggleFloor.cs" t="Include" />
           </e>
+          <e p="TutorialManager.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="ChangeGenText.cs" t="Include" />
             <e p="DragUIObject.cs" t="Include" />

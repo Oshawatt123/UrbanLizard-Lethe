@@ -66,6 +66,7 @@ public class InventoryTracker : MonoBehaviour
         TF.hasFlashlight = true;
         TF.canToggle = true;
         Debug.Log("Player given flashlight");
+        CheckpointManager.instance.FlashlightGot();
     }
 
 }
