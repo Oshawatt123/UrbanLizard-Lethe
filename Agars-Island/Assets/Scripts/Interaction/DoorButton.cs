@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ public class DoorButton : Interactable
 
     private InventoryTracker playerInv;
     [SerializeField] private int clearanceLevel = 0;
+    private int locked;
+    
+    [SerializeField] private Animator lightAnim;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,9 @@ public class DoorButton : Interactable
         door.AddInteract();
 
         playerInv = GameObject.Find("Player").GetComponent<InventoryTracker>();
+        lightAnim = GetComponentInChildOnly<Animator>(gameObject);
+        
+        
     }
 
     public override void Interact()
@@ -26,6 +33,8 @@ public class DoorButton : Interactable
         if (playerInv.GetKeycardLevel() >= clearanceLevel)
         {
             base.Interact();
+            Debug.Log(lightAnim.gameObject.name);
+            lightAnim.SetTrigger("Pass");
 
             if (!pressedOnce)
             {
@@ -33,5 +42,43 @@ public class DoorButton : Interactable
                 door.Interact();
             }
         }
+        else
+        {
+            lightAnim.SetTrigger("Fail");
+            Debug.Log(lightAnim.gameObject.name);
+        }
     }
+
+    private T GetComponentInChildOnly<T>(GameObject parent) where T:Component
+    {
+        T[] comps = parent.GetComponentsInChildren<T>();
+
+        if (comps.Length > 1)
+        {
+            for (int i = 1; i < comps.Length; i++)
+            {
+                T comp = comps[i];
+                if (comp.gameObject.GetInstanceID() != GetInstanceID())
+                {
+                    return comp;
+                }
+            }
+        }
+
+        return null;
+    }
+    
+    
+    /*private T[] GetCompNoRoot<T>(GameObject obj)where T:Component{
+        List<T> tList = new List<T>();
+        foreach (Transform child in obj.transform.root)
+        {
+            T[] scripts = child.GetComponentsInChildren<T>();    
+            if(scripts != null) {
+                foreach(T sc in scripts)
+                    tList.Add (sc);
+            }
+        }
+        return tList.ToArray();
+    }*/
 }
