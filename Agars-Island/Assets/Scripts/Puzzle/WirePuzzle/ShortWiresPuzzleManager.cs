@@ -56,7 +56,7 @@ public class ShortWiresPuzzleManager : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             if (wires[i] != 1)
-                break;
+                return;
         }
         finishEvent.Invoke();
     }
