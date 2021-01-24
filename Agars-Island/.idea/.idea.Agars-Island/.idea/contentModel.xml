@@ -15,12 +15,12 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
-        <e p="GasParticleScript.cs" t="Include" />
-        <e p="LightFlicker.cs" t="Include" />
+        <e p="CopyTextColour.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="CheckpointManager.cs" t="Include" />
           <e p="Enemy Scripts" t="Include">
             <e p="AIControl.cs" t="Include" />
             <e p="AITest.cs" t="Include" />
@@ -41,12 +41,14 @@
           <e p="Interaction" t="Include">
             <e p="ActivatePuzzle.cs" t="Include" />
             <e p="ActivateWorldCanvas.cs" t="Include" />
+            <e p="Button.cs" t="Include" />
             <e p="Door.cs" t="Include" />
             <e p="DoorButton.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="ItemPickup.cs" t="Include" />
             <e p="Switch.cs" t="Include" />
           </e>
+          <e p="LightFlicker.cs" t="Include" />
           <e p="Menu" t="Include">
             <e p="MainMenu.cs" t="Include" />
           </e>
@@ -67,6 +69,7 @@
           <e p="Puzzle" t="Include">
             <e p="DragObject.cs" t="Include" />
             <e p="DrawLine.cs" t="Include" />
+            <e p="GasParticleScript.cs" t="Include" />
             <e p="GasPuzzle" t="Include">
               <e p="GasPuzzleLogic.cs" t="Include" />
             </e>
@@ -86,6 +89,7 @@
               <e p="ScrewTurnOnClick.cs" t="Include" />
               <e p="ShortWiresPuzzleManager.cs" t="Include" />
               <e p="UpdateWireMaterials.cs" t="Include" />
+              <e p="WireEnd.cs" t="Include" />
             </e>
           </e>
           <e p="Saving" t="Include">
@@ -98,6 +102,7 @@
             <e p="ToggleFloor.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="ChangeGenText.cs" t="Include" />
             <e p="DragUIObject.cs" t="Include" />
           </e>
         </e>
@@ -155,7 +160,6 @@
             <e p="RadiatorGames.cs" t="Include" />
           </e>
         </e>
-        <e p="WireEnd.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
