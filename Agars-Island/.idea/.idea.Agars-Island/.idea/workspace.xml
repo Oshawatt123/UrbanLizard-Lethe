@@ -20,16 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CopyTextColour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CopyTextColour.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +112,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" />
         <option value="$PROJECT_DIR$/Assets/DragObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/LightFlicker.cs" />
@@ -132,8 +126,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
       </list>
     </option>
   </component>
@@ -203,6 +198,7 @@
       <workItem from="1611433332024" duration="2031000" />
       <workItem from="1611449376403" duration="3691000" />
       <workItem from="1611493452618" duration="8204000" />
+      <workItem from="1611518721539" duration="1081000" />
     </task>
     <servers />
   </component>

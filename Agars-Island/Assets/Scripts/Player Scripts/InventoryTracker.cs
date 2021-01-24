@@ -15,6 +15,8 @@ public class InventoryTracker : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
+    [SerializeField] private TextMeshProUGUI PickUpText;
+    private Animator pickUpTextAnim;
 
     private ToggleFlashlight TF;
 
@@ -26,6 +28,9 @@ public class InventoryTracker : MonoBehaviour
         meds = loadedData[1];
         keycardLevel = loadedData[2];
         UpdateText();
+
+        if (PickUpText)
+            pickUpTextAnim = PickUpText.gameObject.GetComponent<Animator>();
 
         TF = GetComponent<ToggleFlashlight>();
     }
@@ -43,15 +48,27 @@ public class InventoryTracker : MonoBehaviour
         LoadInventory.Save(saveData);
     }
 
-    public void AddBattery(int number) { batteries += number; UpdateText(); }
+    public void AddBattery(int number)
+    {
+        batteries += number; UpdateText();
+        ShowPickupText("Picked up battery");
+    }
     
     public void RemoveBattery(int number) { batteries -= number; UpdateText(); }
-    
-    public void AddMeds(int number) { meds += number; UpdateText(); }
+
+    public void AddMeds(int number)
+    {
+        meds += number; UpdateText();
+        ShowPickupText("Picked up meds");
+    }
     
     public void RemoveMeds(int number) { meds -= number; UpdateText(); }
 
-    public void SetKeycardLevel(int level) { keycardLevel = level; }
+    public void SetKeycardLevel(int level)
+    {
+        keycardLevel = level;
+        ShowPickupText("Picked up keycard level " + level.ToString());
+    }
 
     public int GetKeycardLevel() { return keycardLevel; }
 
@@ -67,6 +84,18 @@ public class InventoryTracker : MonoBehaviour
         TF.canToggle = true;
         Debug.Log("Player given flashlight");
         CheckpointManager.instance.FlashlightGot();
+        ShowPickupText("Picked up flashlight");
+    }
+
+    private void ShowPickupText(string text)
+    {
+        if (pickUpTextAnim)
+        {
+            PickUpText.text = text;
+            if(pickUpTextAnim.GetCurrentAnimatorStateInfo(0).IsName("InventHidden"))
+                pickUpTextAnim.SetTrigger("FadeIn");
+            
+        }
     }
 
 }
