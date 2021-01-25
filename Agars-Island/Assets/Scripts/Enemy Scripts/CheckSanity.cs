@@ -40,7 +40,7 @@ public class CheckSanity : BT_Behaviour
         float RandomNumb = Random.Range(SanityLimit - 10, SanityLimit + 10);
 
         //Otherwise compare sanity to threshold for this behaviour
-        if(SanityScript.Sanity > SanityLimit || RandomNumb > SanityLimit)
+        if(SanityScript.Sanity > SanityLimit || RandomNumb == SanityLimit)
         {
             return NodeState.NODE_FAILURE;
         }
