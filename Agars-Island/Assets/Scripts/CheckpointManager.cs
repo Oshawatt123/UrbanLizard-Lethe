@@ -13,6 +13,7 @@ public class CheckpointManager : MonoBehaviour
 
     [SerializeField] private GameObject enemy;
     [SerializeField] private TextMeshProUGUI taskText;
+    [SerializeField] private GameObject Player;
 
     [HideInInspector] public UnityEvent FlashLightEvents;
     [HideInInspector] public UnityEvent GeneratorFixEvents;
@@ -26,6 +27,7 @@ public class CheckpointManager : MonoBehaviour
             instance = this;
 
         taskText.text = "☐ Find a light source";
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -50,5 +52,6 @@ public class CheckpointManager : MonoBehaviour
         taskText.text = "☐ Spoopy boi is here to nibble your nipple";
         enemy.SetActive(true);
         GeneratorOn = true;
+        Player.GetComponent<PlayerSanity>().enabled = true;
     }
 }
