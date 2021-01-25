@@ -20,6 +20,10 @@ public class InventoryTracker : MonoBehaviour
 
     private ToggleFlashlight TF;
 
+    [SerializeField] private AudioSource batteryPickup;
+    [SerializeField] private AudioSource paperPickup;
+    [SerializeField] private AudioSource genericPickup;
+
     // Start is called before the first frame update
     void Start()
     {

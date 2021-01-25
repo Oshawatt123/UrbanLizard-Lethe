@@ -20,12 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/DoorOpen/Door.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DoorOpen/Door.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Puzzle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Puzzle/morsecode_b412b993629d0fbb6609c6e1aa44798f.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Puzzle/morsecode_b412b993629d0fbb6609c6e1aa44798f.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/KeyCard (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/KeyCard (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/KeyCard (2).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/KeyCard (2).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/KeyCard (3).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/KeyCard (3).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelGeometry/MapBoard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelGeometry/MapBoard.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/Interactive Monitor/Prefabs/CRT Display.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/Interactive Monitor/Prefabs/CRT Display.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/_Flashlight PRO/_PREFABS/Battery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/_Flashlight PRO/_PREFABS/Battery.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Signage/Map_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Signage/Map_0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Signage/Map_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Signage/Map_1.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +81,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9B956647-017D-4DC1-B8D3-D25EEF012467/24/f45d8f2b/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,14 +94,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeSwitch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9B956647-017D-4DC1-B8D3-D25EEF012467/10/cd73d594/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryOpen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
         <option value="$PROJECT_DIR$/Assets/InventoryTracker.cs" />
@@ -125,10 +144,12 @@
         <option value="$PROJECT_DIR$/Assets/CopyTextColour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
       </list>
     </option>
   </component>
@@ -198,7 +219,8 @@
       <workItem from="1611433332024" duration="2031000" />
       <workItem from="1611449376403" duration="3691000" />
       <workItem from="1611493452618" duration="8204000" />
-      <workItem from="1611518721539" duration="1081000" />
+      <workItem from="1611518721539" duration="1432000" />
+      <workItem from="1611563313325" duration="7877000" />
     </task>
     <servers />
   </component>

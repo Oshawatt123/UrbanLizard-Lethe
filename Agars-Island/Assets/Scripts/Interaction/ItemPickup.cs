@@ -7,10 +7,18 @@ public class ItemPickup : Interactable
     private InventoryTracker playerInventory;
 
     [SerializeField] private string PickupType;
+
+    private MeshRenderer[] render;
+    private Collider collider;
+    private AudioSource pickUpNoise;
     // Start is called before the first frame update
     void Start()
     {
         playerInventory = GameObject.FindWithTag("Player").GetComponent<InventoryTracker>();
+
+        render = GetComponentsInChildren<MeshRenderer>();
+        collider = GetComponentInChildren<Collider>();
+        pickUpNoise = GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,6 +53,16 @@ public class ItemPickup : Interactable
                 break;
         }
 
-        Destroy(gameObject);
+        pickUpNoise.pitch = Random.Range(0.5f, 1.0f);
+        pickUpNoise.Play();
+
+        collider.enabled = false;
+
+        foreach (MeshRenderer mesh in render)
+        {
+            mesh.enabled = false;
+        }
+        
+        Destroy(gameObject, 1.0f);
     }
 }

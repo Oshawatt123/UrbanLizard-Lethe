@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CheckpointManager : MonoBehaviour
 {
-    public static CheckpointManager instance;
+    [HideInInspector] public static CheckpointManager instance;
 
-    public bool GeneratorFixed;
-    public bool GeneratorOn;
+    [HideInInspector] public bool GeneratorFixed;
+    [HideInInspector] public bool GeneratorOn;
 
     [SerializeField] private GameObject enemy;
     [SerializeField] private TextMeshProUGUI taskText;
+
+    [HideInInspector] public UnityEvent FlashLightEvents;
+    [HideInInspector] public UnityEvent GeneratorFixEvents;
+    [HideInInspector] public UnityEvent GeneratorOnEvents;
     
     void Awake()
     {
@@ -34,7 +39,7 @@ public class CheckpointManager : MonoBehaviour
         taskText.text = "☐ Fix the backup generator";
     }
 
-    public void FixGenerator()
+    public void GeneratorFix()
     {
         taskText.text = "☐ Turn on the generator in the security room";
         GeneratorFixed = true;
@@ -44,5 +49,6 @@ public class CheckpointManager : MonoBehaviour
     {
         taskText.text = "☐ Spoopy boi is here to nibble your nipple";
         enemy.SetActive(true);
+        GeneratorOn = true;
     }
 }

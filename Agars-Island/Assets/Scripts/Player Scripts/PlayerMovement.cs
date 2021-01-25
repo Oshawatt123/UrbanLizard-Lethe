@@ -10,27 +10,43 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Rigidbody PlayerBody;
 
     //Rotation
+    [Header("Rotation")]
     public float RotationSpeed;
     public float CamMinY;
     public float CamMaxY;
     public float RotSmoothSpeed;
 
     //Movement
+    [Header("Movement")]
     public float MoveSpeed;
+    public LayerMask stopLayers;
+    [SerializeField] private float stopDistance;
+
     //Sprinting
-    private bool IsSprinting;
+    [Header("Sprinting")]
     public int Stamina;
     public int MaxStamina;
+    private bool IsSprinting;
+    
     //Stamina Drain
+    [Header("Stamina drain")]
     public int SprintDrainDelay;
     private float NextDrainTime;
+    
     //Stamina Recovery
+    [Header("Stamina recovery")]
     public int SprintRecoverDelay;
     private float NextRecTime;
+    
     //Other Movement Related
+    [Header("Other")]
     float Gravity = -13;
     float VelocityY = 0.0f;
 
+    [SerializeField] private AudioSource footStep;
+    [SerializeField] private float stepTime;
+    private float stepTimer;
+    
     //Rotations
     private float BodyRoationX;
     private float CamRotationY;
@@ -55,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
         Stamina = MaxStamina;
         NextDrainTime = Time.time + SprintDrainDelay;
         IsHiding = false;
+
+        stepTimer = stepTime;
     }
 
     private void Update()
@@ -78,6 +96,14 @@ public class PlayerMovement : MonoBehaviour
         }
         
         staminaBar.value = (Stamina / (float)MaxStamina)*100.0f;
+        
+        // checking for bounce-back off hinge joint doors
+        if (PlayerBody.velocity.x > 0 && Input.GetAxisRaw("Horizontal") == 0)
+        {
+            PlayerBody.velocity = Vector3.zero;
+        }
+
+        stepTimer -= Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -115,10 +141,12 @@ public class PlayerMovement : MonoBehaviour
 
         PlayerBody.MovePosition(NewPos);
 
-        if(MoveDir == Vector3.zero && IsSprinting)
+        if (MoveDir == Vector3.zero && IsSprinting)
         {
             SprintToggle();
         }
+
+        PlayFootStep(MoveDir, IsSprinting);
     }
     void SprintToggle()
     {
@@ -153,6 +181,27 @@ public class PlayerMovement : MonoBehaviour
         {
             Stamina += 5;
             NextRecTime = Time.time + SprintRecoverDelay;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position + (transform.forward * stopDistance), 0.3f);
+    }
+
+    private void PlayFootStep(Vector3 movement, bool sprint)
+    {
+        if (movement.magnitude > 0 && (sprint || !footStep.isPlaying) && stepTimer <= 0)
+        {
+            footStep.pitch = UnityEngine.Random.Range(0.7f, 1.0f);
+            if(sprint)
+                footStep.volume = UnityEngine.Random.Range(0.5f, 1.0f);
+            else
+                footStep.volume = UnityEngine.Random.Range(0.3f, 0.7f);
+                
+            footStep.Play();
+
+            stepTimer = stepTime / (sprint ? 2f : 1f);
         }
     }
 }

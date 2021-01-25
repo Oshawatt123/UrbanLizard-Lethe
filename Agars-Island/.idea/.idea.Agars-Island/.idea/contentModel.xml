@@ -20,6 +20,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CheckpointManager.cs" t="Include" />
+          <e p="ChkpntMgrInspector.cs" t="Include" />
           <e p="Enemy Scripts" t="Include">
             <e p="AIControl.cs" t="Include" />
             <e p="AITest.cs" t="Include" />
