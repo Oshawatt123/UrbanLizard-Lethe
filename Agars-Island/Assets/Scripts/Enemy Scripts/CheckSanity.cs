@@ -10,6 +10,7 @@ public class CheckSanity : BT_Behaviour
     private localTree LocalBB;
     private NavMeshAgent Agent;
     private GameObject Player;
+    private PlayerSanity SanityScript;
 
     public float SanityLimit;
 
@@ -22,6 +23,7 @@ public class CheckSanity : BT_Behaviour
 
         Player = GameObject.FindGameObjectWithTag("Player");
         SanityLimit = InLimit;
+        SanityScript = Player.GetComponent<PlayerSanity>();
     }
 
     public override NodeState tick()
@@ -34,9 +36,11 @@ public class CheckSanity : BT_Behaviour
             Player.transform.GetChild(1).gameObject.SetActive(false);
             return NodeState.NODE_SUCCESS;
         }
+        //Get random number
+        float RandomNumb = Random.Range(SanityLimit - 10, SanityLimit + 10);
 
         //Otherwise compare sanity to threshold for this behaviour
-        if(Player.GetComponent<PlayerSanity>().Sanity > SanityLimit)
+        if(SanityScript.Sanity > SanityLimit || RandomNumb > SanityLimit)
         {
             return NodeState.NODE_FAILURE;
         }
