@@ -13,6 +13,11 @@ public class CheckpointManager : MonoBehaviour
 
     [SerializeField] private GameObject enemy;
     [SerializeField] private TextMeshProUGUI taskText;
+    
+    [SerializeField] private TextMeshProUGUI taskCompText;
+    private Animator taskCompAnim;
+    private TextMeshProUGUI newTaskText;
+    
     [SerializeField] private GameObject Player;
 
     [HideInInspector] public UnityEvent FlashLightEvents;
@@ -27,6 +32,7 @@ public class CheckpointManager : MonoBehaviour
             instance = this;
 
         taskText.text = "☐ Find a light source";
+        taskCompAnim = taskCompText.gameObject.GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -38,17 +44,26 @@ public class CheckpointManager : MonoBehaviour
 
     public void FlashlightGot()
     {
+        taskCompText.text = "|COMPLETE| Find a light source";
+        taskCompAnim.SetTrigger("FadeIn");
+        
         taskText.text = "☐ Fix the backup generator";
     }
 
     public void GeneratorFix()
     {
+        taskCompText.text = "|COMPLETE| Fix the backup generator";
+        taskCompAnim.SetTrigger("FadeIn");
+        
         taskText.text = "☐ Turn on the generator in the security room";
         GeneratorFixed = true;
     }
 
     public void ReleaseEnemy()
     {
+        taskCompText.text = "|COMPLETE| Turn on the generator in the security room";
+        taskCompAnim.SetTrigger("FadeIn");
+        
         taskText.text = "☐ Spoopy boi is here to nibble your nipple";
         enemy.SetActive(true);
         GeneratorOn = true;
