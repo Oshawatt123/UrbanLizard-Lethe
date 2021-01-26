@@ -22,7 +22,7 @@ public class TileScript : MonoBehaviour
     {
         this.transform.Rotate(0, 90, 0);
         //Check overall puzzle completion
-        this.transform.root.GetComponent<LongWireController>().CheckPuzzle();
+        this.transform.parent.GetComponent<LongWireController>().CheckPuzzle();
     }
 
     public void ResetTile()

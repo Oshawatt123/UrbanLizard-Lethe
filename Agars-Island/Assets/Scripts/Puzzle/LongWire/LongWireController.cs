@@ -29,6 +29,7 @@ public class LongWireController : MonoBehaviour
                 if (Tile.transform.localEulerAngles.y == TileRot)
                 {
                     tilesCorrect++;
+                    break;
                 }
 
                 /*

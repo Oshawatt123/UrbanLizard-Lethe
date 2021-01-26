@@ -6,6 +6,6 @@ public class ResetTiles : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        this.transform.root.GetComponent<LongWireController>().ResetPuzzle();
+        this.transform.parent.GetComponent<LongWireController>().ResetPuzzle();
     }
 }
