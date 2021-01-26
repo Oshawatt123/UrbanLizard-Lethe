@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
 
+    [SerializeField] private bool slide;
     [SerializeField] private bool singleInteract;
     private int interactsToOpen = 0;
     private int interactions = 0;
@@ -15,6 +16,8 @@ public class Door : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+
+        if (!anim) GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
 
     // Update is called once per frame
@@ -43,6 +46,14 @@ public class Door : MonoBehaviour
 
     private void Open()
     {
-        anim.SetTrigger("OpenDoor");
+        if (anim)
+        {
+            if (slide) anim.SetTrigger("SlideDoor");
+            else anim.SetTrigger("OpenDoor");
+        }
+        else
+        {
+            GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.None;
+        }
     }
 }

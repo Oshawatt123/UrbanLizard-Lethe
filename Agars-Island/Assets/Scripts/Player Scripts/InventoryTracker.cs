@@ -28,9 +28,12 @@ public class InventoryTracker : MonoBehaviour
     void Start()
     {
         int[] loadedData = LoadInventory.Load();
-        batteries = loadedData[0];
-        meds = loadedData[1];
-        keycardLevel = loadedData[2];
+        //batteries = loadedData[0];
+        //meds = loadedData[1];
+        //keycardLevel = loadedData[2];
+        batteries = 0;
+        meds = 0;
+        keycardLevel = 0;
         UpdateText();
 
         if (PickUpText)
