@@ -91,6 +91,15 @@ public class InventoryTracker : MonoBehaviour
         ShowPickupText("Picked up flashlight");
     }
 
+    //---------------------------------------- Note Collection -----------------------------------
+    public void NoteCollection(GameObject Note)
+    {
+        //Get Details script from note
+        NoteDetails ThisNote = Note.GetComponent<NoteDetails>();
+        
+    }
+
+    //-------------------------------------- Display Pickup Text ----------------------------------
     private void ShowPickupText(string text)
     {
         if (pickUpTextAnim)
@@ -101,5 +110,6 @@ public class InventoryTracker : MonoBehaviour
             
         }
     }
+
 
 }

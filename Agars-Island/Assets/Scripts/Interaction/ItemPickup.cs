@@ -51,6 +51,9 @@ public class ItemPickup : Interactable
             case "Flashlight":
                 playerInventory.GiveFlashlight();
                 break;
+            case "Note":
+                playerInventory.NoteCollection(this.gameObject);
+                break;
         }
 
         pickUpNoise.pitch = Random.Range(0.5f, 1.0f);
