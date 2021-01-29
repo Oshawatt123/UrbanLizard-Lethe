@@ -20,18 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DoorOpen/Door.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DoorOpen/Door.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DoorOpen/DoorOpen.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DoorOpen/DoorOpen.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DoorOpen/DoorSlideUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DoorOpen/DoorSlideUp.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Door.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,12 +125,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -211,6 +204,7 @@
       <workItem from="1611563313325" duration="9815000" />
       <workItem from="1611588463701" duration="1531000" />
       <workItem from="1611692389160" duration="3406000" />
+      <workItem from="1611932400985" duration="555000" />
     </task>
     <servers />
   </component>

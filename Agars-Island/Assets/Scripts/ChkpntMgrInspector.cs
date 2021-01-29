@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(CheckpointManager))]
 public class ChkpntMgrInspector : Editor
 {
@@ -70,3 +71,4 @@ public class ChkpntMgrInspector : Editor
         }
     }
 }
+#endif

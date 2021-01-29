@@ -128,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Handle Rotations
         transform.rotation = Quaternion.Lerp(transform.rotation, BodyRotationTarget, Time.deltaTime * RotSmoothSpeed);
-        Camera.transform.localRotation = Quaternion.Lerp(Camera.transform.localRotation, CamTargetRotation, RotSmoothSpeed);
+        Camera.transform.localRotation = Quaternion.Lerp(Camera.transform.localRotation, CamTargetRotation, Time.deltaTime * RotSmoothSpeed);
     }
     void Movement()
     {
