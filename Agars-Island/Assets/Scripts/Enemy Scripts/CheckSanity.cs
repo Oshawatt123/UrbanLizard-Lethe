@@ -29,18 +29,19 @@ public class CheckSanity : BT_Behaviour
     public override NodeState tick()
     {
         float DistToPlayer = Vector3.Distance(Player.transform.position, Self.position);
-        //Check if AI is forcing a direct charge
-        if (LocalBB.ForceCharge || DistToPlayer < 25)
+        //Get random number
+        float RandomNumb = Random.Range(SanityLimit - 10, SanityLimit + 10);
+
+        //Check if AI is forcing a direct charge or random chance has been activated
+        if (LocalBB.ForceCharge || DistToPlayer < 25 || RandomNumb == SanityLimit)
         {
             //Disable Cone
             Player.transform.GetChild(1).gameObject.SetActive(false);
             return NodeState.NODE_SUCCESS;
         }
-        //Get random number
-        float RandomNumb = Random.Range(SanityLimit - 10, SanityLimit + 10);
 
         //Otherwise compare sanity to threshold for this behaviour
-        if(SanityScript.Sanity > SanityLimit || RandomNumb == SanityLimit)
+        if(SanityScript.Sanity > SanityLimit)
         {
             return NodeState.NODE_FAILURE;
         }
