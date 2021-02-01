@@ -69,7 +69,10 @@ public class InventoryTracker : MonoBehaviour
         ShowPickupText("Picked up meds");
     }
     
-    public void RemoveMeds(int number) { meds -= number; UpdateText(); }
+    public void RemoveMeds(int number) 
+    { 
+        meds -= number; UpdateText(); 
+    }
 
     public void SetKeycardLevel(int level)
     {

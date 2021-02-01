@@ -33,7 +33,7 @@ public class ToggleFlashlight : MonoBehaviour
             LightScript.Switch();
         }
 
-        if (Input.GetKeyDown(KeyCode.L) && Inventory.batteries > 0)
+        if (Input.GetKeyDown(KeyCode.R) && Inventory.batteries > 0)
         {
             Inventory.RemoveBattery(1);
             Battery = 100f;
