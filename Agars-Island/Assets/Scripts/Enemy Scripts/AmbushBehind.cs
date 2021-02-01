@@ -32,7 +32,7 @@ public class AmbushBehind : BT_Behaviour
             float AngleToPoint = Vector3.Angle(Player.transform.forward, Point.transform.position);
             Debug.Log(AngleToPoint);
             //Check if angle to point is equal to behind player
-            if (AngleToPoint > 90 || AngleToPoint < -90)
+            if ((AngleToPoint > 90 || AngleToPoint < -90) && Point.transform.position.y == Player.transform.position.y)
             {
                 Debug.Log("Point Behind Found");
                 //Check if point is closest to player
@@ -51,8 +51,10 @@ public class AmbushBehind : BT_Behaviour
             //Rescan list and just find closest point
             foreach (GameObject Point in AmbushPositions)
             {
+                float PlayerY = Mathf.RoundToInt(Player.transform.position.y);
                 //Check if point is closest to player
-                if (Vector3.Distance(Player.transform.position, Point.transform.position) < ClosestDistance)
+                if (Vector3.Distance(Player.transform.position, Point.transform.position) < ClosestDistance && 
+                    Point.transform.position.y == PlayerY)
                 {
                     ClosestPoint = Point;
                     ClosestDistance = Vector3.Distance(Player.transform.position, Point.transform.position);

@@ -54,8 +54,9 @@ public class MoveToAmbush : BT_Behaviour
             foreach (GameObject Point in AmbushPositions)
             {
                 float PathDistance = CalculatePathDistance(Point);
+                float PlayerY = Mathf.RoundToInt(Player.transform.position.y);
 
-                if (PathDistance < ClosestDistance)
+                if (PathDistance < ClosestDistance && Point.transform.position.y == PlayerY)
                 {
                     ClosestDistance = PathDistance;
                     ClosestPoint = Point;

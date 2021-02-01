@@ -47,9 +47,10 @@ public class RandomMovement : BT_Behaviour
 
             while(SuitablePoint == false)
             {
-                Vector3 RandomDirection = Random.insideUnitSphere * Random.Range(10, WanderDistance);
+                Vector3 RandomDirection = Random.insideUnitCircle * Random.Range(10, WanderDistance);
 
                 RandomDirection += Player.transform.position;
+                RandomDirection.y = Player.transform.position.y;
 
                 NavMesh.SamplePosition(RandomDirection, out NavHit, WanderDistance, -1);
 
