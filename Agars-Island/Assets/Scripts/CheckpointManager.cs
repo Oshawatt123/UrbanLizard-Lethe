@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Configuration;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,6 +11,7 @@ public class CheckpointManager : MonoBehaviour
 
     [HideInInspector] public bool GeneratorFixed;
     [HideInInspector] public bool GeneratorOn;
+    [HideInInspector] public bool doorLockedTrigger = false;
 
     [SerializeField] private GameObject enemy;
     [SerializeField] private TextMeshProUGUI taskText;
@@ -34,6 +36,7 @@ public class CheckpointManager : MonoBehaviour
         taskText.text = "☐ Find a light source";
         taskCompAnim = taskCompText.gameObject.GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        doorLockedTrigger = false;
     }
 
     // Update is called once per frame
@@ -45,6 +48,24 @@ public class CheckpointManager : MonoBehaviour
     public void FlashlightGot()
     {
         taskCompText.text = "|COMPLETE| Find a light source";
+        taskCompAnim.SetTrigger("FadeIn");
+        
+        taskText.text = "☐ Fix the backup generator";
+    }
+
+    public void DoorLocked()
+    {
+        taskCompText.text = "Find a way to get downstairs";
+        taskCompAnim.SetTrigger("FadeIn");
+        doorLockedTrigger = true;
+        
+        taskText.text = "☐ Search for a keycard to grant access to the lower level";
+    }
+
+    public void FoundKeycard()
+    {
+        taskCompText.text = "|COMPLETE| Found a keycard to gain access to lower level";
+        
         taskCompAnim.SetTrigger("FadeIn");
         
         taskText.text = "☐ Fix the backup generator";

@@ -19,6 +19,8 @@ public class ItemPickup : Interactable
         render = GetComponentsInChildren<MeshRenderer>();
         collider = GetComponentInChildren<Collider>();
         pickUpNoise = GetComponentInChildren<AudioSource>();
+        
+        base.Init();
     }
 
     // Update is called once per frame
@@ -30,6 +32,8 @@ public class ItemPickup : Interactable
     public override void Interact()
     {
         base.Interact();
+        
+        if(chkpnt) chkpnt.CheckPoint();
 
         switch (PickupType)
         {
