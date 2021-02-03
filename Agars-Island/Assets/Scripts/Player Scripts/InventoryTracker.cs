@@ -13,6 +13,8 @@ public class InventoryTracker : MonoBehaviour
 
     private int keycardLevel= 0;
 
+    private List<GameObject> NotesList;
+
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
     [SerializeField] private TextMeshProUGUI PickUpText;
@@ -100,8 +102,10 @@ public class InventoryTracker : MonoBehaviour
     //---------------------------------------- Note Collection -----------------------------------
     public void NoteCollection(GameObject Note)
     {
-        //Get Details script from note
-        NoteDetails ThisNote = Note.GetComponent<NoteDetails>();
+        //Add note to list of collected notes
+        NotesList.Add(Note);
+        //Disable Note
+        Note.SetActive(false);
         
     }
 
