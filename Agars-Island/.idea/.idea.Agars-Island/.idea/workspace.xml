@@ -123,13 +123,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
         <option value="$PROJECT_DIR$/Assets/GiveCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstKeycardCheckpoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
       </list>
     </option>
   </component>
@@ -205,6 +205,7 @@
       <workItem from="1611692389160" duration="3406000" />
       <workItem from="1611932400985" duration="555000" />
       <workItem from="1612358582639" duration="4177000" />
+      <workItem from="1612450650490" duration="666000" />
     </task>
     <servers />
   </component>

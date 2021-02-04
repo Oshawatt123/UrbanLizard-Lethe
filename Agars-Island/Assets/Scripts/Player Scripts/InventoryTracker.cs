@@ -13,7 +13,7 @@ public class InventoryTracker : MonoBehaviour
 
     private int keycardLevel= 0;
 
-    private List<GameObject> NotesList;
+    private List<GameObject> NotesList = new List<GameObject>();
 
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
@@ -57,6 +57,8 @@ public class InventoryTracker : MonoBehaviour
         LoadInventory.Save(saveData);
     }
 
+    //---------------------------------------- Inventory Management -----------------------------------
+    
     public void AddBattery(int number)
     {
         batteries += number; UpdateText();
@@ -83,12 +85,6 @@ public class InventoryTracker : MonoBehaviour
     }
 
     public int GetKeycardLevel() { return keycardLevel; }
-
-    private void UpdateText()
-    {
-        batteryText.text = batteries.ToString();
-        medsText.text = meds.ToString();
-    }
 
     public void GiveFlashlight()
     {
@@ -119,6 +115,12 @@ public class InventoryTracker : MonoBehaviour
                 pickUpTextAnim.SetTrigger("FadeIn");
             
         }
+    }
+    
+    private void UpdateText()
+    {
+        batteryText.text = batteries.ToString();
+        medsText.text = meds.ToString();
     }
 
 
