@@ -15,8 +15,6 @@ public class DoorButton : Interactable
     
     [SerializeField] private Animator lightAnim;
 
-    private GiveCheckPoint chkpnt;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +24,6 @@ public class DoorButton : Interactable
 
         playerInv = GameObject.Find("Player").GetComponent<InventoryTracker>();
         lightAnim = GetComponentInChildOnly<Animator>(gameObject);
-
-        chkpnt = GetComponent<GiveCheckPoint>();
-
     }
 
     public override void Interact()
