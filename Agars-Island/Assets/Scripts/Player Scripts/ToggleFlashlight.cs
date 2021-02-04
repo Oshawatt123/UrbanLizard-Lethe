@@ -17,6 +17,7 @@ public class ToggleFlashlight : MonoBehaviour
         LightScript = this.GetComponentInChildren<Flashlight_PRO>();
         Battery = 100f;
         Inventory = this.GetComponent<InventoryTracker>();
+        canToggle = true;
     }
 
     // Update is called once per frame
@@ -26,9 +27,14 @@ public class ToggleFlashlight : MonoBehaviour
         {
             //Drain Flashlight when on
             Battery -= DrainSpeed * Time.deltaTime;
+            if(Battery <= 0)
+            {
+                LightScript.Switch();
+                canToggle = false;
+            }
         }
 
-        if (Input.GetMouseButtonDown(0) && canToggle && Battery > 0 && hasFlashlight)
+        if (Input.GetMouseButtonDown(0) && canToggle && hasFlashlight)
         {
             LightScript.Switch();
         }
@@ -37,6 +43,7 @@ public class ToggleFlashlight : MonoBehaviour
         {
             Inventory.RemoveBattery(1);
             Battery = 100f;
+            canToggle = true;
         }
     }
 }
