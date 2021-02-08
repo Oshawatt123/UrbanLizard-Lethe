@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChangeGenText : MonoBehaviour
 {
     [SerializeField] private Text text;
+    [SerializeField] private List<ExplodableMonitor> monitors;
     
     public void GeneratorFixed()
     {
@@ -20,6 +21,11 @@ public class ChangeGenText : MonoBehaviour
             text.text = "BackupGenerator: On";
             text.color = Color.green;
             CheckpointManager.instance.ReleaseEnemy();
+        }
+
+        foreach (var monitor in monitors)
+        {
+            monitor.TurnOn();
         }
     }
 }

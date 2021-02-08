@@ -127,6 +127,14 @@
           <e p="LowPolyOfficeProps_LITE" t="Include">
             <e p="About.txt" t="Include" />
           </e>
+          <e p="Pekdata" t="Include">
+            <e p="PekdataCRTMonitor" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="ExampleBullet.cs" t="Include" />
+                <e p="ExplodableMonitor.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="PolygonPrototype" t="Include">
             <e p="Shaders" t="Include">
               <e p="Prototype_Glass_Global.shader" t="Include" />
