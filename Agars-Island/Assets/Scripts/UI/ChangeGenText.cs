@@ -21,11 +21,11 @@ public class ChangeGenText : MonoBehaviour
             text.text = "BackupGenerator: On";
             text.color = Color.green;
             CheckpointManager.instance.ReleaseEnemy();
-        }
-
-        foreach (var monitor in monitors)
-        {
-            monitor.TurnOn();
+            
+            foreach (var monitor in monitors)
+            {
+                monitor.TurnOn();
+            }
         }
     }
 }
