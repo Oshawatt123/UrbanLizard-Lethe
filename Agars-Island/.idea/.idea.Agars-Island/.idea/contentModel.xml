@@ -19,8 +19,9 @@
           <e p="InventoryState.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="CheckpointManager.cs" t="Include" />
-          <e p="ChkpntMgrInspector.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="ChkpntMgrInspector.cs" t="Include" />
+          </e>
           <e p="Enemy Scripts" t="Include">
             <e p="AIControl.cs" t="Include" />
             <e p="AITest.cs" t="Include" />
@@ -38,7 +39,6 @@
             <e p="SetToMarkedPos.cs" t="Include" />
             <e p="StoreLastPosition.cs" t="Include" />
           </e>
-          <e p="FirstKeycardCheckpoint.cs" t="Include" />
           <e p="GiveCheckPoint.cs" t="Include" />
           <e p="Interaction" t="Include">
             <e p="ActivatePuzzle.cs" t="Include" />
@@ -46,10 +46,16 @@
             <e p="Button.cs" t="Include" />
             <e p="Door.cs" t="Include" />
             <e p="DoorButton.cs" t="Include" />
+            <e p="FirstKeycardCheckpoint.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="ItemPickup.cs" t="Include" />
             <e p="NoteDetails.cs" t="Include" />
             <e p="Switch.cs" t="Include" />
+          </e>
+          <e p="Manager" t="Include">
+            <e p="CheckpointManager.cs" t="Include" />
+            <e p="SceneLoader.cs" t="Include" />
+            <e p="TutorialManager.cs" t="Include" />
           </e>
           <e p="Menu" t="Include">
             <e p="MainMenu.cs" t="Include" />
@@ -105,7 +111,6 @@
             </e>
             <e p="ToggleFloor.cs" t="Include" />
           </e>
-          <e p="TutorialManager.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="ChangeGenText.cs" t="Include" />
             <e p="DragUIObject.cs" t="Include" />

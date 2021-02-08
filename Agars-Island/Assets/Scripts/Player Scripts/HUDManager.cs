@@ -29,6 +29,9 @@ public class HUDManager : MonoBehaviour
     private static PlayerMovement playerMovement;
     private static ToggleFlashlight TF;
 
+    [SerializeField] private CanvasGroup pauseGroup;
+    private bool pauseOpen;
+
 
     [Header("Hints")]
     [SerializeField] private CanvasGroup InteractHint;
@@ -37,11 +40,13 @@ public class HUDManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GroupSwapper.HideCanvasGroup(pauseGroup);
         GroupSwapper.HideCanvasGroup(inventoryGroup);
         GroupSwapper.ShowCanvasGroup(HUD);
 
         allCanvases.Add(HUD);
         allCanvases.Add(inventoryGroup);
+        allCanvases.Add(pauseGroup);
 
         playerMovement = GetComponent<PlayerMovement>();
         TF = GetComponent<ToggleFlashlight>();
@@ -60,6 +65,7 @@ public class HUDManager : MonoBehaviour
 
             if (inventoryOpen)
             {
+                GroupSwapper.HideCanvasGroup(pauseGroup);
                 GroupSwapper.HideCanvasGroup(inventoryGroup);
                 GroupSwapper.ShowCanvasGroup(HUD);
                 MouseModeGame();
@@ -74,9 +80,25 @@ public class HUDManager : MonoBehaviour
             {
                 GroupSwapper.ShowCanvasGroup(inventoryGroup);
                 GroupSwapper.HideCanvasGroup(HUD);
+                GroupSwapper.HideCanvasGroup(pauseGroup);
                 MouseModeUI();
                 inventoryOpen = !inventoryOpen;
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (pauseOpen)
+            {
+                GroupSwapper.HideCanvasGroup(pauseGroup);
+                MouseModeGame();
+            }
+            else
+            {
+                GroupSwapper.ShowCanvasGroup(pauseGroup);
+                MouseModeUI();
+            }
+
+            pauseOpen = !pauseOpen;
         }
     }
 
