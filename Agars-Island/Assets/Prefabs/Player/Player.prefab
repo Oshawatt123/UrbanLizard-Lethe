@@ -2760,7 +2760,7 @@ MonoBehaviour:
   stopDistance: 0.88
   Stamina: 0
   MaxStamina: 100
-  SprintDrainDelay: 1
+  SprintDrainRate: 2
   SprintRecoverDelay: 3
   footStep: {fileID: 1897450405}
   stepTime: 0.7

@@ -24,14 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
     //Sprinting
     [Header("Sprinting")]
-    public int Stamina;
-    public int MaxStamina;
+    public float Stamina;
+    public float MaxStamina;
     private bool IsSprinting;
     
     //Stamina Drain
     [Header("Stamina drain")]
-    public int SprintDrainDelay;
-    private float NextDrainTime;
+    public float SprintDrainRate;
     
     //Stamina Recovery
     [Header("Stamina recovery")]
@@ -55,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Slider staminaBar;
 
+    [Header("Hiding")]
     public bool IsHiding;
 
     // Start is called before the first frame update
@@ -69,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
 
         //Controller = this.GetComponent<CharacterController>();
         Stamina = MaxStamina;
-        NextDrainTime = Time.time + SprintDrainDelay;
         IsHiding = false;
 
         stepTimer = stepTime;
@@ -84,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Drain Sprint after delay
-        if (IsSprinting && Time.time >= NextDrainTime)
+        if (IsSprinting)
         {
             DrainSprint();
         }
@@ -132,41 +131,52 @@ public class PlayerMovement : MonoBehaviour
     }
     void Movement()
     {
+        //Get Movement inputs
         float MoveH = Input.GetAxisRaw("Horizontal");
         float MoveV = Input.GetAxisRaw("Vertical");
 
+        //Turn into Vector and Multiply by move speed
         Vector3 MoveDir = new Vector3(MoveH, 0, MoveV) * MoveSpeed;
 
+        //Get position to move to
         Vector3 NewPos = PlayerBody.position + PlayerBody.transform.TransformDirection(MoveDir);
 
+        //Move player
         PlayerBody.MovePosition(NewPos);
 
+        //If player is still, ensure sprinting is disables
         if (MoveDir == Vector3.zero && IsSprinting)
         {
             SprintToggle();
         }
 
+        //Play Sound
         PlayFootStep(MoveDir, IsSprinting);
     }
     void SprintToggle()
     {
+        //Check if toggling sprinting on or off
         if (IsSprinting)
         {
+            //Set to not sprinting
             IsSprinting = false;
+            //Reduce move speed
             MoveSpeed /= 2;
+            //Set sprint recovery time
             NextRecTime = Time.time + SprintRecoverDelay;
         }
-
+        //Check if player has stamina
         else if (Stamina > 0)
         {
+            //Enable sprinting
             IsSprinting = true;
+            //Increase move speed
             MoveSpeed *= 2;
         }
     }
     void DrainSprint()
     {
-        Stamina -= 5;
-        NextDrainTime = Time.time + SprintDrainDelay;
+        Stamina -= SprintDrainRate * Time.deltaTime;
         //Check if stamina is depleted
         if (Stamina <= 0)
         {
