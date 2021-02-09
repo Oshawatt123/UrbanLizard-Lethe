@@ -100,9 +100,21 @@ public class InventoryTracker : MonoBehaviour
     {
         //Add note to list of collected notes
         NotesList.Add(Note);
+        //Call Note Updater
+        UpdateNotesScreen();
         //Disable Note
         Note.SetActive(false);
         
+    }
+
+    private void UpdateNotesScreen()
+    {
+        //Loop through each note in collected notes
+        foreach(GameObject Note in NotesList)
+        {
+            //Add to side bar with Note title
+            
+        }
     }
 
     //-------------------------------------- Display Pickup Text ----------------------------------

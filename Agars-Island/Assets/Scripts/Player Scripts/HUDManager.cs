@@ -32,6 +32,8 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private CanvasGroup pauseGroup;
     private bool pauseOpen;
 
+    [SerializeField] private CanvasGroup NotesGroup;
+
 
     [Header("Hints")]
     [SerializeField] private CanvasGroup InteractHint;
@@ -42,11 +44,13 @@ public class HUDManager : MonoBehaviour
     {
         GroupSwapper.HideCanvasGroup(pauseGroup);
         GroupSwapper.HideCanvasGroup(inventoryGroup);
+        GroupSwapper.HideCanvasGroup(NotesGroup);
         GroupSwapper.ShowCanvasGroup(HUD);
 
         allCanvases.Add(HUD);
         allCanvases.Add(inventoryGroup);
         allCanvases.Add(pauseGroup);
+        allCanvases.Add(NotesGroup);
 
         playerMovement = GetComponent<PlayerMovement>();
         TF = GetComponent<ToggleFlashlight>();
@@ -67,6 +71,7 @@ public class HUDManager : MonoBehaviour
             {
                 GroupSwapper.HideCanvasGroup(pauseGroup);
                 GroupSwapper.HideCanvasGroup(inventoryGroup);
+                GroupSwapper.HideCanvasGroup(NotesGroup);
                 GroupSwapper.ShowCanvasGroup(HUD);
                 MouseModeGame();
                 inventoryOpen = !inventoryOpen;
@@ -213,5 +218,17 @@ public class HUDManager : MonoBehaviour
     public void HideInteractHint()
     {
         GroupSwapper.HideCanvasGroup(InteractHint);
+    }
+
+    public void ShowNotesScreen()
+    {
+        GroupSwapper.HideCanvasGroup(inventoryGroup);
+        GroupSwapper.ShowCanvasGroup(NotesGroup);
+    }
+
+    public void LeaveNotesScreen()
+    {
+        GroupSwapper.ShowCanvasGroup(inventoryGroup);
+        GroupSwapper.HideCanvasGroup(NotesGroup);
     }
 }
