@@ -27,6 +27,7 @@ public class TutorialManager : MonoBehaviour
             Thread.Sleep(1000);
             TABAnim.SetTrigger("FadeIn");
             firstLoad = false;
+            Debug.Log("Tut started");
         }
     }
 
