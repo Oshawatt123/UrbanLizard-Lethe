@@ -3144,6 +3144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6712414817873800391, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
+        type: 3}
+      propertyPath: slide
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6712414817873800392, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5392,17 +5397,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629927126}
     m_Modifications:
-    - target: {fileID: 2765059959562364436, guid: 6071c3bed2ca93a469eadbbb899e1531,
-        type: 3}
-      propertyPath: NoteTitle
-      value: Note 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2765059959562364436, guid: 6071c3bed2ca93a469eadbbb899e1531,
-        type: 3}
-      propertyPath: noteData
-      value: 
-      objectReference: {fileID: 11400000, guid: f3e2c201cdc0fc74883b88a175240b24,
-        type: 2}
     - target: {fileID: 2765059959562364437, guid: 6071c3bed2ca93a469eadbbb899e1531,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7713,6 +7707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712414817873800391, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
+        type: 3}
+      propertyPath: slide
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6712414817873800392, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
         type: 3}
@@ -19172,6 +19171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6712414817873800391, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
+        type: 3}
+      propertyPath: slide
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6712414817873800392, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20691,6 +20695,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712414817873800391, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
+        type: 3}
+      propertyPath: slide
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6712414817873800392, guid: 3ad03a3555a4f6a4fbc4767a70c93d83,
         type: 3}
@@ -23432,6 +23441,18 @@ PrefabInstance:
       propertyPath: NoteTitle
       value: Note 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2765059959562364436, guid: 6071c3bed2ca93a469eadbbb899e1531,
+        type: 3}
+      propertyPath: noteData
+      value: 
+      objectReference: {fileID: 11400000, guid: f3e2c201cdc0fc74883b88a175240b24,
+        type: 2}
+    - target: {fileID: 2765059959562364436, guid: 6071c3bed2ca93a469eadbbb899e1531,
+        type: 3}
+      propertyPath: LinkedNoteData
+      value: 
+      objectReference: {fileID: 11400000, guid: f3e2c201cdc0fc74883b88a175240b24,
+        type: 2}
     - target: {fileID: 2765059959562364437, guid: 6071c3bed2ca93a469eadbbb899e1531,
         type: 3}
       propertyPath: m_LocalPosition.x

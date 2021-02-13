@@ -15,6 +15,7 @@ public class InventoryTracker : MonoBehaviour
 
     private List<GameObject> NotesList = new List<GameObject>();
     public TMP_Dropdown NoteSelector;
+    public TextMeshProUGUI NoteDescBox;
     private TextMeshProUGUI NoteLabel;
 
     [SerializeField] private TextMeshProUGUI batteryText;
@@ -121,14 +122,22 @@ public class InventoryTracker : MonoBehaviour
         foreach (GameObject Note in NotesList)
         {
             //Get Note Data
-            NoteDetails noteData = Note.GetComponent<NoteDetails>();
+            NoteData NoteData = Note.GetComponent<NoteDetails>().LinkedNoteData;
             //Add to list for side bar
-            NoteTitles.Add(noteData.noteData.title);
+            NoteTitles.Add(NoteData.title);
         }
         //Add each title to new dropdown option
         foreach (string Title in NoteTitles)
         {
             NoteSelector.options.Add(new TMP_Dropdown.OptionData() { text = Title });
+        }
+
+        //Check if player has notes
+        if(NotesList.Count != 0)
+        {
+            GameObject CurrentSelection = NotesList[NoteSelector.value];
+            NoteData SelectedNote = CurrentSelection.GetComponent<NoteDetails>().LinkedNoteData;
+            NoteDescBox.text = SelectedNote.description;
         }
 
         //Reset Label
@@ -159,9 +168,9 @@ public class InventoryTracker : MonoBehaviour
         NoteSelector.value = IndexSelected;
         //Get Note in inventory at index
         GameObject SelectedNote = NotesList[IndexSelected];
-        NoteDetails SelectedDetails = SelectedNote.GetComponent<NoteDetails>();
+        NoteData SelectedDetails = SelectedNote.GetComponent<NoteDetails>().LinkedNoteData;
         //Set Note Text to selected notes data
-
+        NoteDescBox.text = SelectedDetails.description;
         //Reset Label
         NoteLabel.text = "Notes";
     }
