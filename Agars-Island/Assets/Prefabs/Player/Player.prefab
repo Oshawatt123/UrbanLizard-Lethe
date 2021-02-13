@@ -165,7 +165,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.8
+  m_fontSize: 37.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.6
+  m_fontSize: 16.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -743,7 +743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3866394, y: 0.88500005}
   m_AnchorMax: {x: 0.6154426, y: 1}
-  m_AnchoredPosition: {x: -0.8049927, y: 2.144989}
+  m_AnchoredPosition: {x: -0.8049927, y: 2.1449585}
   m_SizeDelta: {x: 2.3812866, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &422466123
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.55
+  m_fontSize: 41.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.7
+  m_fontSize: 40.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.55
+  m_fontSize: 40.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.35
+  m_fontSize: 27.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2883,7 +2883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerBody: {fileID: 0}
-  RotationSpeed: 10
+  RotationSpeed: 5
   CamMinY: -60
   CamMaxY: 75
   RotSmoothSpeed: 10
@@ -3725,7 +3725,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.85
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3836,10 +3836,10 @@ RectTransform:
   m_Father: {fileID: 2045640523}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.272, y: 0.75100005}
-  m_AnchorMax: {x: 0.72452575, y: 0.85668826}
-  m_AnchoredPosition: {x: 0.2501831, y: 0.3999939}
-  m_SizeDelta: {x: 0.25886536, y: -1.3634434}
+  m_AnchorMin: {x: 0.34025, y: 0.76600003}
+  m_AnchorMax: {x: 0.65931815, y: 0.84153676}
+  m_AnchoredPosition: {x: 0.171875, y: 0.39996338}
+  m_SizeDelta: {x: 0.5233612, y: -1.3471956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5773277303352753156
 CanvasRenderer:
@@ -3895,7 +3895,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.1
+  m_fontSize: 23.5
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4926,9 +4926,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5548565665158200002}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &5550545768874595103
 GameObject:
@@ -4963,10 +4963,10 @@ RectTransform:
   m_Father: {fileID: 2045640523}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.272, y: 0.75100005}
-  m_AnchorMax: {x: 0.72452575, y: 0.85668826}
-  m_AnchoredPosition: {x: 0.2501831, y: 0.3999939}
-  m_SizeDelta: {x: 0.25886536, y: -1.3634434}
+  m_AnchorMin: {x: 0.272, y: 0.76600003}
+  m_AnchorMax: {x: 0.65931815, y: 0.84153676}
+  m_AnchoredPosition: {x: 12.207367, y: 0.38497925}
+  m_SizeDelta: {x: -23.453812, y: -1.3172092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6084982822270819225
 CanvasRenderer:
@@ -5022,7 +5022,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.85
+  m_fontSize: 39.1
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5414,7 +5414,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.05
+  m_fontSize: 36.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5824,6 +5824,7 @@ GameObject:
   - component: {fileID: 7714073899073714951}
   - component: {fileID: 7714073899073714944}
   - component: {fileID: 7714073899073714945}
+  - component: {fileID: 2126431707}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5877,7 +5878,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3895
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5897,6 +5898,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7714073899073714946}
   m_Enabled: 1
+--- !u!114 &2126431707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714073899073714946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f570e6965b4154aa8c67072236440c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 0}
+  lightsToCull: []
 --- !u!1 &8286944993943157378
 GameObject:
   m_ObjectHideFlags: 0
