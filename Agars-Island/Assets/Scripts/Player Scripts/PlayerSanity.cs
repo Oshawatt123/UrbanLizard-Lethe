@@ -40,7 +40,7 @@ public class PlayerSanity : MonoBehaviour
                 Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
                 if (Physics.Raycast(this.transform.position, VectToEnemy, out Hit, 75f, ~Mask))
                 {
-                    Debug.Log("Here");
+                    //Debug.Log("Here");
                     if (Hit.transform.CompareTag("Enemy"))
                     {
                         //Drain Sanity

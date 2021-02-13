@@ -121,9 +121,9 @@ public class InventoryTracker : MonoBehaviour
         foreach (GameObject Note in NotesList)
         {
             //Get Note Data
-            NoteDetails NoteData = Note.GetComponent<NoteDetails>();
+            NoteDetails noteData = Note.GetComponent<NoteDetails>();
             //Add to list for side bar
-            NoteTitles.Add(NoteData.NoteTitle);
+            NoteTitles.Add(noteData.noteData.title);
         }
         //Add each title to new dropdown option
         foreach (string Title in NoteTitles)

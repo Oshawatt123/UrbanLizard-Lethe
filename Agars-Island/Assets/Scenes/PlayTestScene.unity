@@ -405,6 +405,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126431707, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
+      propertyPath: sun
+      value: 
+      objectReference: {fileID: 1892499200}
     - target: {fileID: 3660028597552631826, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_Name
@@ -413,17 +417,17 @@ PrefabInstance:
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -193.63
+      value: -88.9
       objectReference: {fileID: 0}
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.02
+      value: 3.81
       objectReference: {fileID: 0}
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -80.65
+      value: -18.5
       objectReference: {fileID: 0}
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
@@ -5393,6 +5397,12 @@ PrefabInstance:
       propertyPath: NoteTitle
       value: Note 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2765059959562364436, guid: 6071c3bed2ca93a469eadbbb899e1531,
+        type: 3}
+      propertyPath: noteData
+      value: 
+      objectReference: {fileID: 11400000, guid: f3e2c201cdc0fc74883b88a175240b24,
+        type: 2}
     - target: {fileID: 2765059959562364437, guid: 6071c3bed2ca93a469eadbbb899e1531,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23490,26 +23500,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1928774093}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2126431705 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7714073899073714946, guid: 2fe1889d32b3e594a8917dfec052f09c,
-    type: 3}
-  m_PrefabInstance: {fileID: 42891083}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2126431707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126431705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f570e6965b4154aa8c67072236440c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sun: {fileID: 1892499200}
-  lightsToCull: []
 --- !u!1 &2140981425
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,13 +15,13 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
-        <e p="CullLights.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="Editor" t="Include">
             <e p="ChkpntMgrInspector.cs" t="Include" />
+            <e p="NoteDataInspector.cs" t="Include" />
           </e>
           <e p="Enemy Scripts" t="Include">
             <e p="AIControl.cs" t="Include" />
@@ -63,6 +63,7 @@
           </e>
           <e p="Other" t="Include">
             <e p="CopyTextColour.cs" t="Include" />
+            <e p="CullLights.cs" t="Include" />
             <e p="EditParticleScale.cs" t="Include" />
             <e p="HidingSpot.cs" t="Include" />
             <e p="LightFlicker.cs" t="Include" />
@@ -105,6 +106,9 @@
           </e>
           <e p="Saving" t="Include">
             <e p="LoadInventory.cs" t="Include" />
+          </e>
+          <e p="ScriptableObjects" t="Include">
+            <e p="NoteData.cs" t="Include" />
           </e>
           <e p="Tools" t="Include">
             <e p="Editor" t="Include">

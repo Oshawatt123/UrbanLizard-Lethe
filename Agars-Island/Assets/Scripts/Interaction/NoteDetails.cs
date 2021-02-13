@@ -7,6 +7,8 @@ public class NoteDetails : MonoBehaviour
     public string NoteText;
     public string NoteTitle;
 
+    public NoteData noteData;
+
     // Start is called before the first frame update
     void Start()
     {
