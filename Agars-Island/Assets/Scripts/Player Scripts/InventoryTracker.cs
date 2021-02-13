@@ -111,6 +111,7 @@ public class InventoryTracker : MonoBehaviour
         Note.transform.position = new Vector3(-87f, 3f, 10f);
         // Show GUI
         ShowPickupText("Picked up note '" + Note.GetComponent<NoteDetails>().LinkedNoteData.title + "'");
+        Debug.LogError(Note.GetComponent<NoteDetails>().LinkedNoteData.title);
 
     }
 
