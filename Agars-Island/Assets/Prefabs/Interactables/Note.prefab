@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NoteText: 
-  NoteTitle: Note 4
+  NoteTitle: 
 --- !u!65 &8650749138022706498
 BoxCollider:
   m_ObjectHideFlags: 0

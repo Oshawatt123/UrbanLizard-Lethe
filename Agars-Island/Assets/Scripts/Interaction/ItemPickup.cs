@@ -71,9 +71,6 @@ public class ItemPickup : Interactable
             mesh.enabled = false;
         }
         
-        if(PickupType != "Note")
-        {
-            Destroy(gameObject, 1.0f);
-        }
+        Destroy(gameObject, 1.0f);
     }
 }

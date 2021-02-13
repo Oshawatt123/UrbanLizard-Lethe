@@ -14,8 +14,6 @@ public class InventoryTracker : MonoBehaviour
     private int keycardLevel= 0;
 
     private List<GameObject> NotesList = new List<GameObject>();
-    public TMP_Dropdown NoteSelector;
-    private TextMeshProUGUI NoteLabel;
 
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
@@ -44,9 +42,6 @@ public class InventoryTracker : MonoBehaviour
             pickUpTextAnim = PickUpText.gameObject.GetComponent<Animator>();
 
         TF = GetComponent<ToggleFlashlight>();
-        NoteLabel = NoteSelector.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        UpdateNotesScreen();
-        NoteSelector.value = -1;
     }
 
     // Update is called once per frame
@@ -108,33 +103,18 @@ public class InventoryTracker : MonoBehaviour
         //Call Note Updater
         UpdateNotesScreen();
         //Disable Note
-        Note.transform.position = new Vector3(-87f, 3f, 10f);
+        Note.SetActive(false);
         
     }
 
     private void UpdateNotesScreen()
     {
-        //Clear DropDownList
-        NoteSelector.ClearOptions();
-        //Make a new list of note titles
-        List<string> NoteTitles = new List<string>();
         //Loop through each note in collected notes
         foreach(GameObject Note in NotesList)
         {
-            //Get Note Data
-            NoteDetails NoteData = Note.GetComponent<NoteDetails>();
-            //Add to list for side bar
-            NoteTitles.Add(NoteData.NoteTitle);
+            //Add to side bar with Note title
+            
         }
-
-        //Add each title to new dropdown option
-        foreach (string Title in NoteTitles)
-        {
-            NoteSelector.options.Add(new TMP_Dropdown.OptionData() { text = Title });
-        }
-
-        //Reset Label
-        NoteLabel.text = "Notes";
     }
 
     //-------------------------------------- Display Pickup Text ----------------------------------
@@ -155,19 +135,5 @@ public class InventoryTracker : MonoBehaviour
         medsText.text = meds.ToString();
     }
 
-    public void ChangeSelectedNote(int IndexSelected)
-    {
-        //Set selected on dropdown
-        NoteSelector.value = IndexSelected;
 
-        //Get Note in inventory at index
-        GameObject SelectedNote = NotesList[IndexSelected];
-        NoteDetails SelectedDetails = SelectedNote.GetComponent<NoteDetails>();
-
-        //Set Note Text to selected notes data
-
-
-        //Reset Label
-        NoteLabel.text = "Notes";
-    }
 }
