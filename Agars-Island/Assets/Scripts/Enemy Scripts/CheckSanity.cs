@@ -33,7 +33,7 @@ public class CheckSanity : BT_Behaviour
         float RandomNumb = Random.Range(SanityLimit - 10, SanityLimit + 10);
 
         //Check if AI is forcing a direct charge or random chance has been activated
-        if (LocalBB.ForceCharge || DistToPlayer < 35 || RandomNumb == SanityLimit)
+        if ((LocalBB.ForceCharge || DistToPlayer < 35 || RandomNumb == SanityLimit) && LocalBB.InAmbush == false )
         {
             //Disable Cone
             Player.transform.GetChild(1).gameObject.SetActive(false);

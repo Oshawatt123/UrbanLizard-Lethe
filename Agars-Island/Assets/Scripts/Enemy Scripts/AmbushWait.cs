@@ -58,9 +58,12 @@ public class AmbushWait : BT_Behaviour
                 }
             }
 
+            localBB.InAmbush = false;
             Self.transform.GetChild(0).gameObject.SetActive(false);
-            agent.enabled = true;
             Self.transform.position -= Self.transform.up * 5;
+            Self.GetComponent<MeshRenderer>().enabled = true;
+            Self.GetComponent<CapsuleCollider>().enabled = true;
+            agent.enabled = true;
             Debug.Log("Ambush Timer Complete");
 
             //Reset timer to trigger first pass

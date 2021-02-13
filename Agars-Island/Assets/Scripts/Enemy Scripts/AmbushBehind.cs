@@ -30,7 +30,6 @@ public class AmbushBehind : BT_Behaviour
         foreach(GameObject Point in AmbushPositions)
         {
             float AngleToPoint = Vector3.Angle(Player.transform.forward, Point.transform.position);
-            Debug.Log(AngleToPoint);
             //Check if angle to point is equal to behind player
             if ((AngleToPoint > 90 || AngleToPoint < -90) && Point.transform.position.y == Player.transform.position.y)
             {
@@ -63,6 +62,8 @@ public class AmbushBehind : BT_Behaviour
         }
 
         localBB.ForceCharge = true;
+        Self.GetComponent<MeshRenderer>().enabled = true;
+        Self.GetComponent<CapsuleCollider>().enabled = true;
         Self.transform.position = ClosestPoint.transform.position;
         agent.enabled = true;
 
