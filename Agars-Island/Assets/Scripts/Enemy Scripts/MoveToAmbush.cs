@@ -81,7 +81,6 @@ public class MoveToAmbush : BT_Behaviour
             agent.enabled = false;
             Self.GetComponent<MeshRenderer>().enabled = false;
             Self.GetComponent<CapsuleCollider>().enabled = false;
-            Self.transform.position += Self.transform.up * 5;
             localBB.InAmbush = true;
             return NodeState.NODE_SUCCESS;
         }

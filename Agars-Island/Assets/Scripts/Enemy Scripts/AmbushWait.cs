@@ -60,7 +60,6 @@ public class AmbushWait : BT_Behaviour
 
             localBB.InAmbush = false;
             Self.transform.GetChild(0).gameObject.SetActive(false);
-            Self.transform.position -= Self.transform.up * 5;
             Self.GetComponent<MeshRenderer>().enabled = true;
             Self.GetComponent<CapsuleCollider>().enabled = true;
             agent.enabled = true;
