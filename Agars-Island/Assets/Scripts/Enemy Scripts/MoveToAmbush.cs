@@ -43,6 +43,7 @@ public class MoveToAmbush : BT_Behaviour
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
         {
+            Debug.Log("Moving to Ambush");
             DestSetFrame = false;
             GameObject ClosestPoint = null;
             float ClosestDistance = float.MaxValue;
@@ -55,8 +56,8 @@ public class MoveToAmbush : BT_Behaviour
             {
                 float PathDistance = CalculatePathDistance(Point);
                 float PlayerY = Mathf.RoundToInt(Player.transform.position.y);
-
-                if (PathDistance < ClosestDistance && Point.transform.position.y == PlayerY)
+                float Pointy = Mathf.RoundToInt(Point.transform.position.y);
+                if (PathDistance < ClosestDistance && Pointy == PlayerY)
                 {
                     ClosestDistance = PathDistance;
                     ClosestPoint = Point;
