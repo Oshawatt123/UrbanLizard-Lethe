@@ -43,11 +43,10 @@ public class MoveToAmbush : BT_Behaviour
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
         {
-            Debug.Log("Moving to Ambush");
             DestSetFrame = false;
             GameObject ClosestPoint = null;
             float ClosestDistance = float.MaxValue;
-
+            NextAmbRouteCheck = Time.time + AmbushRouteDelay;
             //Enable Obstacle on player to prevent selecting ambush point in sight
             Player.transform.GetChild(1).gameObject.SetActive(true);
 
@@ -57,24 +56,25 @@ public class MoveToAmbush : BT_Behaviour
                 float PathDistance = CalculatePathDistance(Point);
                 float PlayerY = Mathf.RoundToInt(Player.transform.position.y);
                 float Pointy = Mathf.RoundToInt(Point.transform.position.y);
-                if (PathDistance < ClosestDistance && Pointy == PlayerY)
+                if (PathDistance < ClosestDistance /*&& Pointy == PlayerY*/)
                 {
                     ClosestDistance = PathDistance;
                     ClosestPoint = Point;
-
                     //Set Destination
                     localBB.setMoveToLocation(ClosestPoint.transform.position);
                     agent.SetDestination(ClosestPoint.transform.position);
-                    NextAmbRouteCheck = Time.time + AmbushRouteDelay;
                     DestSetFrame = true;
                 }
             }
+
         }
 
         float dist = agent.remainingDistance;
+        Debug.Log(dist);
         //Check if arrived at ambush position
         if (dist <= 0 && !DestSetFrame)
         {            
+            
             //Disable Cone
             Player.transform.GetChild(1).gameObject.SetActive(false);
 

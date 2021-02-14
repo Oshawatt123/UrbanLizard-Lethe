@@ -138,8 +138,8 @@ MonoBehaviour:
   InAmbush: 0
   AmbushRouteDelay: 1
   SightRange: 50
-  MinAmbushTime: 3
-  MaxAmbushTime: 6
+  MinAmbushTime: 10
+  MaxAmbushTime: 15
   WanderDistance: 80
   MinDirTime: 7.5
   MaxDirTime: 15
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 3873757202860249303}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

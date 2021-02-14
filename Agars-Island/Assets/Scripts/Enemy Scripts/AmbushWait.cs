@@ -48,16 +48,6 @@ public class AmbushWait : BT_Behaviour
         //Check if time has passed to leave ambush
         else if (Time.time >= TimeToEndAmbush)
         {
-            foreach(GameObject Point in AmbushPositions)
-            {
-                Vector3 VectToPlayer = Player.transform.position - Self.position;
-                if(VectToPlayer.magnitude <= 40)
-                {
-                    Self.position = Point.transform.position;
-                    break;
-                }
-            }
-
             localBB.InAmbush = false;
             Self.transform.GetChild(0).gameObject.SetActive(false);
             Self.GetComponent<MeshRenderer>().enabled = true;

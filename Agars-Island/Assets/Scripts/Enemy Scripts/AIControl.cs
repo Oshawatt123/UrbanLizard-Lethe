@@ -63,6 +63,7 @@ public class AIControl : localTree
         Seq4.AddNode(new GoToPoint(transform));
 
         BT_Sequencer Seq6 = new BT_Sequencer();
+        Seq6.AddNode(new DisableObstacleCone(transform));
         Seq6.AddNode(new MovingToMarkedPos(transform));
         Seq6.AddNode(new ArrivedAtMarkedPoint(transform));
 
