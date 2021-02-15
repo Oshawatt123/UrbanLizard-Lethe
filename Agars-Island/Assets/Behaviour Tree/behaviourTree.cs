@@ -20,7 +20,7 @@ namespace BehaviourTree
         NODE_SEQUENCER,
         NODE_UNDEFINED
     }
-    public class BT_Node
+    public class BT_Node : MonoBehaviour
     {
         public NodeType nodeType = NodeType.NODE_UNDEFINED;
         public NodeState nodeState = NodeState.NODE_UNDEFINED;

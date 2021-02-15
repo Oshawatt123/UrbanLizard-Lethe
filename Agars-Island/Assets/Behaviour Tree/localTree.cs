@@ -20,6 +20,7 @@ public class localTree : MonoBehaviour
     public Vector3 StoredPosition;
     public bool ForceCharge;
     public bool InAmbush;
+    public bool CanAmbush;
 
     public void setMoveToLocation(Vector3 location)
     {

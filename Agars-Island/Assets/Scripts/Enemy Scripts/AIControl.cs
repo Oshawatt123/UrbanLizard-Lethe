@@ -29,6 +29,8 @@ public class AIControl : localTree
     // Start is called before the first frame update
     void Start()
     {
+        CanAmbush = true;
+
         BT_Sequencer Seq1 = new BT_Sequencer();
         Seq1.AddNode(new CheckSanity(transform, AltRouteSanity));
         Seq1.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));

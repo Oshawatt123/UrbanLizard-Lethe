@@ -39,6 +39,13 @@ public class MoveToAmbush : BT_Behaviour
 
     public override NodeState tick()
     {
+        //Check if agent is unable to ambush
+        if (!localBB.CanAmbush)
+        {
+            //Fail node and force alt route
+            return NodeState.NODE_FAILURE;
+        }
+
         Player.transform.GetChild(1).gameObject.SetActive(true);
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
@@ -84,7 +91,6 @@ public class MoveToAmbush : BT_Behaviour
             Self.GetComponent<MeshRenderer>().enabled = false;
             Self.GetComponent<CapsuleCollider>().enabled = false;
             localBB.InAmbush = true;
-            Time.timeScale = 0;
             return NodeState.NODE_SUCCESS;
         }
 

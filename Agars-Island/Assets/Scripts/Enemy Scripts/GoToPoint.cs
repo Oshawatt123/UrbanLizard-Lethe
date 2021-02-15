@@ -41,8 +41,6 @@ public class GoToPoint : BT_Behaviour
 
         Player.transform.GetChild(1).gameObject.SetActive(false);
 
-        Debug.Log("Moving To Point");
-
         nodeState = NodeState.NODE_SUCCESS;
         return NodeState.NODE_SUCCESS;
 

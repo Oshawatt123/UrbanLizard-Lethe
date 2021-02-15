@@ -21,7 +21,6 @@ public class FlashlightAttack : MonoBehaviour
     {
         ThisToggle = this.GetComponent<ToggleFlashlight>();
         EnemyInCone = false;
-        Enemy = GameObject.FindGameObjectWithTag("Enemy");
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
     }
 
@@ -94,9 +93,10 @@ public class FlashlightAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") )
         {
             EnemyInCone = true;
+            Enemy = other.gameObject;
         }
     }
 
@@ -113,8 +113,8 @@ public class FlashlightAttack : MonoBehaviour
         yield return new WaitForSeconds(ActivationCooldown);
 
         //Re-activate enemy behaviour tree
-        Enemy.transform.GetComponent<AIControl>().enabled = true;
-        Enemy.transform.GetComponent<AIControl>().MovingToMarkedLocation = false;
-        Enemy.transform.GetComponent<NavMeshAgent>().enabled = true;
+        Enemy.GetComponent<AIControl>().enabled = true;
+        Enemy.GetComponent<AIControl>().MovingToMarkedLocation = false;
+        Enemy.GetComponent<NavMeshAgent>().enabled = true;
     }
 }

@@ -48,6 +48,7 @@ public class AmbushWait : BT_Behaviour
         //Check if time has passed to leave ambush
         else if (Time.time >= TimeToEndAmbush)
         {
+            //Set to no longer in ambush
             localBB.InAmbush = false;
             Self.transform.GetChild(0).gameObject.SetActive(false);
             Self.GetComponent<MeshRenderer>().enabled = true;
@@ -55,11 +56,21 @@ public class AmbushWait : BT_Behaviour
             agent.enabled = true;
             Debug.Log("Ambush Timer Complete");
 
+            //Do something to prevent AI from looping Ambushing
+            localBB.CanAmbush = false;
+            //StartCoroutine(AmbushActiveDelay());
+
             //Reset timer to trigger first pass
             TimeToEndAmbush = int.MaxValue;
             return NodeState.NODE_SUCCESS;
         }
 
         return NodeState.NODE_RUNNING;
+    }
+
+    private IEnumerator AmbushActiveDelay()
+    {
+        yield return new WaitForSeconds(30f);
+        localBB.CanAmbush = true;
     }
 }
