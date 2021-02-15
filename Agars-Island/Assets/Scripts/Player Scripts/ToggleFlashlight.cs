@@ -12,14 +12,18 @@ public class ToggleFlashlight : MonoBehaviour
     [HideInInspector] public bool hasFlashlight = false;
     private bool Inspecting;
 
+    private Animator flashLightAnim;
+
     // Start is called before the first frame update
     void Start()
     {
         LightScript = this.GetComponentInChildren<Flashlight_PRO>();
+        flashLightAnim = LightScript.gameObject.GetComponent<Animator>();
+        
         Battery = 100f;
         Inventory = this.GetComponent<InventoryTracker>();
         canToggle = true;
-        Inspecting = true;
+        Inspecting = false;
     }
 
     // Update is called once per frame
@@ -50,6 +54,7 @@ public class ToggleFlashlight : MonoBehaviour
             Inventory.RemoveBattery(1);
             Battery = 100f;
             canToggle = true;
+            flashLightAnim.SetTrigger("ReloadBattery");
         }
 
         //Inspect Battery Toggle
@@ -58,12 +63,12 @@ public class ToggleFlashlight : MonoBehaviour
             if (!Inspecting)
             {
                 //Play inspection animation
-
+                flashLightAnim.SetTrigger("CheckBattery");
             }
             else
             {
                 //Play reverse animation
-
+                flashLightAnim.SetTrigger("HolsterTorch");
             }
             //Set bool to new value
             Inspecting = !Inspecting;

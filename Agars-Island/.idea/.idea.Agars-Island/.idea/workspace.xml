@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="" />
+    <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +106,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" />
         <option value="$PROJECT_DIR$/Assets/DragObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
         <option value="$PROJECT_DIR$/Assets/LightFlicker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" />
@@ -133,6 +136,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
       </list>
     </option>
   </component>
