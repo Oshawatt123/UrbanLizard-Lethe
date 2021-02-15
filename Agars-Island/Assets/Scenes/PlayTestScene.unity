@@ -413,6 +413,11 @@ PrefabInstance:
       propertyPath: sun
       value: 
       objectReference: {fileID: 1892499200}
+    - target: {fileID: 2750013172553713569, guid: 2fe1889d32b3e594a8917dfec052f09c,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1599703043}
     - target: {fileID: 3660028597552631826, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_Name

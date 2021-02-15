@@ -66,7 +66,8 @@ public class MoveToAmbush : BT_Behaviour
                 Debug.Log(Point + " Distance To Is: " + PathDistance);
 
                 //Check if point is closer
-                if (PathDistance < ClosestDistance)
+                if (PathDistance < ClosestDistance && ((Self.transform.position.y < 0 && PointY < 0) ||
+                (Self.transform.position.y > 0 && PointY > 0)))
                 {
                     ClosestDistance = PathDistance;
                     ClosestPoint = Point;

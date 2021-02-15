@@ -11,7 +11,8 @@ public class FlashlightAttack : MonoBehaviour
     public bool EnemyInCone;
 
     private ToggleFlashlight ThisToggle;
-    private GameObject Enemy;
+    public GameObject Enemy;
+    private Flashlight_PRO LightScript;
 
     private GameObject[] AmbushPositions;
     public LayerMask Mask;
@@ -22,6 +23,7 @@ public class FlashlightAttack : MonoBehaviour
         ThisToggle = this.GetComponent<ToggleFlashlight>();
         EnemyInCone = false;
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
+        LightScript = this.GetComponentInChildren<Flashlight_PRO>();
     }
 
     // Update is called once per frame
@@ -29,11 +31,12 @@ public class FlashlightAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            //Check if enough battery to complete attack
-            if(ThisToggle.Battery >= DrainAmount)
+            //Check if enough battery to complete attack and that enemy isn't ambushing
+            if(ThisToggle.Battery >= DrainAmount && Enemy.GetComponent<localTree>().InAmbush == false)
             {
                 //Increase Brightness for set time
-
+                LightScript.Change_Intensivity(100);
+                StartCoroutine(LightResetDelay());
 
                 //Drain set amount of battery
                 ThisToggle.Battery -= DrainAmount;
@@ -96,7 +99,6 @@ public class FlashlightAttack : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy") )
         {
             EnemyInCone = true;
-            Enemy = other.gameObject;
         }
     }
 
@@ -116,5 +118,12 @@ public class FlashlightAttack : MonoBehaviour
         Enemy.GetComponent<AIControl>().enabled = true;
         Enemy.GetComponent<AIControl>().MovingToMarkedLocation = false;
         Enemy.GetComponent<NavMeshAgent>().enabled = true;
+    }
+
+    private IEnumerator LightResetDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        //Reset brightness;
+        LightScript.Change_Intensivity(50);
     }
 }
