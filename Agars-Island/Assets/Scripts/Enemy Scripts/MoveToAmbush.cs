@@ -43,6 +43,7 @@ public class MoveToAmbush : BT_Behaviour
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
         {
+            Debug.Log("Setting Route");
             DestSetFrame = false;
             GameObject ClosestPoint = null;
             float ClosestDistance = float.MaxValue;
@@ -56,6 +57,8 @@ public class MoveToAmbush : BT_Behaviour
                 float PathDistance = CalculatePathDistance(Point);
                 float PlayerY = Mathf.RoundToInt(Player.transform.position.y);
                 float Pointy = Mathf.RoundToInt(Point.transform.position.y);
+                Debug.Log(Point + " Distance To Is: " + PathDistance);
+
                 if (PathDistance < ClosestDistance /*&& Pointy == PlayerY*/)
                 {
                     ClosestDistance = PathDistance;
@@ -66,11 +69,9 @@ public class MoveToAmbush : BT_Behaviour
                     DestSetFrame = true;
                 }
             }
-
         }
 
         float dist = agent.remainingDistance;
-        Debug.Log(dist);
         //Check if arrived at ambush position
         if (dist <= 0 && !DestSetFrame)
         {            
@@ -83,6 +84,7 @@ public class MoveToAmbush : BT_Behaviour
             Self.GetComponent<MeshRenderer>().enabled = false;
             Self.GetComponent<CapsuleCollider>().enabled = false;
             localBB.InAmbush = true;
+            Time.timeScale = 0;
             return NodeState.NODE_SUCCESS;
         }
 
