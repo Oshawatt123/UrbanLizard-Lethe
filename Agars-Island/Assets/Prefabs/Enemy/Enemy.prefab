@@ -145,8 +145,8 @@ MonoBehaviour:
   MaxDirTime: 15
   MovingToMarkedLocation: 0
   MarkedLocation: {x: 0, y: 0, z: 0}
-  ChargeSanity: 50
-  AltRouteSanity: 75
+  ChargeSanity: 55
+  AltRouteSanity: 70
 --- !u!1 &3873757202860249297
 GameObject:
   m_ObjectHideFlags: 0
