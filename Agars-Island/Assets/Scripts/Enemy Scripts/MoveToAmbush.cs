@@ -63,11 +63,9 @@ public class MoveToAmbush : BT_Behaviour
             {
                 float PathDistance = CalculatePathDistance(Point);
                 float PointY = Point.transform.position.y;
-                Debug.Log(Point + " Distance To Is: " + PathDistance);
 
                 //Check if point is closer
-                if (PathDistance < ClosestDistance && ((Self.transform.position.y < 0 && PointY < 0) ||
-                (Self.transform.position.y > 0 && PointY > 0)))
+                if (PathDistance < ClosestDistance && CheckForSameLevel(Point))
                 {
                     ClosestDistance = PathDistance;
                     ClosestPoint = Point;
@@ -91,7 +89,6 @@ public class MoveToAmbush : BT_Behaviour
             agent.enabled = false;
             Self.GetComponent<MeshRenderer>().enabled = false;
             Self.GetComponent<CapsuleCollider>().enabled = false;
-            localBB.InAmbush = true;
             return NodeState.NODE_SUCCESS;
         }
 
@@ -124,5 +121,19 @@ public class MoveToAmbush : BT_Behaviour
         //If Calculation Fails or Path is incomplete
         return float.MaxValue;
 
+    }
+
+    private bool CheckForSameLevel(GameObject Point)
+    {
+        AmbPointData PointLevel = Point.GetComponent<AmbPointData>();
+        //If point is on same level
+        if ((Self.transform.position.y < 0 && PointLevel.Floor == "Lower") || (Self.transform.position.y > 0 && PointLevel.Floor == "Upper"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

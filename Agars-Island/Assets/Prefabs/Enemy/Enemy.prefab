@@ -136,6 +136,7 @@ MonoBehaviour:
   StoredPosition: {x: 0, y: 0, z: 0}
   ForceCharge: 0
   InAmbush: 0
+  CanAmbush: 0
   AmbushRouteDelay: 1
   SightRange: 50
   MinAmbushTime: 10
@@ -145,8 +146,8 @@ MonoBehaviour:
   MaxDirTime: 15
   MovingToMarkedLocation: 0
   MarkedLocation: {x: 0, y: 0, z: 0}
-  ChargeSanity: 55
-  AltRouteSanity: 70
+  ChargeSanity: 40
+  AltRouteSanity: 64
 --- !u!1 &3873757202860249297
 GameObject:
   m_ObjectHideFlags: 0

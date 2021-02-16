@@ -40,7 +40,7 @@ public class AmbushWait : BT_Behaviour
             {
                 localBB.FixedMoveLocation = false;
             }
-
+            localBB.InAmbush = true;
             //Start Timer
             TimeToEndAmbush = Time.time + Random.Range(MinAmbushTime,MaxAmbushTime);
         }
