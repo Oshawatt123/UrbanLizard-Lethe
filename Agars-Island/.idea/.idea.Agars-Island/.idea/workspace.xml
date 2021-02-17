@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/Dnk_Dev/HospitalHorrorPack/Prefab/P_Door_01_Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/Dnk_Dev/HospitalHorrorPack/Prefab/P_Door_01_Base.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/_Flashlight PRO/_PREFABS/Flashlight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/_Flashlight PRO/_PREFABS/Flashlight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/09/0d95e427/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,6 +71,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Pekdata/PekdataCRTMonitor/Scripts/ExplodableMonitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DoorInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/ac/e994a195/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,8 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/ScrewTurnOnClick.cs" />
-        <option value="$PROJECT_DIR$/Assets/MoveWire.cs" />
         <option value="$PROJECT_DIR$/Assets/UpdateWireMaterials.cs" />
         <option value="$PROJECT_DIR$/Assets/DrawLine.cs" />
         <option value="$PROJECT_DIR$/Assets/ResetMorsePuzzle.cs" />
@@ -121,7 +130,6 @@
         <option value="$PROJECT_DIR$/Assets/GiveCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstKeycardCheckpoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
@@ -129,13 +137,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Thirdparty/Pekdata/PekdataCRTMonitor/Scripts/ExplodableMonitor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/CullLights.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayAudio.cs" />
+        <option value="$PROJECT_DIR$/Assets/DoorInteractable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
       </list>
     </option>
@@ -219,6 +230,7 @@
       <workItem from="1613050940206" duration="648000" />
       <workItem from="1613243797310" duration="2293000" />
       <workItem from="1613254001265" duration="2087000" />
+      <workItem from="1613566311265" duration="7018000" />
     </task>
     <servers />
   </component>

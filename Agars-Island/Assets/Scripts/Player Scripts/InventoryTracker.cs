@@ -29,6 +29,8 @@ public class InventoryTracker : MonoBehaviour
     [SerializeField] private AudioSource paperPickup;
     [SerializeField] private AudioSource genericPickup;
 
+    private TutorialManager tutManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,8 @@ public class InventoryTracker : MonoBehaviour
         TF = GetComponent<ToggleFlashlight>();
         NoteLabel = NoteSelector.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         UpdateNotesScreen();
+
+        tutManager = GameObject.FindWithTag("Manager").GetComponent<TutorialManager>();
     }
 
     // Update is called once per frame
@@ -97,6 +101,7 @@ public class InventoryTracker : MonoBehaviour
         TF.canToggle = true;
         Debug.Log("Player given flashlight");
         CheckpointManager.instance.FlashlightGot();
+        tutManager.StartFlashLighTut();
         ShowPickupText("Picked up flashlight");
     }
 

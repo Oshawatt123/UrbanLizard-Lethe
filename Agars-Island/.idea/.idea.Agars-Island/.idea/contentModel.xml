@@ -15,6 +15,8 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
+        <e p="DoorInteractable.cs" t="Include" />
+        <e p="PlayAudio.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
@@ -62,6 +64,7 @@
             <e p="MainMenu.cs" t="Include" />
           </e>
           <e p="Other" t="Include">
+            <e p="AmbPointData.cs" t="Include" />
             <e p="CopyTextColour.cs" t="Include" />
             <e p="CullLights.cs" t="Include" />
             <e p="EditParticleScale.cs" t="Include" />

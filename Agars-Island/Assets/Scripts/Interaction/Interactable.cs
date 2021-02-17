@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
 
     [HideInInspector] public GiveCheckPoint chkpnt;
 

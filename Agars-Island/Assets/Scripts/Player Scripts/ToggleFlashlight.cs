@@ -42,36 +42,40 @@ public class ToggleFlashlight : MonoBehaviour
             }
         }
 
-        //Toggle Light on and off
-        if (Input.GetMouseButtonDown(0) && canToggle && hasFlashlight)
+        if (hasFlashlight)
         {
-            LightScript.Switch();
-        }
-
-        //Reload battery
-        if (Input.GetKeyDown(KeyCode.R) && Inventory.batteries > 0)
-        {
-            Inventory.RemoveBattery(1);
-            Battery = 100f;
-            canToggle = true;
-            flashLightAnim.SetTrigger("ReloadBattery");
-        }
-
-        //Inspect Battery Toggle
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (!Inspecting)
+            //Toggle Light on and off
+            if (Input.GetMouseButtonDown(0) && canToggle)
             {
-                //Play inspection animation
-                flashLightAnim.SetTrigger("CheckBattery");
+                LightScript.Switch();
             }
-            else
+
+            //Reload battery
+            if (Input.GetKeyDown(KeyCode.R) && Inventory.batteries > 0)
             {
-                //Play reverse animation
-                flashLightAnim.SetTrigger("HolsterTorch");
+                Inventory.RemoveBattery(1);
+                Battery = 100f;
+                canToggle = true;
+                flashLightAnim.SetTrigger("ReloadBattery");
             }
-            //Set bool to new value
-            Inspecting = !Inspecting;
+
+            //Inspect Battery Toggle
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                if (!Inspecting)
+                {
+                    //Play inspection animation
+                    flashLightAnim.SetTrigger("CheckBattery");
+                }
+                else
+                {
+                    //Play reverse animation
+                    flashLightAnim.SetTrigger("HolsterTorch");
+                }
+
+                //Set bool to new value
+                Inspecting = !Inspecting;
+            }
         }
     }
 }
