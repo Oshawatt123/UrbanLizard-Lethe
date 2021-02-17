@@ -7,6 +7,7 @@ public class ToggleFlashlight : MonoBehaviour
     private Flashlight_PRO LightScript;
     [HideInInspector] public bool canToggle = true;
     public float Battery;
+    [SerializeField] public float maxBattery = 100f;
     public float DrainSpeed;
     private InventoryTracker Inventory;
     [HideInInspector] public bool hasFlashlight = false;
@@ -20,7 +21,7 @@ public class ToggleFlashlight : MonoBehaviour
         LightScript = this.GetComponentInChildren<Flashlight_PRO>();
         flashLightAnim = LightScript.gameObject.GetComponent<Animator>();
         
-        Battery = 100f;
+        Battery = maxBattery;
         Inventory = this.GetComponent<InventoryTracker>();
         canToggle = true;
         Inspecting = false;
@@ -54,7 +55,7 @@ public class ToggleFlashlight : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R) && Inventory.batteries > 0)
             {
                 Inventory.RemoveBattery(1);
-                Battery = 100f;
+                Battery = maxBattery;
                 canToggle = true;
                 flashLightAnim.SetTrigger("ReloadBattery");
             }

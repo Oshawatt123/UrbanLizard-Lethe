@@ -15,6 +15,7 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
+        <e p="DisplayBatteryLevel.cs" t="Include" />
         <e p="DoorInteractable.cs" t="Include" />
         <e p="PlayAudio.cs" t="Include" />
         <e p="Resources" t="Include">
