@@ -2,21 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HidingSpot : MonoBehaviour
+public class HidingSpot : Interactable
 {
-    private void OnTriggerEnter(Collider other)
+    private GameObject Player;
+    private PlayerMovement MoveScript;
+
+    private void Start()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.GetComponent<PlayerMovement>().IsHiding = true;
-        }
+        Player = GameObject.FindGameObjectWithTag("Player");
+        MoveScript = Player.GetComponent<PlayerMovement>();
     }
 
-    private void OnTriggerExit(Collider other)
+    public override void Interact()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if(MoveScript.IsHiding == false)
         {
-            other.gameObject.GetComponent<PlayerMovement>().IsHiding = false;
+            //Play Enter hiding spot animation
+
+            //Set IsHiding
+            MoveScript.IsHiding = true;
+            //Prevent Player Movement
+            MoveScript.enabled = false;
+        }
+        else
+        {
+            //Play Leave hiding spot animation
+
+            //Set IsHiding
+            MoveScript.IsHiding = false;
+            //Enable Movement
+            MoveScript.enabled = true;
         }
     }
 }
