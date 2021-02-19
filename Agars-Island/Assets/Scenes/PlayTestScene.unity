@@ -22759,7 +22759,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: HidingSpot
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2237394968890284134, guid: 1ba86d38b66a644419b2db9288464075,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2237394968890284133, guid: 1ba86d38b66a644419b2db9288464075, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ba86d38b66a644419b2db9288464075, type: 3}
 --- !u!64 &2478355599323502916
 MeshCollider:
