@@ -13,6 +13,7 @@ public class GoToPoint : BT_Behaviour
 
     public GoToPoint(Transform _self)
     {
+        //Set required variables
         Self = _self;
         LocalBB = Self.GetComponent<localTree>();
 
@@ -25,22 +26,17 @@ public class GoToPoint : BT_Behaviour
     {
         Agent.destination = LocalBB.getMoveToLocation();
 
-        //Debug.Log("GoToPoint : " + agent.destination);
+        //Get Agent path
         var path = Agent.path;
 
         for (int i = 0; i < path.corners.Length - 1; i++)
         {
             Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.blue);
         }
-
-        /*if (!Agent.pathPending && Agent.remainingDistance < 1.0f)
-        {
-            nodeState = NodeState.NODE_SUCCESS;
-            return NodeState.NODE_SUCCESS;
-        }*/
-
+        //Disable player obstacle
         Player.transform.GetChild(1).gameObject.SetActive(false);
 
+        //Return Node succeeded
         nodeState = NodeState.NODE_SUCCESS;
         return NodeState.NODE_SUCCESS;
 

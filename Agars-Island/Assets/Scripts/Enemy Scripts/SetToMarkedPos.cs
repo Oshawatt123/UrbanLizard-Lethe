@@ -21,6 +21,7 @@ public class SetToMarkedPos : BT_Behaviour
 
     public override NodeState tick()
     {
+        //Set target location to stored location and mark as moving to
         localBB.setMoveToLocation(localBB.StoredPosition);
         localBB.FixedMoveLocation = true;
 

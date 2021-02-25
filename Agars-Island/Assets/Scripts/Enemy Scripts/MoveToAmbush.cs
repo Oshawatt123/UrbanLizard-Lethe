@@ -6,33 +6,39 @@ using UnityEngine.AI;
 
 public class MoveToAmbush : BT_Behaviour
 {
+    //Tree variables
     private Transform Self;
     private localTree localBB;
     private NavMeshAgent agent;
     private GameObject Player;
 
+    //Bools for checking if frame is same the destination has been set (Prevents path from appearing complete before updating)
     bool DestSetFrame;
 
-    //----------------------------------- Ambush positions ---------------------------
+    //Ambush Positions
     private GameObject[] AmbushPositions;
 
-    //---------------------------------- Ambush Movement Variables ------------------
+    //Ambush Movement Variables
     private float NextAmbRouteCheck;
     private float AmbushRouteDelay;
 
     public MoveToAmbush(Transform _self, float InRouteDelay)
     {
+        //Set required variables
         Self = _self;
         localBB = Self.GetComponent<localTree>();
         agent = Self.GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
 
+        //Set time to check next route
         NextAmbRouteCheck = Time.time;
+        //Get all ambush positions
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
-
+        //Set delay between updating routes
         AmbushRouteDelay = InRouteDelay;
 
         DestSetFrame = false;
+        //Disable ambush attack cone
         Self.transform.GetChild(0).gameObject.SetActive(false);
 
     }
@@ -46,7 +52,6 @@ public class MoveToAmbush : BT_Behaviour
             return NodeState.NODE_FAILURE;
         }
 
-        Player.transform.GetChild(1).gameObject.SetActive(true);
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
         {
@@ -81,22 +86,24 @@ public class MoveToAmbush : BT_Behaviour
         //Check if arrived at ambush position
         if (dist <= 0 && !DestSetFrame)
         {            
-            
             //Disable Cone
             Player.transform.GetChild(1).gameObject.SetActive(false);
-
+            //Enable attack cone
             Self.transform.GetChild(0).gameObject.SetActive(true);
+            //Disable movement
             agent.enabled = false;
+            //Disable mesh renderer and collider
             Self.GetComponent<MeshRenderer>().enabled = false;
             Self.GetComponent<CapsuleCollider>().enabled = false;
+            //Return node succeeded
             return NodeState.NODE_SUCCESS;
         }
-
+        //If Route updated this frame, toggle to no longer
         if (DestSetFrame)
         {
             DestSetFrame = false;
         }
-
+        //Mark node as running
         return NodeState.NODE_RUNNING;
     }
 

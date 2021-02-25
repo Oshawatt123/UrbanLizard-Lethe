@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class CheckSanity : BT_Behaviour
 {
+    //Required Variables
     private Transform Self;
     private localTree LocalBB;
     private NavMeshAgent Agent;

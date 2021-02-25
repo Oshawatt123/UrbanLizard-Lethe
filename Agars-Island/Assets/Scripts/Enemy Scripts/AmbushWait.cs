@@ -6,16 +6,16 @@ using BehaviourTree;
 
 public class AmbushWait : BT_Behaviour
 {
+    //Required Variables
     private Transform Self;
     private localTree localBB;
     private NavMeshAgent agent;
 
+    //Time Ambush will end
     private float TimeToEndAmbush;
+    //Min and max ambush time after starting
     private float MinAmbushTime;
     private float MaxAmbushTime;
-
-    private GameObject[] AmbushPositions;
-    private GameObject Player;
 
     public AmbushWait(Transform _self, float InMinAmbushTime, float InMaxAmbushTime)
     {
@@ -26,9 +26,6 @@ public class AmbushWait : BT_Behaviour
 
         MinAmbushTime = InMinAmbushTime;
         MaxAmbushTime = InMaxAmbushTime;
-
-        AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
-        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public override NodeState tick()
@@ -36,10 +33,12 @@ public class AmbushWait : BT_Behaviour
         //Check if first frame in ambush
         if(TimeToEndAmbush == int.MaxValue)
         {
+            //If moving to fixed location, toggle to not
             if (localBB.FixedMoveLocation)
             {
                 localBB.FixedMoveLocation = false;
             }
+            //Set in ambush to true
             localBB.InAmbush = true;
             //Start Timer
             TimeToEndAmbush = Time.time + Random.Range(MinAmbushTime,MaxAmbushTime);
@@ -58,7 +57,7 @@ public class AmbushWait : BT_Behaviour
 
             //Do something to prevent AI from looping Ambushing
             localBB.CanAmbush = false;
-            //StartCoroutine(AmbushActiveDelay());
+            StartCoroutine(AmbushActiveDelay());
 
             //Reset timer to trigger first pass
             TimeToEndAmbush = int.MaxValue;

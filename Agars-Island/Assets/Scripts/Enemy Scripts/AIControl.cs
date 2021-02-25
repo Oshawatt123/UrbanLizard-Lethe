@@ -5,24 +5,29 @@ using BehaviourTree;
 
 public class AIControl : localTree
 {
-    //Move To Ambush Variables
-    public float AmbushRouteDelay;
-
     //Check for sight variables
+    [Header("Sight")]
     public float SightRange;
 
     //Ambushing variables
+    [Header("Ambush")]
     public float MinAmbushTime;
     public float MaxAmbushTime;
+    public float AmbushRouteDelay;
 
     //Random Movement variables
+    [Header("Random Movement")]
     public float WanderDistance;
     public float MinDirTime;
     public float MaxDirTime;
 
+    //Marked Location Variables
+    [Header("Marked Locations")]
     public bool MovingToMarkedLocation;
-    public Vector3 MarkedLocation;
+    [HideInInspector]public Vector3 MarkedLocation;
 
+    //Other Behaviours
+    [Header("Other Behaviours")]
     public float ChargeSanity;
     public float AltRouteSanity;
 
@@ -30,7 +35,7 @@ public class AIControl : localTree
     void Start()
     {
         CanAmbush = true;
-
+        //-------------------------------- Building Behaviour Tree ---------------------------
         BT_Sequencer Seq1 = new BT_Sequencer();
         Seq1.AddNode(new CheckSanity(transform, AltRouteSanity));
         Seq1.AddNode(new MoveToAmbush(transform, AmbushRouteDelay));
@@ -80,6 +85,7 @@ public class AIControl : localTree
     // Update is called once per frame
     void Update()
     {
+        //Run tree update
         tree.Tick();
     }
 }

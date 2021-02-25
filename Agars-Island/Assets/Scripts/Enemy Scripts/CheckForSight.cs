@@ -6,29 +6,32 @@ using UnityEngine.AI;
 
 public class CheckForSight : BT_Behaviour
 {
+    //Required Variables
     private Transform Self;
     private localTree LocalBB;
-
-    private float SightRange;
     private GameObject Player;
+
+    //Sight variables
+    private float SightRange;
     private PlayerMovement PlayerMove;
 
 
     public CheckForSight(Transform _self, float InSightRange)
     {
+        //Set required variables
         Self = _self;
         LocalBB = Self.GetComponent<localTree>();
-
-        SightRange = InSightRange;
-
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        //Set sight range and player movement script
+        SightRange = InSightRange;
         PlayerMove = Player.GetComponent<PlayerMovement>();
     }
 
     public override NodeState tick()
     {
         Vector3 VectToPlayer = GetPlayerPosition() - Self.position;
-        //Check if within range
+        //Check if within range and Player not hiding
         if (VectToPlayer.magnitude <= SightRange && !PlayerMove.IsHiding)
         {
             //Check for line of sight

@@ -6,15 +6,15 @@ using UnityEngine.AI;
 
 public class MovingToMarkedPos : BT_Behaviour
 {
+    //Required variables
     private Transform Self;
     private localTree localBB;
-    private NavMeshAgent agent;
 
     public MovingToMarkedPos(Transform _self)
     {
+        //Set Required variables
         Self = _self;
         localBB = Self.GetComponent<localTree>();
-        agent = Self.GetComponent<NavMeshAgent>();
 
     }
 

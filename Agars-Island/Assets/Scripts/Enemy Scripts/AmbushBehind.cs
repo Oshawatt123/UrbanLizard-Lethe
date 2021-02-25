@@ -6,24 +6,29 @@ using BehaviourTree;
 
 public class AmbushBehind : BT_Behaviour
 {
+    //Required variables
     private Transform Self;
     private localTree localBB;
     private NavMeshAgent agent;
     private GameObject Player;
 
+    //Ambush positions
     private GameObject[] AmbushPositions;
 
     public AmbushBehind(Transform _self)
     {
+        //Set all required variables
         Self = _self;
         localBB = Self.GetComponent<localTree>();
         agent = Self.GetComponent<NavMeshAgent>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        //Get all marked Ambush positions
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
     }
 
     public override NodeState tick()
     {
+        //Check for nearest ambush point behind player
         GameObject ClosestPoint = null;
         float ClosestDistance = int.MaxValue;
         foreach (GameObject Point in AmbushPositions)
@@ -55,13 +60,19 @@ public class AmbushBehind : BT_Behaviour
                 }
             }
         }
-        Debug.Log(ClosestPoint);
+        //Debug.Log(ClosestPoint);
+        //Enable force charge
         localBB.ForceCharge = true;
+        //Enable renderer and Collider
         Self.GetComponent<MeshRenderer>().enabled = true;
         Self.GetComponent<CapsuleCollider>().enabled = true;
+        //Move to found point
         Self.transform.position = ClosestPoint.transform.position;
+        //Disable player obstacle cone
         Player.transform.GetChild(1).gameObject.SetActive(false);
+        //Enable Movement
         agent.enabled = true;
+        //Return Node Succeeded
         return NodeState.NODE_SUCCESS;
     }
 

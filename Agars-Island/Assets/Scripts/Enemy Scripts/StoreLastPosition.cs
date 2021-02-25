@@ -13,6 +13,7 @@ public class StoreLastPosition : BT_Behaviour
 
     public StoreLastPosition(Transform _self)
     {
+        //Set required variables
         Self = _self;
         localBB = Self.GetComponent<localTree>();
         agent = Self.GetComponent<NavMeshAgent>();
@@ -21,6 +22,7 @@ public class StoreLastPosition : BT_Behaviour
 
     public override NodeState tick()
     {
+        //Store last location Player was seen at
         localBB.StoredPosition = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
         return NodeState.NODE_SUCCESS;
     }
