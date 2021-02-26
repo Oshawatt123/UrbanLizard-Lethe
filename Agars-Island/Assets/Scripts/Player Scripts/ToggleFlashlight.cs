@@ -4,25 +4,37 @@ using UnityEngine;
 
 public class ToggleFlashlight : MonoBehaviour
 {
+    [Header("Required Variables")]
+    //Flashlight script
     private Flashlight_PRO LightScript;
+    //Enable/ disable toggling of light
     [HideInInspector] public bool canToggle = true;
+    //Current battery
     public float Battery;
+    //Max battery
     [SerializeField] public float maxBattery = 100f;
+    //Speed light drains at when on
     public float DrainSpeed;
+    //Inventory script
     private InventoryTracker Inventory;
+    //Does the player have flashlight
     [HideInInspector] public bool hasFlashlight = false;
+    //Is the player inspecting the light
     private bool Inspecting;
-
+    //Animation for inspecting the flashlight
     private Animator flashLightAnim;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Get scripts for flashlight
         LightScript = this.GetComponentInChildren<Flashlight_PRO>();
         flashLightAnim = LightScript.gameObject.GetComponent<Animator>();
-        
+        //Set battery to max
         Battery = maxBattery;
+        //Get inventory component
         Inventory = this.GetComponent<InventoryTracker>();
+        //Set toggle and inspect bools
         canToggle = true;
         Inspecting = false;
     }
@@ -30,10 +42,12 @@ public class ToggleFlashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //If the light is on
         if (LightScript.is_enabled)
         {
-            //Drain Flashlight when on
+            //Drain Flashlight
             Battery -= DrainSpeed * Time.deltaTime;
+            //If battery is empty
             if(Battery <= 0)
             {
                 //Switch light off

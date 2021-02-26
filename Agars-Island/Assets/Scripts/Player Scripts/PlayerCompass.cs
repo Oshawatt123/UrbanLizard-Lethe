@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCompass : MonoBehaviour {
-
-    public Transform player;
+public class PlayerCompass : MonoBehaviour 
+{
+    private Transform player;
     Vector3 vector;
 
-    void Start() {
-        
+    void Start() 
+    {
+        player = this.transform.root;
     }
 
-  void Update () {
+    void Update () 
+    {
+        //Set Compass rotation equal to player rotation
+        vector.z = player.eulerAngles.y;
+        transform.localEulerAngles = vector;
 
-    vector.z = player.eulerAngles.y;
-    transform.localEulerAngles = vector;
-
-}
+    }
 
 }

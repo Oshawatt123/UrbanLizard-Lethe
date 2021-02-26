@@ -4,30 +4,38 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    //Camera Transform
     [SerializeField] private Transform CamTransform;
+    //Distance player can interact at
     [SerializeField] private float InteractLength;
+    //Hud manager script
     private HUDManager HUDmanager;
     [SerializeField] private LayerMask layers;
 
     private bool lookingAtInteractable = false;
+    //Interactable in focus
     private Transform focusInteractable;
     
     // Start is called before the first frame update
     void Start()
     {
+        //Get HUD manager
         HUDmanager = GetComponent<HUDManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Check if pressing to interact
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //If should be starting interaction
             if (HUDmanager.ShouldInteract())
             {
                 Debug.Log("E");
                 Interact();
             }
+            //Otherwise stop interacting
             else
             {
                 HUDmanager.ResetHUD();
@@ -53,11 +61,12 @@ public class PlayerInteract : MonoBehaviour
                 lookingAtInteractable = true;
             }
         }
-
+        //Show e to interact hint
         if (lookingAtInteractable)
         {
             HUDmanager.ShowInteractHint();
         }
+        //Hide hint
         else
         {
             HUDmanager.HideInteractHint();

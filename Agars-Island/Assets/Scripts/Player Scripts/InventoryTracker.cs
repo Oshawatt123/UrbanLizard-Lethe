@@ -7,24 +7,26 @@ using UnityEngine.UI;
 
 public class InventoryTracker : MonoBehaviour
 {
+    //Number of batteries being carried
     public int batteries;
-
+    //Number of sanity meds being carried
     public int meds;
-
-    private int keycardLevel = 0;
-
-    private List<GameObject> NotesList = new List<GameObject>();
+    //Current access level
+    private int keycardLevel;
+    //Note variables
+    private List<GameObject> NotesList;
     public TMP_Dropdown NoteSelector;
     public TextMeshProUGUI NoteDescBox;
     private TextMeshProUGUI NoteLabel;
-
+    //Inventory UI variables
     [SerializeField] private TextMeshProUGUI batteryText;
     [SerializeField] private TextMeshProUGUI medsText;
     [SerializeField] private TextMeshProUGUI PickUpText;
+    //Pickup animation
     private Animator pickUpTextAnim;
-
+    //Flashlight script
     private ToggleFlashlight TF;
-
+    //Audio sources
     [SerializeField] private AudioSource batteryPickup;
     [SerializeField] private AudioSource paperPickup;
     [SerializeField] private AudioSource genericPickup;
@@ -34,29 +36,28 @@ public class InventoryTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NotesList = new List<GameObject>();
         int[] loadedData = LoadInventory.Load();
         //batteries = loadedData[0];
         //meds = loadedData[1];
         //keycardLevel = loadedData[2];
+        //Set batteries, meds and keycard level
         batteries = 0;
         meds = 0;
         keycardLevel = 0;
         UpdateText();
 
+        //Set animator
         if (PickUpText)
+        {
             pickUpTextAnim = PickUpText.gameObject.GetComponent<Animator>();
-
+        }
+        //Set other variables
         TF = GetComponent<ToggleFlashlight>();
         NoteLabel = NoteSelector.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         UpdateNotesScreen();
 
         tutManager = GameObject.FindWithTag("Manager").GetComponent<TutorialManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     // TODO: Change this to call from a single object to avoid dependency issues
@@ -68,33 +69,44 @@ public class InventoryTracker : MonoBehaviour
 
     //---------------------------------------- Inventory Management -----------------------------------
 
+    //Add battery
     public void AddBattery(int number)
     {
         batteries += number; UpdateText();
         ShowPickupText("Picked up battery");
     }
 
-    public void RemoveBattery(int number) { batteries -= number; UpdateText(); }
+    //Remove battery
+    public void RemoveBattery(int number) 
+    { 
+        batteries -= number; UpdateText(); 
+    }
 
+    //Add sanity meds
     public void AddMeds(int number)
     {
         meds += number; UpdateText();
         ShowPickupText("Picked up meds");
     }
 
+    //Remove sanity meds
     public void RemoveMeds(int number)
     {
         meds -= number; UpdateText();
     }
 
+    //Set keycard level
     public void SetKeycardLevel(int level)
     {
         keycardLevel = level;
         ShowPickupText("Picked up keycard level " + level.ToString());
     }
 
-    public int GetKeycardLevel() { return keycardLevel; }
-
+    public int GetKeycardLevel() 
+    { 
+        return keycardLevel; 
+    }
+    //Enable flashlight usage
     public void GiveFlashlight()
     {
         TF.hasFlashlight = true;

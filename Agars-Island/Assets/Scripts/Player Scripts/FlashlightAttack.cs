@@ -5,21 +5,29 @@ using UnityEngine.AI;
 
 public class FlashlightAttack : MonoBehaviour
 {
-    public float AttackRange;
-    public float DrainAmount;
-    public float ActivationCooldown;
-    public bool EnemyInCone;
-
+    //Required variables
+    [Header("Required Variables")]
     private ToggleFlashlight ThisToggle;
     public GameObject Enemy;
     private Flashlight_PRO LightScript;
 
+    //Attack range
+    public float AttackRange;
+    //Amount to drain flashlight power by
+    public float DrainAmount;
+    //Attack cooldown timer
+    public float ActivationCooldown;
+    //Is enemy in cone
+    public bool EnemyInCone;
+
+    //Ambush positions to move AI to upon successful attack
     private GameObject[] AmbushPositions;
     public LayerMask Mask;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Set required variables
         ThisToggle = this.GetComponent<ToggleFlashlight>();
         EnemyInCone = false;
         AmbushPositions = GameObject.FindGameObjectsWithTag("AmbushPos");
@@ -29,6 +37,7 @@ public class FlashlightAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //On right mouse press
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             //Check if enough battery to complete attack and that enemy isn't ambushing
@@ -50,7 +59,6 @@ public class FlashlightAttack : MonoBehaviour
                     Debug.DrawRay(this.transform.position + (this.transform.forward * 2), VectToEnemy, Color.red);
                     if (Physics.Raycast(this.transform.position, VectToEnemy, out HitObject, 100f, ~Mask))
                     {
-                        Debug.Log(HitObject.transform.name);
                         if(HitObject.transform.gameObject == Enemy)
                         {
                             //Play Dispersal Animation
