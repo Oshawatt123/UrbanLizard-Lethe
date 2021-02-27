@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
 
     [HideInInspector] public GiveCheckPoint chkpnt;
 
+    [HideInInspector] public bool canInteract = true;
+    public string interactableType;
     private void Start()
     {
         Init();
@@ -22,8 +24,15 @@ public class Interactable : MonoBehaviour
     
     virtual public void Interact()
     {
-        Debug.Log("Base Interact");
-        if (anim)
-            anim.SetTrigger("Interact");
+        if (canInteract)
+        {
+            Debug.Log("Base Interact");
+            if (anim)
+                anim.SetTrigger("Interact");
+        }
+        else
+        {
+            Debug.Log("Interactable disabled");
+        }
     }
 }

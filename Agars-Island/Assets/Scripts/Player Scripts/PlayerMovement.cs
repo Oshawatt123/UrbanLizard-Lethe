@@ -76,30 +76,33 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Check for sprint toggle
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (!IsHiding)
         {
-            SprintToggle();
-        }
+            //Check for sprint toggle
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                SprintToggle();
+            }
 
-        //Drain Sprint after delay
-        if (IsSprinting)
-        {
-            DrainSprint();
-        }
+            //Drain Sprint after delay
+            if (IsSprinting)
+            {
+                DrainSprint();
+            }
 
-        //As long as not sprinting, recover stamina
-        else if (!IsSprinting && Time.time >= NextRecTime)
-        {
-            RecoverSprint();
-        }
-        
-        staminaBar.value = (Stamina / (float)MaxStamina)*100.0f;
-        
-        // checking for bounce-back off hinge joint doors
-        if (PlayerBody.velocity.x > 0 && Input.GetAxisRaw("Horizontal") == 0)
-        {
-            PlayerBody.velocity = Vector3.zero;
+            //As long as not sprinting, recover stamina
+            else if (!IsSprinting && Time.time >= NextRecTime)
+            {
+                RecoverSprint();
+            }
+
+            staminaBar.value = (Stamina / (float) MaxStamina) * 100.0f;
+
+            // checking for bounce-back off hinge joint doors
+            if (PlayerBody.velocity.x > 0 && Input.GetAxisRaw("Horizontal") == 0)
+            {
+                PlayerBody.velocity = Vector3.zero;
+            }
         }
 
         stepTimer -= Time.deltaTime;
@@ -108,8 +111,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        LookRotation();
-        Movement();
+        if (!IsHiding)
+        {
+            LookRotation();
+            Movement();
+        }
     }
 
     void LookRotation()

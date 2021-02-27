@@ -8,6 +8,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AnimEvent.cs" t="Include" />
         <e p="Behaviour Tree" t="Include">
           <e p="behaviourTree.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -28,7 +29,6 @@
           </e>
           <e p="Enemy Scripts" t="Include">
             <e p="AIControl.cs" t="Include" />
-            <e p="AITest.cs" t="Include" />
             <e p="AmbushBehind.cs" t="Include" />
             <e p="AmbushWait.cs" t="Include" />
             <e p="ArrivedAtMarkedPoint.cs" t="Include" />
@@ -133,6 +133,11 @@
               </e>
             </e>
           </e>
+          <e p="Locker" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="VIS_BumpSpec.shader" t="Include" />
+            </e>
+          </e>
           <e p="LowPolyOfficeProps_LITE" t="Include">
             <e p="About.txt" t="Include" />
           </e>
@@ -187,6 +192,7 @@
             <e p="RadiatorGames.cs" t="Include" />
           </e>
         </e>
+        <e p="ToggleInteractable.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

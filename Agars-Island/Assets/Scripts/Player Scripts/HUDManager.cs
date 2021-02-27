@@ -34,6 +34,8 @@ public class HUDManager : MonoBehaviour
 
     [SerializeField] private CanvasGroup NotesGroup;
 
+    private static float rotSpeed;
+
 
     [Header("Hints")]
     [SerializeField] private CanvasGroup InteractHint;
@@ -53,6 +55,8 @@ public class HUDManager : MonoBehaviour
         allCanvases.Add(NotesGroup);
 
         playerMovement = GetComponent<PlayerMovement>();
+        rotSpeed = playerMovement.RotationSpeed;
+        
         TF = GetComponent<ToggleFlashlight>();
 
         if (!playerMovement || !TF)
@@ -179,7 +183,7 @@ public class HUDManager : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        playerMovement.RotationSpeed = 10f;
+        playerMovement.RotationSpeed = rotSpeed;
         TF.canToggle = true;
     }
 

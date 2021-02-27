@@ -33,6 +33,7 @@ public class DoorButton : Interactable
             base.Interact();
             Debug.Log(lightAnim.gameObject.name);
             lightAnim.SetTrigger("Pass");
+            if (chkpnt) chkpnt.CheckPoint();
 
             if (!pressedOnce)
             {
@@ -42,7 +43,6 @@ public class DoorButton : Interactable
         }
         else
         {
-            if (chkpnt) chkpnt.CheckPoint();
             lightAnim.SetTrigger("Fail");
             Debug.Log(lightAnim.gameObject.name);
         }
@@ -67,17 +67,4 @@ public class DoorButton : Interactable
         return null;
     }
     
-    
-    /*private T[] GetCompNoRoot<T>(GameObject obj)where T:Component{
-        List<T> tList = new List<T>();
-        foreach (Transform child in obj.transform.root)
-        {
-            T[] scripts = child.GetComponentsInChildren<T>();    
-            if(scripts != null) {
-                foreach(T sc in scripts)
-                    tList.Add (sc);
-            }
-        }
-        return tList.ToArray();
-    }*/
 }

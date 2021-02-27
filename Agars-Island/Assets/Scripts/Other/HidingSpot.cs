@@ -7,6 +7,8 @@ public class HidingSpot : Interactable
     private GameObject Player;
     private PlayerMovement MoveScript;
 
+    public Transform animStartTransform;
+
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -17,21 +19,20 @@ public class HidingSpot : Interactable
     {
         if(MoveScript.IsHiding == false)
         {
-            //Play Enter hiding spot animation
-
             //Set IsHiding
             MoveScript.IsHiding = true;
             //Prevent Player Movement
-            MoveScript.enabled = false;
+            //MoveScript.enabled = false;
         }
         else
         {
-            //Play Leave hiding spot animation
-
             //Set IsHiding
             MoveScript.IsHiding = false;
             //Enable Movement
-            MoveScript.enabled = true;
+            //MoveScript.enabled = true;
         }
+        
+        // LA - 27/02/21 ; 20:49
+        base.Interact();
     }
 }
