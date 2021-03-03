@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BehaviourTree;
@@ -87,5 +88,11 @@ public class AIControl : localTree
     {
         //Run tree update
         tree.Tick();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 1f);
     }
 }

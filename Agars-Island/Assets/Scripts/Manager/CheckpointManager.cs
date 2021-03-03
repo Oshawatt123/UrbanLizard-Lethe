@@ -72,19 +72,15 @@ public class CheckpointManager : MonoBehaviour
 
     public void GeneratorFix()
     {
-        taskCompText.text = "|COMPLETE| Fix the backup generator";
-        taskCompAnim.SetTrigger("FadeIn");
-        
-        taskText.text = "☐ Turn on the generator in the security room";
-        GeneratorFixed = true;
+        ReleaseEnemy();
     }
 
     public void ReleaseEnemy()
     {
-        taskCompText.text = "|COMPLETE| Turn on the generator in the security room";
+        taskCompText.text = "|COMPLETE| Fix the backup generator";
         taskCompAnim.SetTrigger("FadeIn");
         
-        taskText.text = "☐ Spoopy boi is here to nibble your nipple";
+        taskText.text = "☐ Hide";
         enemy.SetActive(true);
         GeneratorOn = true;
         Player.GetComponent<PlayerSanity>().enabled = true;
