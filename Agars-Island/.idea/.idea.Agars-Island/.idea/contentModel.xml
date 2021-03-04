@@ -16,8 +16,14 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
+        <e p="CameraPostProcess.cs" t="Include" />
         <e p="DisplayBatteryLevel.cs" t="Include" />
         <e p="DoorInteractable.cs" t="Include" />
+        <e p="Materials" t="Include">
+          <e p="Screen Effects" t="Include">
+            <e p="SanityPostProcess.shader" t="Include" />
+          </e>
+        </e>
         <e p="PlayAudio.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
