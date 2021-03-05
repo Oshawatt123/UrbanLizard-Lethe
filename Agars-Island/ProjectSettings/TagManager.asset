@@ -8,6 +8,7 @@ TagManager:
   - AmbushPos
   - Enemy
   - Manager
+  - Cutscene
   layers:
   - Default
   - TransparentFX

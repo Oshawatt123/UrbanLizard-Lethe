@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class PlayerSanity : MonoBehaviour
     private float maxSanity = 100f;
     //Sanity UI Element
     [SerializeField] private Slider sanityBar;
+    private CameraPostProcess sanityPP;
 
     //Enemy object
     private GameObject Enemy;
@@ -29,17 +31,22 @@ public class PlayerSanity : MonoBehaviour
     {
         //Set enemy and Inventory
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
+        Enemy.SetActive(false);
         Inventory = this.GetComponent<InventoryTracker>();
+
+        sanityPP = GetComponentInChildren<CameraPostProcess>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        float drainAmount = 0;
         //Get distance to enemey
         float DistToEnemy = Vector3.Distance(this.transform.position, Enemy.transform.position);
         //If enemy is close enough to drain sanity
         if(DistToEnemy <= DrainDistance)
         {
+            drainAmount = DrainSpeed / 4;
             //Get vector to enemy
             Vector3 VectToEnemy = Enemy.transform.position - this.transform.position;
             RaycastHit Hit;
@@ -57,13 +64,16 @@ public class PlayerSanity : MonoBehaviour
                     if (Hit.transform.CompareTag("Enemy"))
                     {
                         //Drain Sanity
-                        Sanity -= DrainSpeed * Time.deltaTime;
+                        drainAmount = DrainSpeed;
                     }
                 }
             }
+
+            Sanity -= drainAmount * Time.deltaTime;
         }
         //Update sanity bar
-        sanityBar.value = (Sanity / maxSanity) * 100f;
+        //sanityBar.value = (Sanity / maxSanity) * 100f;
+        sanityPP.SetVignetteRadius(RadiatorGames.Math.Mapping.Map(0f, maxSanity, 0.65f, 1.0f, Sanity));
 
         //Use sanity meds if key pressed and inventory contains meds
         if(Input.GetKeyDown(KeyCode.M) && Inventory.meds > 0)
@@ -81,6 +91,15 @@ public class PlayerSanity : MonoBehaviour
         {
             Debug.Log("Contact");
             Time.timeScale = 0;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (Enemy)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(Enemy.transform.position, DrainDistance);
         }
     }
 }
