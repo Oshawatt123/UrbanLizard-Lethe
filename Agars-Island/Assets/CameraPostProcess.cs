@@ -12,4 +12,14 @@ public class CameraPostProcess : MonoBehaviour
     {
         Graphics.Blit(src, dest, material);
     }
+
+    public void SetVignetteRadius(float radius)
+    {
+        material.SetFloat("_VRadius", radius);
+    }
+
+    private void Start()
+    {
+        //SetVignetteRadius(0f);
+    }
 }

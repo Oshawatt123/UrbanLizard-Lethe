@@ -3,7 +3,8 @@
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _VPower ("Vignette Power", Range(0.0, 2.0)) = 0.8
+        _VRadius("Vignette Radius", Range(0.0, 1.0)) = 0.8
+        _VSoft("Vignette softness", Range(0.0, 1.0)) = 0.5
         _VColor("Vignette Color", Color) = (1,1,1,1)
     }
     SubShader
@@ -46,7 +47,10 @@
                 return o;
             }
             
-            float _VPower;
+            // Properties
+            
+            float _VRadius;
+            float _VSoft;
             float4 _VColor;
 
             fixed4 frag (v2f i) : SV_Target
@@ -57,28 +61,10 @@
                 // add vignette
                 float distFromCenter = distance(i.uv.xy, float2(0.5,0.5));
                 
-                float vignette = (distFromCenter * _VPower);
-                
-                //return float4(vignette, vignette, vignette, 1.0f);
-                
-                
-                
-                float4 vignetteColor = float4(vignette, vignette, vignette, 1.0f) * _VColor;
-                
-                //return vignetteColor;
-                
-                float oppositeVignette = 1 - vignette;
-                
-                float4 oppVignette = float4(oppositeVignette, oppositeVignette, oppositeVignette, 1.0f);
-                //return oppVignette;
-                
-                vignette = (vignetteColor + oppVignette);
-                
-                return float4(vignette, vignette, vignette, 1.0f);
-                
-                
-                
+                float vignette = smoothstep(_VRadius, _VRadius - _VSoft, distFromCenter);
                 col = saturate(col * vignette);
+                
+                col = col + (_VColor * (1 - vignette));
                 
                 // apply fog
                 //UNITY_APPLY_FOG(i.fogCoord, col);

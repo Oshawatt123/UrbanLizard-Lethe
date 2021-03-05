@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraPostProcess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CameraPostProcess.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityPostProcess.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityPostProcess.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AIControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/CameraPostProcess.cs" />
         <option value="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityPostProcess.shader" />
+        <option value="$PROJECT_DIR$/Assets/CameraPostProcess.cs" />
       </list>
     </option>
   </component>
@@ -233,6 +233,8 @@
       <workItem from="1614458490081" duration="7699000" />
       <workItem from="1614793392814" duration="1286000" />
       <workItem from="1614890165719" duration="4877000" />
+      <workItem from="1614896398849" duration="919000" />
+      <workItem from="1614956020383" duration="837000" />
     </task>
     <servers />
   </component>
