@@ -67,8 +67,10 @@ public class LongWireController : MonoBehaviour
 
     public void ResetPuzzle()
     {
+        //Loop through every tile in puzzle
         foreach(GameObject Tile in AllWireTiles)
         {
+            //Trigger reset
             Tile.GetComponent<TileScript>().ResetTile();
         }
     }
