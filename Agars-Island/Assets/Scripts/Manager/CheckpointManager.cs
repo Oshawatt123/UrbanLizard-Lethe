@@ -4,6 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Manages the checkpoints in the game.
+/// Responsible for setting flags and
+/// controlling the objectives seen on screen.
+/// </summary>
 public class CheckpointManager : MonoBehaviour
 {
     [HideInInspector] public static CheckpointManager instance;
@@ -25,6 +30,7 @@ public class CheckpointManager : MonoBehaviour
     [HideInInspector] public UnityEvent GeneratorFixEvents;
     [HideInInspector] public UnityEvent GeneratorOnEvents;
     
+    // INIT
     void Awake()
     {
         if (instance)
@@ -43,6 +49,11 @@ public class CheckpointManager : MonoBehaviour
     {
         
     }
+    
+    /// 
+    /// Following is a series of public functins, called from different
+    /// gameobjects to indicate that a checkpoint has been reached
+    /// 
 
     public void FlashlightGot()
     {
@@ -68,11 +79,6 @@ public class CheckpointManager : MonoBehaviour
         taskCompAnim.SetTrigger("FadeIn");
         
         taskText.text = "☐ Fix the backup generator";
-    }
-
-    public void GeneratorFix()
-    {
-        ReleaseEnemy();
     }
 
     public void ReleaseEnemy()

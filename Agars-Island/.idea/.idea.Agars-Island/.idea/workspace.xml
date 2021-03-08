@@ -22,14 +22,9 @@
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/RunIntoLabs.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/RunIntoLabs.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/SpawnAtLabs.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/SpawnAtLabs.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ceiling light/Ceiling_Light.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ceiling light/Ceiling_Light.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +118,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/GiveCheckPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FirstKeycardCheckpoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
@@ -141,18 +135,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
         <option value="$PROJECT_DIR$/Assets/DisplayBatteryLevel.cs" />
         <option value="$PROJECT_DIR$/Assets/ToggleInteractable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Other/HidingSpot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/AnimEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AIControl.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraPostProcess.cs" />
         <option value="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityPostProcess.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
       </list>
     </option>
   </component>
@@ -242,6 +237,7 @@
       <workItem from="1614896398849" duration="919000" />
       <workItem from="1614956020383" duration="837000" />
       <workItem from="1614970194652" duration="3159000" />
+      <workItem from="1615199629828" duration="1343000" />
     </task>
     <servers />
   </component>

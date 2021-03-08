@@ -565,7 +565,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 32120553, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.0258942
+      value: -2.025879
       objectReference: {fileID: 0}
     - target: {fileID: 32120554, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_fontSize
@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1412262531, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.8098907
+      value: -3.8098755
       objectReference: {fileID: 0}
     - target: {fileID: 1412262532, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_fontSize
@@ -633,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1480072833, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.4972458
+      value: 0.49725342
       objectReference: {fileID: 0}
     - target: {fileID: 1649081855, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_fontSize
@@ -7569,7 +7569,7 @@ PrefabInstance:
     - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
         type: 3}
       propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GeneratorFixed
+      value: GeneratorOn
       objectReference: {fileID: 0}
     - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
         type: 3}
@@ -7594,7 +7594,7 @@ PrefabInstance:
     - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
         type: 3}
       propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: GeneratorFix
+      value: ReleaseEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
         type: 3}
