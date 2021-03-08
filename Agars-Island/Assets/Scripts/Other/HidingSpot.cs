@@ -22,17 +22,23 @@ public class HidingSpot : Interactable
             //Set IsHiding
             MoveScript.IsHiding = true;
             //Prevent Player Movement
-            //MoveScript.enabled = false;
+            MoveScript.enabled = false;
         }
         else
         {
             //Set IsHiding
             MoveScript.IsHiding = false;
-            //Enable Movement
-            //MoveScript.enabled = true;
+            StartCoroutine(MoveEnableDelay());
         }
         
         // LA - 27/02/21 ; 20:49
         base.Interact();
+    }
+
+    private IEnumerator MoveEnableDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        //Enable Movement
+        MoveScript.enabled = true;
     }
 }
