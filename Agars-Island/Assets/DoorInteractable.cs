@@ -23,22 +23,30 @@ public class DoorInteractable : Interactable
 
     public override void Interact()
     {
-        if (open)
+
+        if(anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
-            anim.SetTrigger("Close");
-        }
-        else
-        {
-            if (Vector3.Dot(transform.forward, player.forward) > 0)
+            if (open)
             {
-                anim.SetTrigger("OpenBackward");
+                anim.SetTrigger("Close");
             }
             else
             {
-                anim.SetTrigger("OpenForward");
+                if (Vector3.Dot(transform.forward, player.forward) > 0)
+                {
+                    anim.SetTrigger("OpenBackward");
+                }
+                else
+                {
+                    anim.SetTrigger("OpenForward");
+                }
             }
-        }
 
-        open = !open;
+            open = !open;
+        }
+        else
+        {
+            Debug.Log("Door already in animation");
+        }
     }
 }

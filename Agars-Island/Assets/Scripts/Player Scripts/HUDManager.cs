@@ -98,12 +98,17 @@ public class HUDManager : MonoBehaviour
         {
             if (pauseOpen)
             {
+                GroupSwapper.ShowCanvasGroup(HUD);
                 GroupSwapper.HideCanvasGroup(pauseGroup);
                 MouseModeGame();
             }
             else
             {
+                GroupSwapper.HideCanvasGroup(HUD);
+                GroupSwapper.HideCanvasGroup(inventoryGroup);
+                GroupSwapper.HideCanvasGroup(NotesGroup);
                 GroupSwapper.ShowCanvasGroup(pauseGroup);
+                inventoryOpen = false;
                 MouseModeUI();
             }
 
