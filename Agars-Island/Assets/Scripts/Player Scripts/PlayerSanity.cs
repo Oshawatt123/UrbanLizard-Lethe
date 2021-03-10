@@ -16,9 +16,12 @@ public class PlayerSanity : MonoBehaviour
     public float DrainSpeed;
     //Max sanity
     private float maxSanity = 100f;
-    //Sanity UI Element
+    
+    // Feedback
     [SerializeField] private Slider sanityBar;
     private CameraPostProcess sanityPP;
+
+    [SerializeField] private AudioSource heartbeat;
 
     //Enemy object
     private GameObject Enemy;
@@ -74,6 +77,8 @@ public class PlayerSanity : MonoBehaviour
         //Update sanity bar
         //sanityBar.value = (Sanity / maxSanity) * 100f;
         sanityPP.SetVignetteRadius(RadiatorGames.Math.Mapping.Map(0f, maxSanity, 0.65f, 1.0f, Sanity));
+        heartbeat.volume = RadiatorGames.Math.Mapping.Map(0, maxSanity, 1, 0, Sanity);
+        heartbeat.pitch = RadiatorGames.Math.Mapping.Map(0, maxSanity, 1, 0, Sanity);
 
         //Use sanity meds if key pressed and inventory contains meds
         if(Input.GetKeyDown(KeyCode.M) && Inventory.meds > 0)
