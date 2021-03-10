@@ -49,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
     //Rotations
     private float BodyRoationX;
     private float CamRotationY;
+    
+    // Feedback - LA 10/03
+    [SerializeField] private AudioSource outOfBreath;
 
     //private CharacterController Controller;
 
@@ -189,6 +192,7 @@ public class PlayerMovement : MonoBehaviour
             IsSprinting = false;
             MoveSpeed /= 2;
             NextRecTime = Time.time + SprintRecoverDelay;
+            outOfBreath.Play();
         }
     }
     void RecoverSprint()
