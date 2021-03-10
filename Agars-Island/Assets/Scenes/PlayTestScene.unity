@@ -565,7 +565,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 32120553, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.025879
+      value: -2.0259094
       objectReference: {fileID: 0}
     - target: {fileID: 32120554, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_fontSize
@@ -613,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1412262531, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.8098755
+      value: -3.809906
       objectReference: {fileID: 0}
     - target: {fileID: 1412262532, guid: 2fe1889d32b3e594a8917dfec052f09c, type: 3}
       propertyPath: m_fontSize
@@ -686,7 +686,7 @@ PrefabInstance:
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -90.1
+      value: -209.5
       objectReference: {fileID: 0}
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
@@ -696,7 +696,7 @@ PrefabInstance:
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.3
+      value: -38.3
       objectReference: {fileID: 0}
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
@@ -2079,7 +2079,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &154326145
 Transform:
@@ -3880,6 +3880,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sleeping_Quarters001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3301ff57c40588f498d3d1e5a0888ec8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3301ff57c40588f498d3d1e5a0888ec8, type: 3}
@@ -7679,6 +7684,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 176656676}
     m_Modifications:
+    - target: {fileID: 471227011, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 471227011, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471227011, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 536916391, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 536916391, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536916391, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428511962, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428511962, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428511962, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457394192, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457394192, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457394192, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9027320330537525746, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
         type: 3}
       propertyPath: m_Name
@@ -7741,64 +7794,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
         type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
       propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1576531636}
     - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
         type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GeneratorOn
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
       propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 331151110}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ReleaseEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330537525756, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: finishEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 9027320330631946164, guid: c5e4916de269a5d43b1e1b63ea54fbc4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e4916de269a5d43b1e1b63ea54fbc4, type: 3}
 --- !u!1001 &531614171
@@ -10483,6 +10486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hallway
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2b0f0375cd0735449b257761a2aa96d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b0f0375cd0735449b257761a2aa96d, type: 3}
 --- !u!4 &730373530 stripped
@@ -11801,7 +11809,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &829442552
 Transform:
@@ -16224,6 +16232,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electrical Room
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96b1c44795c59ed4891b39a40509db6a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b1c44795c59ed4891b39a40509db6a, type: 3}
 --- !u!4 &1105963567 stripped
@@ -18576,6 +18589,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Labs_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06d087121b139434eb2e09203cf46765,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d087121b139434eb2e09203cf46765, type: 3}
 --- !u!4 &1256495260 stripped
@@ -19416,7 +19434,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1312965147
 Transform:
@@ -25038,6 +25056,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Generator_Room
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc578cb413928fb45b1d91c3abbb4c87,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc578cb413928fb45b1d91c3abbb4c87, type: 3}
 --- !u!4 &1708444239 stripped
@@ -25941,6 +25964,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meeting_Rooms2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ab93eb67b662cd45b2fa3c67b7f2ba7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab93eb67b662cd45b2fa3c67b7f2ba7, type: 3}
 --- !u!4 &1753170952 stripped
@@ -26220,6 +26248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770579147}
   - component: {fileID: 1770579148}
+  - component: {fileID: 1770579149}
   m_Layer: 0
   m_Name: Blockage_Rubble
   m_TagString: Untagged
@@ -26258,6 +26287,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.277649, y: 7.5586405, z: 12.056915}
   m_Center: {x: -0.589798, y: 0.28472757, z: 0.20407104}
+--- !u!208 &1770579149
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770579146}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.6, y: 3.75, z: 6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.5, y: 0.2, z: 0.2}
+  m_TimeToStationary: 0.5
 --- !u!4 &1779629810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 483f08f987a9eb64d874c8b481cdab96,
@@ -27142,6 +27187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870516531}
   - component: {fileID: 1870516532}
+  - component: {fileID: 1870516533}
   m_Layer: 0
   m_Name: Blockage_Rubble (1)
   m_TagString: Untagged
@@ -27180,6 +27226,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.277649, y: 7.5586405, z: 12.056915}
   m_Center: {x: -0.589798, y: 0.28472757, z: 0.20407104}
+--- !u!208 &1870516533
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870516530}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.6, y: 3.75, z: 6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.5, y: 0.2, z: 0.2}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1870718210
 PrefabInstance:
   m_ObjectHideFlags: 0

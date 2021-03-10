@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +104,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" />
         <option value="$PROJECT_DIR$/Assets/DragObject.cs" />
         <option value="$PROJECT_DIR$/Assets/LightFlicker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" />
@@ -139,11 +138,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AIControl.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraPostProcess.cs" />
         <option value="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityPostProcess.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" />
       </list>
     </option>
   </component>
@@ -235,6 +235,7 @@
       <workItem from="1614970194652" duration="3159000" />
       <workItem from="1615199629828" duration="1343000" />
       <workItem from="1615373711818" duration="1887000" />
+      <workItem from="1615387103747" duration="823000" />
     </task>
     <servers />
   </component>

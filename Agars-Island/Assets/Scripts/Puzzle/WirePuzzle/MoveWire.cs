@@ -31,6 +31,9 @@ public class MoveWire : MonoBehaviour
     [SerializeField] private ShortWiresPuzzleManager manager;
     [SerializeField] private int wireNumber;
     
+    // Feedback
+    [SerializeField] private AudioSource electricity_noise;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,11 @@ public class MoveWire : MonoBehaviour
         originalColliderSize = collider.size;
 
         manager = transform.parent.parent.GetComponent<ShortWiresPuzzleManager>();
+
+        if (!electricity_noise)
+            electricity_noise = GetComponent<AudioSource>();
+        if (!electricity_noise)
+            Debug.LogWarning("No audio source on short wires movable");
     }
 
     // Update is called once per frame
@@ -71,6 +79,9 @@ public class MoveWire : MonoBehaviour
         SetPosition(newLocation);
 
         collider.size = originalColliderSize * 2;
+        
+        // turn on feedback
+        electricity_noise.volume = 1;
     }
 
     private void OnMouseUpAsButton()
@@ -101,6 +112,9 @@ public class MoveWire : MonoBehaviour
         }
 
         collider.size = originalColliderSize;
+        
+        // turn off feedback
+        electricity_noise.volume = 0;
     }
 
     float getScaleFromSize(float newSize)
