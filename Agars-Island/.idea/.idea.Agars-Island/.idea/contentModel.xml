@@ -139,6 +139,9 @@
               </e>
             </e>
           </e>
+          <e p="Blood decal pack" t="Include">
+            <e p="readme.txt" t="Include" />
+          </e>
           <e p="Locker" t="Include">
             <e p="Shaders" t="Include">
               <e p="VIS_BumpSpec.shader" t="Include" />
@@ -146,6 +149,13 @@
           </e>
           <e p="LowPolyOfficeProps_LITE" t="Include">
             <e p="About.txt" t="Include" />
+          </e>
+          <e p="PBRRiggedSkeletonandBoneCollection" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="SimpleCameraController.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="Pekdata" t="Include">
             <e p="PekdataCRTMonitor" t="Include">

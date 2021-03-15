@@ -14,6 +14,10 @@ public class DoorButton : Interactable
     private int locked;
     
     [SerializeField] private Animator lightAnim;
+    private AudioSource audioSource;
+
+    [SerializeField] private AudioClip keycardAcceptAudio;
+    [SerializeField] private AudioClip keycardDeniedAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,7 @@ public class DoorButton : Interactable
 
         playerInv = GameObject.Find("Player").GetComponent<InventoryTracker>();
         lightAnim = GetComponentInChildOnly<Animator>(gameObject);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -31,8 +36,11 @@ public class DoorButton : Interactable
         if (playerInv.GetKeycardLevel() >= clearanceLevel)
         {
             base.Interact();
-            Debug.Log(lightAnim.gameObject.name);
+
+            // feedback
             lightAnim.SetTrigger("Pass");
+            audioSource.PlayOneShot(keycardAcceptAudio);
+            
             if (chkpnt) chkpnt.CheckPoint();
 
             if (!pressedOnce)
@@ -43,8 +51,9 @@ public class DoorButton : Interactable
         }
         else
         {
+            //feedback
             lightAnim.SetTrigger("Fail");
-            Debug.Log(lightAnim.gameObject.name);
+            audioSource.PlayOneShot(keycardDeniedAudio);
         }
     }
 

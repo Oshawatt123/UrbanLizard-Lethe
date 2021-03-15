@@ -20,7 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/DoorOpen/SwingDoor/P_Door_01_.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DoorOpen/SwingDoor/P_Door_01_.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DoorInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DoorInteractable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/SyntyButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/SyntyButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NoteStuff/Lobby notes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NoteStuff/Lobby notes.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/Dnk_Dev/HospitalHorrorPack/Prefab/P_Door_01_Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/Dnk_Dev/HospitalHorrorPack/Prefab/P_Door_01_Base.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +133,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/DoorInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
@@ -133,7 +141,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Other/HidingSpot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/AnimEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AIControl.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraPostProcess.cs" />
@@ -144,6 +151,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" />
+        <option value="$PROJECT_DIR$/Assets/DoorInteractable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
       </list>
     </option>
   </component>
@@ -236,6 +245,7 @@
       <workItem from="1615199629828" duration="1343000" />
       <workItem from="1615373711818" duration="1887000" />
       <workItem from="1615387103747" duration="823000" />
+      <workItem from="1615809016931" duration="1839000" />
     </task>
     <servers />
   </component>

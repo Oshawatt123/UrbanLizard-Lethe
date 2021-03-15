@@ -175,6 +175,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: ae92b399d1a57734fac38245d1a4c12d, type: 3}
   - {fileID: 8300000, guid: 54479020a81a9ae46b65f5813e3c1e14, type: 3}
+  - {fileID: 8300000, guid: 92fedc69d731f174e8da98242cd5f337, type: 3}
   audioToPlay: 0
 --- !u!114 &9009544190776379840
 MonoBehaviour:
@@ -190,6 +191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   chkpnt: {fileID: 0}
+  canInteract: 1
+  interactableType: 
+  locked: 0
 --- !u!1 &1756943968600888
 GameObject:
   m_ObjectHideFlags: 0
