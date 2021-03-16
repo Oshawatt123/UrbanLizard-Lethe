@@ -26,10 +26,13 @@ public class PlayerSanity : MonoBehaviour
     //Enemy object
     private GameObject Enemy;
     //Game manager
-    public CheckpointManager GameManager;
+    private CheckpointManager GameManager;
     //Inventory tracker for sanity usage
     private InventoryTracker Inventory;
     public LayerMask Mask;
+
+    //Game Over Screen
+
 
     // Start is called before the first frame update
     void Start()
@@ -98,7 +101,7 @@ public class PlayerSanity : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Contact");
+            this.GetComponent<HUDManager>().TriggerGameOver();
             Time.timeScale = 0;
         }
     }

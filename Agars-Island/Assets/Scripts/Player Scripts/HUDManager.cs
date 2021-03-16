@@ -39,7 +39,9 @@ public class HUDManager : MonoBehaviour
 
     [Header("Hints")]
     [SerializeField] private CanvasGroup InteractHint;
-    
+
+    //Game Over Canvas
+    public CanvasGroup GameOverCanvas;
     
     // Start is called before the first frame update
     void Start()
@@ -239,5 +241,14 @@ public class HUDManager : MonoBehaviour
     {
         GroupSwapper.ShowCanvasGroup(inventoryGroup);
         GroupSwapper.HideCanvasGroup(NotesGroup);
+    }
+
+    public void TriggerGameOver()
+    {
+        GroupSwapper.HideCanvasGroup(HUD);
+        GroupSwapper.HideCanvasGroup(NotesGroup);
+        GroupSwapper.HideCanvasGroup(inventoryGroup);
+
+        GroupSwapper.ShowCanvasGroup(GameOverCanvas);
     }
 }
