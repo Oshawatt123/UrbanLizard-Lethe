@@ -25,6 +25,8 @@ public class PlayerSanity : MonoBehaviour
 
     //Enemy object
     private GameObject Enemy;
+    //Game manager
+    public CheckpointManager GameManager;
     //Inventory tracker for sanity usage
     private InventoryTracker Inventory;
     public LayerMask Mask;
@@ -38,6 +40,8 @@ public class PlayerSanity : MonoBehaviour
         Inventory = this.GetComponent<InventoryTracker>();
 
         sanityPP = GetComponentInChildren<CameraPostProcess>();
+
+        GameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<CheckpointManager>();
     }
 
     // Update is called once per frame
@@ -47,7 +51,7 @@ public class PlayerSanity : MonoBehaviour
         //Get distance to enemey
         float DistToEnemy = Vector3.Distance(this.transform.position, Enemy.transform.position);
         //If enemy is close enough to drain sanity
-        if(DistToEnemy <= DrainDistance)
+        if(DistToEnemy <= DrainDistance && GameManager.GeneratorOn)
         {
             drainAmount = DrainSpeed / 4;
             //Get vector to enemy
