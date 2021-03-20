@@ -23,8 +23,10 @@ public class CheckSanity : BT_Behaviour
         Agent = Self.GetComponent<NavMeshAgent>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
-        SanityLimit = InLimit;
+        SanityLimit = 999f;
         SanityScript = Player.GetComponent<PlayerSanity>();
+
+        StartCoroutine(SanityActivationDelay(InLimit));
     }
 
     public override NodeState tick()
@@ -51,5 +53,11 @@ public class CheckSanity : BT_Behaviour
         {
             return NodeState.NODE_SUCCESS;
         }
+    }
+
+    private IEnumerator SanityActivationDelay(float SanityIn)
+    {
+        yield return new WaitForSeconds(30f);
+        SanityLimit = SanityIn;
     }
 }
