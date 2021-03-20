@@ -64,7 +64,7 @@ public class AmbushBehind : BT_Behaviour
         //Enable force charge
         localBB.ForceCharge = true;
         //Enable renderer and Collider
-        Self.GetComponent<MeshRenderer>().enabled = true;
+        //Self.GetComponent<MeshRenderer>().enabled = true;
         Self.GetComponent<CapsuleCollider>().enabled = true;
         //Move to found point
         Self.transform.position = ClosestPoint.transform.position;

@@ -22,13 +22,9 @@ public static class LoadInventory
         {
             Debug.Log("Got a line of text");
             String temp = sr.ReadLine();
-            Debug.Log(temp);
             returnable[index] = int.Parse(temp);
             index++;
         }
-        
-        Debug.Log(returnable[0].ToString());
-        Debug.Log(returnable[1].ToString());
 
         sr.Close();
 

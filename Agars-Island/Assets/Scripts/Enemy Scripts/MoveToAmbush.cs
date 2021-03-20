@@ -93,7 +93,7 @@ public class MoveToAmbush : BT_Behaviour
             //Disable movement
             agent.enabled = false;
             //Disable mesh renderer and collider
-            Self.GetComponent<MeshRenderer>().enabled = false;
+            //Self.GetComponent<MeshRenderer>().enabled = false;
             Self.GetComponent<CapsuleCollider>().enabled = false;
             //Return node succeeded
             return NodeState.NODE_SUCCESS;
