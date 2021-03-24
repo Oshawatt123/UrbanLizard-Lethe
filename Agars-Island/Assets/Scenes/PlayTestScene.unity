@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -91.22
+      value: -210.4
       objectReference: {fileID: 0}
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
@@ -830,7 +830,7 @@ PrefabInstance:
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.11
+      value: -27.24
       objectReference: {fileID: 0}
     - target: {fileID: 4392052437701796766, guid: 2fe1889d32b3e594a8917dfec052f09c,
         type: 3}
@@ -2534,7 +2534,7 @@ GameObject:
   - component: {fileID: 154326148}
   - component: {fileID: 154326147}
   - component: {fileID: 154326146}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: '"Window" (1)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23249,7 +23249,7 @@ GameObject:
   - component: {fileID: 1312965150}
   - component: {fileID: 1312965149}
   - component: {fileID: 1312965148}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: '"Window"'
   m_TagString: Untagged
   m_Icon: {fileID: 0}

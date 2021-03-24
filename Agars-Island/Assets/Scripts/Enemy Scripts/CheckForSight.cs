@@ -14,7 +14,7 @@ public class CheckForSight : BT_Behaviour
     //Sight variables
     private float SightRange;
     private PlayerMovement PlayerMove;
-
+    private LayerMask IgnoreLayer;
 
     public CheckForSight(Transform _self, float InSightRange)
     {
@@ -26,6 +26,7 @@ public class CheckForSight : BT_Behaviour
         //Set sight range and player movement script
         SightRange = InSightRange;
         PlayerMove = Player.GetComponent<PlayerMovement>();
+        IgnoreLayer = 2;
     }
 
     public override NodeState tick()
@@ -36,7 +37,7 @@ public class CheckForSight : BT_Behaviour
         {
             //Check for line of sight
             RaycastHit HitObject;
-            if (Physics.Raycast(Self.position, VectToPlayer, out HitObject))
+            if (Physics.Raycast(Self.position, VectToPlayer, out HitObject, SightRange, ~IgnoreLayer))
             {
                 //Debug.DrawRay(Self.position, VectToPlayer, Color.blue);
                 //If Hit Player without interuption
