@@ -23,6 +23,7 @@ public class MovingToMarkedPos : BT_Behaviour
         //If agent is moving to a preset location (players last known position from alternate route or sight lost)
         if (localBB.FixedMoveLocation)
         {
+            Debug.Log("Moving to marked position");
             //Return success to continue movement to that point
             return NodeState.NODE_SUCCESS;
         }

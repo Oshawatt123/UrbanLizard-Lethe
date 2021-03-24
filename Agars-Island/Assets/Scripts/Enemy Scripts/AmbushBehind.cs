@@ -28,6 +28,7 @@ public class AmbushBehind : BT_Behaviour
 
     public override NodeState tick()
     {
+        Debug.Log("Finding Point Behind Player");
         //Check for nearest ambush point behind player
         GameObject ClosestPoint = null;
         float ClosestDistance = int.MaxValue;

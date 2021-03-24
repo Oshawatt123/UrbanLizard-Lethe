@@ -1281,9 +1281,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2094012808}
-  - {fileID: 1663481365}
   - {fileID: 580455019}
   - {fileID: 1861510771}
+  - {fileID: 1663481365}
   - {fileID: 958102273}
   - {fileID: 844717619}
   - {fileID: 536190515}
@@ -35964,31 +35964,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3873757201971433342, guid: 11126754408c6c440b558d8bf765bd9a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3873757201971433342, guid: 11126754408c6c440b558d8bf765bd9a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8544007354004363547, guid: 11126754408c6c440b558d8bf765bd9a,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.029769244
-      objectReference: {fileID: 0}
-    - target: {fileID: 8544007354004363547, guid: 11126754408c6c440b558d8bf765bd9a,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8544007354004363547, guid: 11126754408c6c440b558d8bf765bd9a,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.043
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11126754408c6c440b558d8bf765bd9a, type: 3}

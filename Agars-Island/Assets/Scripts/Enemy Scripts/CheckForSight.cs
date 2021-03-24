@@ -42,6 +42,7 @@ public class CheckForSight : BT_Behaviour
                 //If Hit Player without interuption
                 if (HitObject.transform.gameObject.tag == "Player")
                 {
+                    Debug.Log("Line of sight made");
                     LocalBB.setMoveToLocation(GetPlayerPosition());
                     //Line of sight established, return True
                     nodeState = NodeState.NODE_SUCCESS;

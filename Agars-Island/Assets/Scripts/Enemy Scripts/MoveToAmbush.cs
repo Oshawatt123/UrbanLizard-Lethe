@@ -55,7 +55,6 @@ public class MoveToAmbush : BT_Behaviour
         //If small delay has past, recalculate routes to ensure still moving to closest
         if (Time.time >= NextAmbRouteCheck)
         {
-            Debug.Log("Setting Route");
             DestSetFrame = false;
             GameObject ClosestPoint = null;
             float ClosestDistance = float.MaxValue;
@@ -103,6 +102,7 @@ public class MoveToAmbush : BT_Behaviour
         {
             DestSetFrame = false;
         }
+        Debug.Log("Moving to ambush point");
         //Mark node as running
         return NodeState.NODE_RUNNING;
     }

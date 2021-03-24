@@ -144,7 +144,7 @@ MonoBehaviour:
   MinAmbushTime: 10
   MaxAmbushTime: 15
   AmbushRouteDelay: 1
-  WanderDistance: 80
+  WanderDistance: 50
   MinDirTime: 7.5
   MaxDirTime: 15
   MovingToMarkedLocation: 0
@@ -5189,7 +5189,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 2
       minColor: {r: 0, g: 0, b: 0, a: 0.46666667}
-      maxColor: {r: 0.07137699, g: 0.0014684916, b: 0.103773594, a: 0.4745098}
+      maxColor: {r: 0.029769244, g: 0, b: 0.043, a: 0.4745098}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

@@ -38,6 +38,7 @@ public class RandomMovement : BT_Behaviour
 
     public override NodeState tick()
     {
+        Debug.Log("Moving Randomly");
         //Bool for suitable point
         bool SuitablePoint = false;
         //If moving to fixed location, toggle to not
@@ -74,7 +75,6 @@ public class RandomMovement : BT_Behaviour
                     //Mark as suitable
                     localBB.setMoveToLocation(NavHit.position);
                     SuitablePoint = true;
-                    Debug.Log("Suitable Path");
                 }
             }
 
