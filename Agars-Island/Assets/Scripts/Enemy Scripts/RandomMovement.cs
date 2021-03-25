@@ -69,8 +69,8 @@ public class RandomMovement : BT_Behaviour
                 //Set path
                 NavMeshPath Path = new NavMeshPath();
                 agent.CalculatePath(NavHit.position, Path);
-                //If path is complete
-                if (Path.status == NavMeshPathStatus.PathComplete)
+                //If path is complete and not too close to player
+                if (Path.status == NavMeshPathStatus.PathComplete && Vector3.Distance(RandomDirection, Player.transform.position) > 10f)
                 {
                     //Mark as suitable
                     localBB.setMoveToLocation(NavHit.position);
