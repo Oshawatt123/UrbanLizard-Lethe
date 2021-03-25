@@ -30,8 +30,6 @@ public class ToggleFlashlight : MonoBehaviour
         //Get scripts for flashlight
         LightScript = this.GetComponentInChildren<Flashlight_PRO>();
         flashLightAnim = LightScript.gameObject.GetComponent<Animator>();
-        //Set battery to max
-        Battery = maxBattery;
         //Get inventory component
         Inventory = this.GetComponent<InventoryTracker>();
         //Set toggle and inspect bools

@@ -98,23 +98,7 @@ public class HUDManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseOpen)
-            {
-                GroupSwapper.ShowCanvasGroup(HUD);
-                GroupSwapper.HideCanvasGroup(pauseGroup);
-                MouseModeGame();
-            }
-            else
-            {
-                GroupSwapper.HideCanvasGroup(HUD);
-                GroupSwapper.HideCanvasGroup(inventoryGroup);
-                GroupSwapper.HideCanvasGroup(NotesGroup);
-                GroupSwapper.ShowCanvasGroup(pauseGroup);
-                inventoryOpen = false;
-                MouseModeUI();
-            }
-
-            pauseOpen = !pauseOpen;
+            TogglePause();
         }
     }
 
@@ -241,6 +225,27 @@ public class HUDManager : MonoBehaviour
     {
         GroupSwapper.ShowCanvasGroup(inventoryGroup);
         GroupSwapper.HideCanvasGroup(NotesGroup);
+    }
+
+    public void TogglePause()
+    {
+        if (pauseOpen)
+        {
+            GroupSwapper.ShowCanvasGroup(HUD);
+            GroupSwapper.HideCanvasGroup(pauseGroup);
+            MouseModeGame();
+        }
+        else
+        {
+            GroupSwapper.HideCanvasGroup(HUD);
+            GroupSwapper.HideCanvasGroup(inventoryGroup);
+            GroupSwapper.HideCanvasGroup(NotesGroup);
+            GroupSwapper.ShowCanvasGroup(pauseGroup);
+            inventoryOpen = false;
+            MouseModeUI();
+        }
+
+        pauseOpen = !pauseOpen;
     }
 
     public void TriggerGameOver()
