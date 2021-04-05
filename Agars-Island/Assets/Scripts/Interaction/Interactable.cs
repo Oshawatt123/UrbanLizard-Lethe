@@ -39,7 +39,7 @@ public class Interactable : MonoBehaviour
     {
         if (canInteract)
         {
-            Debug.Log("Base Interact");
+            //Debug.Log("Base Interact");
             if (anim)
                 anim.SetTrigger("Interact");
         }

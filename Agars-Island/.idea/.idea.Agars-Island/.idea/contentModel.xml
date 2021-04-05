@@ -142,6 +142,16 @@
           <e p="Blood decal pack" t="Include">
             <e p="readme.txt" t="Include" />
           </e>
+          <e p="FreeLabAssets" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="SBS_Mana.shader" t="Include" />
+            </e>
+          </e>
+          <e p="HangingPlantsVolumeFive" t="Include">
+            <e p="Shader" t="Include">
+              <e p="CullOffShader.shader" t="Include" />
+            </e>
+          </e>
           <e p="Locker" t="Include">
             <e p="Shaders" t="Include">
               <e p="VIS_BumpSpec.shader" t="Include" />
@@ -171,6 +181,16 @@
               <e p="Prototype_Glass_Object.shader" t="Include" />
               <e p="Prototype_Global.shader" t="Include" />
               <e p="Prototype_Object.shader" t="Include" />
+            </e>
+          </e>
+          <e p="ScannedRocks" t="Include">
+            <e p="BonusShaders" t="Include">
+              <e p="New" t="Include">
+                <e p="OnTheTopShader.shader" t="Include" />
+              </e>
+              <e p="Old" t="Include">
+                <e p="SnowOnRockShader.shader" t="Include" />
+              </e>
             </e>
           </e>
           <e p="TextMesh Pro" t="Include">
@@ -206,6 +226,11 @@
           </e>
           <e p="Utils" t="Include">
             <e p="RadiatorGames.cs" t="Include" />
+          </e>
+          <e p="WaterTank" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="NormalSpecGloss.shader" t="Include" />
+            </e>
           </e>
         </e>
         <e p="ToggleInteractable.cs" t="Include" />

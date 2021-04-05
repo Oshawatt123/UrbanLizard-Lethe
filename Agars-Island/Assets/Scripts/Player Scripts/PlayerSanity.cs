@@ -33,6 +33,8 @@ public class PlayerSanity : MonoBehaviour
 
     //Game Over Screen
 
+    //Sanity sounds
+    [SerializeField] private AudioSource violinsSound;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,10 @@ public class PlayerSanity : MonoBehaviour
         float drainAmount = 0;
         //Get distance to enemey
         float DistToEnemy = Vector3.Distance(this.transform.position, Enemy.transform.position);
+        //Set sound volume
+        violinsSound.enabled = Enemy.activeInHierarchy;
+        violinsSound.volume = RadiatorGames.Math.Mapping.Map(1, 20, 1, 0, DistToEnemy);
+        
         //If enemy is close enough to drain sanity
         if(DistToEnemy <= DrainDistance && GameManager.GeneratorOn)
         {
