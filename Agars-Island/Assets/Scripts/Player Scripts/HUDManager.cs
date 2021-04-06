@@ -174,7 +174,7 @@ public class HUDManager : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        playerMovement.RotationSpeed = rotSpeed;
+        playerMovement.enabled = true;
         TF.canToggle = true;
     }
 
@@ -182,7 +182,7 @@ public class HUDManager : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        playerMovement.RotationSpeed = 0f;
+        playerMovement.enabled = false;
         TF.canToggle = false;
     }
 
