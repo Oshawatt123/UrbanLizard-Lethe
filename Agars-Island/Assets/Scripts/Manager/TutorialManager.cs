@@ -5,6 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
 
+/// <summary>
+///
+/// Controls the tutorial text fading based on different events
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class TutorialManager : MonoBehaviour
 {
     private bool firstLoad = true; // change to flag from checkpoint manager

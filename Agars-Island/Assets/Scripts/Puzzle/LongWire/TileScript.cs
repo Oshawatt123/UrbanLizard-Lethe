@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// NEEDS DESCRIPTION
+///
+/// Created by: Daniel Bailey
+/// Edited by:
+/// </summary>
 public class TileScript : MonoBehaviour
 {
     //List of acceptable roations for the puzzle to be complete

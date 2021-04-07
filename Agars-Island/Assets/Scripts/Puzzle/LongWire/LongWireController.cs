@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// NEEDS DESCRIPTION
+///
+/// Created by: Daniel Bailey
+/// Edited by:
+/// </summary>
 public class LongWireController : MonoBehaviour
 {
     //List of all Key tiles

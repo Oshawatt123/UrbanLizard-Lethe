@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Checkpoint for the first keycard
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class FirstKeycardCheckpoint : GiveCheckPoint
 {
     [SerializeField] private CheckpointManager mgr;

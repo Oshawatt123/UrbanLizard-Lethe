@@ -5,9 +5,13 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
+/// 
 /// Manages the checkpoints in the game.
 /// Responsible for setting flags and
 /// controlling the objectives seen on screen.
+///
+/// Created by: Lewis Arnold
+/// Edited by: Daniel Bailey
 /// </summary>
 public class CheckpointManager : MonoBehaviour
 {

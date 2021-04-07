@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Handles all Player Interaction
+///
+/// Created by: Lewis Arnold
+/// Edited by: Daniel Bailey
+/// </summary>
 public class PlayerInteract : MonoBehaviour
 {
     //Camera Transform
@@ -24,9 +31,9 @@ public class PlayerInteract : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Get HUD manager
+        //Get HUD manager etc.
+        
         HUDmanager = GetComponent<HUDManager>();
-
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
     }

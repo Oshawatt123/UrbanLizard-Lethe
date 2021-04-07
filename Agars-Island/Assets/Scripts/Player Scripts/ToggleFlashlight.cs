@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Toggles the flashlight
+/// Also houses code for reloading and checking battery
+///
+/// Created by: Daniel Bailey
+/// Edited by: Lewis Arnold, Luke Baldwin
+/// </summary>
 public class ToggleFlashlight : MonoBehaviour
 {
     [Header("Required Variables")]

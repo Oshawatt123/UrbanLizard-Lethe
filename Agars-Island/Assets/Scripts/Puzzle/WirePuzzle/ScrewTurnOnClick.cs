@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Rotates a sprite when clicked, and marks as complete when rotated by maxAngleChange
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class ScrewTurnOnClick : MonoBehaviour
 {
     private bool pressed;

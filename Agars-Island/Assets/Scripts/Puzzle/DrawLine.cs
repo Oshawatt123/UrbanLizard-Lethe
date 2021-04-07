@@ -4,6 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
+/// <summary>
+///
+/// World-space drawing on a surface using the mouse
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
+/// 
 public class DrawLine : MonoBehaviour
 {
 

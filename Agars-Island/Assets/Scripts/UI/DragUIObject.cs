@@ -4,6 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+///
+/// Allows a UI object to be dragged on the screen
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
+/// 
 [RequireComponent(typeof(RectTransform))]
 public class DragUIObject : MonoBehaviour, IDragHandler
 {

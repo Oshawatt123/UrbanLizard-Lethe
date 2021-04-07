@@ -5,6 +5,13 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Handles the inventory during the game
+///
+/// Created by: Lewis Arnold
+/// Edited by: Daniel Bailey
+/// </summary>
 public class InventoryTracker : MonoBehaviour
 {
     //Number of batteries being carried

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Handles door interaction for old-style doors and physics doors
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class Door : MonoBehaviour
 {
 

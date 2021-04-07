@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+/// <summary>
+///
+/// Matches a light's colour to that of a text element
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 
 public class CopyTextColour : MonoBehaviour
 {

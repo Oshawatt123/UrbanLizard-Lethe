@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Radiator Games Library
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 namespace RadiatorGames
 {
     namespace UI

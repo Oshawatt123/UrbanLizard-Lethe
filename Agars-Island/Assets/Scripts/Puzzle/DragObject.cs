@@ -5,6 +5,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+///
+/// Drag a world-space object in world space, along a set axis
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
+/// 
 public class DragObject : MonoBehaviour
 {
 

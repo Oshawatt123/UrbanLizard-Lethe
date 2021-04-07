@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Applies post process to the camera
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 [ExecuteInEditMode]
 public class CameraPostProcess : MonoBehaviour
 {

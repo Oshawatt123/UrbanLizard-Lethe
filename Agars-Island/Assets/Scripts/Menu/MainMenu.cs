@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Controller for the main menu
+/// 
+/// Created by: Daniel Bailey
+/// Edited by:
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
     [Header("Menu Canvas's")]

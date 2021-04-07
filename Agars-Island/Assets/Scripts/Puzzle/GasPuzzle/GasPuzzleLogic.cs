@@ -6,6 +6,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using RadiatorGames.Math;
 
+/// <summary>
+///
+/// Controls the entire gas puzzle functionality
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class GasPuzzleLogic : MonoBehaviour
 {
     [SerializeField] private Slider playerSlider;

@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+///
+/// Loads scenes
+/// 
+/// Created by: Lewis Arnold
+/// Edited by: Daniel Bailey
+/// </summary>
 public class SceneLoader : MonoBehaviour
 {
     // Start is called before the first frame update

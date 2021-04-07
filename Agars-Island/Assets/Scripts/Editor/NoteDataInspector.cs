@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+/// <summary>
+///
+/// Custom Editor for NoteData
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>    
+    
 [CustomEditor(typeof(NoteData))]
 public class NoteDataInspector : Editor
 {

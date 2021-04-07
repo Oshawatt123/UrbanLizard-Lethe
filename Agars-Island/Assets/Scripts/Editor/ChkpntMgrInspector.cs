@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+///
+/// Custom Editor for the CheckpointManager
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
+
 #if UNITY_EDITOR
 [CustomEditor(typeof(CheckpointManager))]
 public class ChkpntMgrInspector : Editor

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Hiding Spot. Manages player behaviour while in a hiding spot
+///
+/// Created by: Daniel Bailey
+/// Edited by: Lewis Arnold
+/// </summary>
 public class HidingSpot : Interactable
 {
     private GameObject Player;

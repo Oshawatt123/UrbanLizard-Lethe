@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Controls Player Movement
+///
+/// Created by: Daniel Bailey
+/// Edited by: Lewis Arnold
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     private Camera Camera;

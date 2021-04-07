@@ -5,6 +5,14 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+///
+/// Manager for the Morse Code puzzle. Calculates button press as dot or dash. Outputs this as
+/// a TMPro object on a UI canvas
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class MorseCodeReader : MonoBehaviour
 {
     private float timeDown;

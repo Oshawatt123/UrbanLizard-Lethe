@@ -7,6 +7,9 @@ using UnityEngine.Events;
 /// Class used to be a checkpoint.
 /// CheckPoint() can be called which
 /// will trigger the events in triggerEvent;
+///
+/// Created by: Lewis Arnold
+/// Edited by:
 /// </summary>
 public class GiveCheckPoint : MonoBehaviour
 {

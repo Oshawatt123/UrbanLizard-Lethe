@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Edits the gas puzzle particles
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
+/// 
 [ExecuteInEditMode]
 public class GasParticleScript : MonoBehaviour
 {

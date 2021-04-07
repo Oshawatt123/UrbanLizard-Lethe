@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+///
+/// Base class for buttons.
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class Button : Interactable
 {
 

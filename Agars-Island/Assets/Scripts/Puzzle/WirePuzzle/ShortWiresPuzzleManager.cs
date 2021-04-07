@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+///
+/// Manager for the short wires puzzle. Determines finish state and screw state
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class ShortWiresPuzzleManager : MonoBehaviour
 {
     private int numberOfScrews;

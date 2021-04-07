@@ -5,6 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Manages Player sanity & feedback to the player for sanity
+/// 
+/// Created by: Daniel Bailey
+/// Edited by: Lewis Arnold
+/// </summary>
 public class PlayerSanity : MonoBehaviour
 {
     [Header("Required Variables")]

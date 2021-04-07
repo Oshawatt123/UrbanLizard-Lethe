@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Changes the text relating to the generator puzzle
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
+/// 
 public class ChangeGenText : MonoBehaviour
 {
     [SerializeField] private Text text;

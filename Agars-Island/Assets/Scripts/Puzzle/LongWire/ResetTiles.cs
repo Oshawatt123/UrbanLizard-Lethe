@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Resets Long Wire puzzle
+///
+/// Created by: Daniel Bailey
+/// Edited by:
+/// </summary>
 public class ResetTiles : MonoBehaviour
 {
     private void OnMouseDown()

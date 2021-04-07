@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+///
+/// Button script for toggling the morse code audio
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class MorseCodeSwitch : Switch
 {
     [SerializeField] private AudioSource morseAudio;

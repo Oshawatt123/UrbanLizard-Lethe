@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Button script that resets the MorseCodeReader
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class ResetMorsePuzzle : MonoBehaviour
 {
     [SerializeField] private MorseCodeReader reader;

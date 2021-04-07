@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Flickers a light
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 [RequireComponent(typeof(Light))]
 public class LightFlicker : MonoBehaviour
 {

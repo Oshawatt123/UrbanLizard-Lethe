@@ -8,7 +8,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AnimEvent.cs" t="Include" />
         <e p="Behaviour Tree" t="Include">
           <e p="behaviourTree.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -16,15 +15,11 @@
           </e>
           <e p="localTree.cs" t="Include" />
         </e>
-        <e p="CameraPostProcess.cs" t="Include" />
-        <e p="DisplayBatteryLevel.cs" t="Include" />
-        <e p="DoorInteractable.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="Screen Effects" t="Include">
             <e p="SanityPostProcess.shader" t="Include" />
           </e>
         </e>
-        <e p="PlayAudio.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="InventoryState.txt" t="Include" />
         </e>
@@ -49,18 +44,19 @@
             <e p="SetToMarkedPos.cs" t="Include" />
             <e p="StoreLastPosition.cs" t="Include" />
           </e>
-          <e p="GiveCheckPoint.cs" t="Include" />
           <e p="Interaction" t="Include">
             <e p="ActivatePuzzle.cs" t="Include" />
             <e p="ActivateWorldCanvas.cs" t="Include" />
             <e p="Button.cs" t="Include" />
             <e p="Door.cs" t="Include" />
             <e p="DoorButton.cs" t="Include" />
+            <e p="DoorInteractable.cs" t="Include" />
             <e p="FirstKeycardCheckpoint.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="ItemPickup.cs" t="Include" />
             <e p="NoteDetails.cs" t="Include" />
             <e p="Switch.cs" t="Include" />
+            <e p="ToggleInteractable.cs" t="Include" />
           </e>
           <e p="Manager" t="Include">
             <e p="CheckpointManager.cs" t="Include" />
@@ -72,13 +68,18 @@
           </e>
           <e p="Other" t="Include">
             <e p="AmbPointData.cs" t="Include" />
+            <e p="AnimEvent.cs" t="Include" />
+            <e p="CameraPostProcess.cs" t="Include" />
             <e p="CopyTextColour.cs" t="Include" />
             <e p="CullLights.cs" t="Include" />
             <e p="EditParticleScale.cs" t="Include" />
+            <e p="GiveCheckPoint.cs" t="Include" />
             <e p="HidingSpot.cs" t="Include" />
             <e p="LightFlicker.cs" t="Include" />
+            <e p="PlayAudio.cs" t="Include" />
           </e>
           <e p="Player Scripts" t="Include">
+            <e p="DisplayBatteryLevel.cs" t="Include" />
             <e p="FlashlightAttack.cs" t="Include" />
             <e p="HUDManager.cs" t="Include" />
             <e p="InventoryTracker.cs" t="Include" />
@@ -91,8 +92,8 @@
           <e p="Puzzle" t="Include">
             <e p="DragObject.cs" t="Include" />
             <e p="DrawLine.cs" t="Include" />
-            <e p="GasParticleScript.cs" t="Include" />
             <e p="GasPuzzle" t="Include">
+              <e p="GasParticleScript.cs" t="Include" />
               <e p="GasPuzzleLogic.cs" t="Include" />
             </e>
             <e p="LongWire" t="Include">
@@ -233,7 +234,6 @@
             </e>
           </e>
         </e>
-        <e p="ToggleInteractable.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

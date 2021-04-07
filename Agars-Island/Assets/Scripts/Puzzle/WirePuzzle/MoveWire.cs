@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
 
+/// <summary>
+///
+/// Moves the wire in world-space along the axis it is in already
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class MoveWire : MonoBehaviour
 {
     private Camera main;

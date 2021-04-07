@@ -5,6 +5,9 @@ using UnityEngine;
 
 /// <summary>
 /// Base class for all interactables in the world
+///
+/// Created by: Lewis Arnold
+/// Edited by:
 /// </summary>
 public class Interactable : MonoBehaviour
 {

@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Handles all item pickups
+/// Ugly switch-case
+/// 
+/// Created by: Lewis Arnold
+/// Edited by: Daniel Bailey
+/// </summary>
 [RequireComponent(typeof(AudioSource))]
 public class ItemPickup : Interactable
 {

@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Used to allow certain cameras to see sunlight.
+/// Use-case in player not needing bright ambient light for atmosphere
+/// but security cameras being too dark to see so more ambient light required
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class CullLights : MonoBehaviour
 {
 

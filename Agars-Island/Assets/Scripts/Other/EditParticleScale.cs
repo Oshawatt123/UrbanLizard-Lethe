@@ -2,6 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/// <summary>
+///
+/// Edits a particle system in a child both at edit time and runtime
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 
 [ExecuteAlways]
 public class EditParticleScale : MonoBehaviour

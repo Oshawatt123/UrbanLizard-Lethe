@@ -4,6 +4,13 @@ using TMPro.SpriteAssetUtilities;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Displays the battery level on the flashlight by a group of UI images
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class DisplayBatteryLevel : MonoBehaviour
 {
 

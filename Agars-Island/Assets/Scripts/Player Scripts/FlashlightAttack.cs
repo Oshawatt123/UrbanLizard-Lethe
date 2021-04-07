@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+///
+/// Controls the flashlight attack
+///
+/// Created by: Daniel Bailey
+/// Edited by:
+/// </summary>
 public class FlashlightAttack : MonoBehaviour
 {
     //Required variables

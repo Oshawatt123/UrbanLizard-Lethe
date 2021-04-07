@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Button script that adds a space to the MorseCodeReader
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class SpaceMorseButton : MonoBehaviour
 {
     [SerializeField] private MorseCodeReader reader;

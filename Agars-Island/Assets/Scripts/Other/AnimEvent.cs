@@ -3,6 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Allows animations to be played from trigger box enter
+/// eventName is the name of the trigger in the Animator
+/// only triggers when the player enters the trigger box
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class AnimEvent : MonoBehaviour
 {
     public Animator anim;

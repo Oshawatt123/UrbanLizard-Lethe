@@ -4,6 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+/// <summary>
+///
+/// Loads the inventory for the player from disk
+///
+/// Created by: Lewis Arnold
+/// Edited by: Daniel Bailey
+/// </summary>
+/// 
 public static class LoadInventory
 {
     private static string inventoryFile = "InventoryState.txt";

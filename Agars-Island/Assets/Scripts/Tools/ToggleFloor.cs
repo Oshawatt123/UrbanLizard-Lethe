@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Toggles a group of objects on/off
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class ToggleFloor : MonoBehaviour
 {
     public List<GameObject> FloorObjects;

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Controls the player's compass
+///
+/// Created by: Luke Baldwin
+/// Edited by: Daniel Bailey
+/// </summary>
 public class PlayerCompass : MonoBehaviour 
 {
     private Transform player;

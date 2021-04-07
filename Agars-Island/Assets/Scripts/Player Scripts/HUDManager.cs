@@ -6,6 +6,14 @@ using UnityEngine;
 using RadiatorGames.UI.SwapCanvasGroup;
 using UnityEngine.UI;
 
+/// <summary>
+///
+/// Manages all the HUD of the player. Responsible for correctly switching canvas panels.
+/// Responsible for toggling player movement in certain HUD states
+///
+/// Created by: Lewis Arnold
+/// Edited by: Daniel Bailey
+/// </summary>
 public class HUDManager : MonoBehaviour
 {
     [SerializeField] private CanvasGroup HUD;

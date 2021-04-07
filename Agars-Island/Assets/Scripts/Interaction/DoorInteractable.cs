@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Handles door interaction
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class DoorInteractable : Interactable
 {
 

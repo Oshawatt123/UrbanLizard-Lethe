@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+///
+/// Custom inspector giving functionality for ToggleFloor
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
+/// 
 [CustomEditor(typeof(ToggleFloor))]
 public class ToggleFloorInspector : Editor
 {

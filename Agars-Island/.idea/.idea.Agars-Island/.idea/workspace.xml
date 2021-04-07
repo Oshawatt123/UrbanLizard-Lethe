@@ -22,14 +22,73 @@
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/FakeEnemyAnimations.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/FakeEnemyAnimations.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/RunIntoLabs.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/RunIntoLabs.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraPostProcess.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraPostProcess.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DisplayBatteryLevel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DisplayBatteryLevel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DoorInteractable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DoorInteractable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayAudio.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayAudio.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/ChkpntMgrInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/ChkpntMgrInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/AmbPointData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/AmbPointData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/CopyTextColour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/CopyTextColour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/CullLights.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/CullLights.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/EditParticleScale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/EditParticleScale.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/HidingSpot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/HidingSpot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/LightFlicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/LightFlicker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/FlashlightAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/FlashlightAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCompass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCompass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/KLURA Design Assets/Sci Fi Assets Style 1 Sample pack/Samples materals/floor version 1 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/KLURA Design Assets/Sci Fi Assets Style 1 Sample pack/Samples materals/floor version 1 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/DragObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/DragObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasParticleScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasParticleScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasParticleScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasParticleScript.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/ResetTiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/ResetTiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/TileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/TileScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeSwitch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/ResetMorsePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/ResetMorsePuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/SpaceMorseButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/SpaceMorseButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/UpdateWireMaterials.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/UpdateWireMaterials.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/WireEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/WireEnd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ToggleInteractable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ToggleInteractable.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +99,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/ToggleInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,21 +108,33 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/ChkpntMgrInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AIControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Switch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behaviour Tree/behaviourTree.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/A4546799-A4AB-4267-88E4-204C69507924/05/ba7a3b6d/020001E2.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behaviour Tree/Editor/BehaviourTreeViewWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/GoToPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/AmbPointData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/CullLights.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4546799-A4AB-4267-88E4-204C69507924/09/0d95e427/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayAudio.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/PlayAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/AnimEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ToggleInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/EditParticleScale.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/CameraPostProcess.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/DisplayBatteryLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/DragObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/CopyTextColour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/DoorInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/LightFlicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6E2FA0A-4741-4CD2-AC33-237924761B45/f0/48a774d1/Editor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -74,24 +144,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Pekdata/PekdataCRTMonitor/Scripts/ExplodableMonitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityPostProcess.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/AnimEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DoorInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/ac/e994a195/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/HidingSpot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DisplayBatteryLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/FlashlightAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/64/ec60fc76/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CameraPostProcess.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/WireEnd.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/ResetTiles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasParticleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/UpdateWireMaterials.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/TileScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCompass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9B956647-017D-4DC1-B8D3-D25EEF012467/24/f45d8f2b/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,57 +177,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/GasParticleScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/EditParticleScale.cs" />
-        <option value="$PROJECT_DIR$/Assets/BlockVertical.cs" />
-        <option value="$PROJECT_DIR$/Assets/BlockHorizontal.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" />
-        <option value="$PROJECT_DIR$/Assets/DragObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/LightFlicker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" />
-        <option value="$PROJECT_DIR$/Assets/CopyTextColour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChkpntMgrInspector.cs" />
-        <option value="$PROJECT_DIR$/Assets/GiveCheckPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FirstKeycardCheckpoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CheckpointManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Thirdparty/Pekdata/PekdataCRTMonitor/Scripts/ExplodableMonitor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ChangeGenText.cs" />
-        <option value="$PROJECT_DIR$/Assets/CullLights.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
-        <option value="$PROJECT_DIR$/Assets/DisplayBatteryLevel.cs" />
-        <option value="$PROJECT_DIR$/Assets/ToggleInteractable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
-        <option value="$PROJECT_DIR$/Assets/AnimEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/AIControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/CameraPostProcess.cs" />
-        <option value="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityPostProcess.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GiveCheckPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasParticleScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/DragObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/WireEnd.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/UpdateWireMaterials.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" />
-        <option value="$PROJECT_DIR$/Assets/DoorInteractable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/SpaceMorseButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/ResetMorsePuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeSwitch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/MorseCodeReader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/TileScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/ResetTiles.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasPuzzleLogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCompass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/FlashlightAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/DisplayBatteryLevel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/EditParticleScale.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/CopyTextColour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/CullLights.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/LightFlicker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Other/HidingSpot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/CameraPostProcess.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/AnimEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/AmbPointData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorInteractable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
       </list>
     </option>
   </component>
@@ -251,6 +323,7 @@
       <workItem from="1615809016931" duration="1839000" />
       <workItem from="1616420431267" duration="129000" />
       <workItem from="1617610361555" duration="2421000" />
+      <workItem from="1617792577824" duration="3881000" />
     </task>
     <servers />
   </component>
@@ -272,11 +345,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-850" y="-71" width="676" height="1109" key="VCS.FileHistoryDialog" timestamp="1617612710095">
-      <screen x="-1080" y="-659" width="1080" height="1880" />
+    <state x="641" y="263" width="1201" height="613" key="VCS.FileHistoryDialog" timestamp="1617796492649">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-850" y="-71" width="676" height="1109" key="VCS.FileHistoryDialog/0.0.1920.1040/-1080.-659.1080.1880@-1080.-659.1080.1880" timestamp="1617612710095" />
-    <state x="408" y="325" width="1201" height="613" key="VCS.FileHistoryDialog/0.0.1920.1040/-1080.-659.1080.1880@0.0.1920.1040" timestamp="1616420561257" />
+    <state x="-861" y="-247" width="676" height="1281" key="VCS.FileHistoryDialog/0.0.1920.1040/-1080.-659.1080.1880@-1080.-659.1080.1880" timestamp="1617793265951" />
+    <state x="641" y="263" width="1201" height="613" key="VCS.FileHistoryDialog/0.0.1920.1040/-1080.-659.1080.1880@0.0.1920.1040" timestamp="1617796492649" />
     <state x="333" y="195" width="1201" height="613" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611450441688" />
   </component>
 </project>

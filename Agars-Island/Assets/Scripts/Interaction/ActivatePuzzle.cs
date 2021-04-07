@@ -4,6 +4,14 @@ using UnityEngine;
 using RadiatorGames.UI;
 using RadiatorGames.UI.SwapCanvasGroup;
 
+/// <summary>
+///
+/// [Deprecated]
+/// Activates a puzzle
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class ActivatePuzzle : Interactable
 {
 

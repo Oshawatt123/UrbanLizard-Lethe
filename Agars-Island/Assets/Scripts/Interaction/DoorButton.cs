@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Handles door buttons
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class DoorButton : Interactable
 {
     public Door door;

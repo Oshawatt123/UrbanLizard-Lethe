@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Plays an audio track. Setup for use in animation events.
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 [RequireComponent(typeof(AudioSource))]
 public class PlayAudio : MonoBehaviour
 {

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// NEEDS DESCRPTION
+/// 
+/// Created by: Daniel Bailey
+/// Edited by: Lewis Arnold
+/// </summary>
 public class NoteDetails : MonoBehaviour
 {
     public NoteData LinkedNoteData;

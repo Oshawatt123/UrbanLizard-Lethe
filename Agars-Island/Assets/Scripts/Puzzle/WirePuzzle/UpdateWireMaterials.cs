@@ -3,6 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// QoL script that updates materials for all wire components.
+/// Edit mode script
+///
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 [ExecuteInEditMode]
 public class UpdateWireMaterials : MonoBehaviour
 {
