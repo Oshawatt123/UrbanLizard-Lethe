@@ -10,6 +10,14 @@ using BehaviourTree;
  * Already included is some functions for getting and setting a
  * 'global' tree variable "moveToLocation"
 */
+
+/// <summary>
+///
+/// See above
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class localTree : MonoBehaviour
 {
 

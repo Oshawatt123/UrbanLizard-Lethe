@@ -22,6 +22,14 @@ using BehaviourTree;
  * UNDEFINED => Gray
  * 
  */
+ 
+/// <summary>
+///
+/// See above
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 public class BehaviourTreeViewWindow : EditorWindow
 {
     GameObject obj;

@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///
+/// Behaviour Tree base function
+/// 
+/// Created by: Lewis Arnold
+/// Edited by:
+/// </summary>
 namespace BehaviourTree
 {
     public enum NodeState
