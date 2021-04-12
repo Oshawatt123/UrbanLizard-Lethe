@@ -125,7 +125,7 @@ public class HUDManager : MonoBehaviour
         if (puzzleOpen)
             GroupSwapper.ShowCanvasGroup(puzzleCanvasGroup);
 
-        playerMovement.RotationSpeed = 0f;
+        //playerMovement.RotationSpeed = 0f;
 
         foreach (CanvasGroup group in allCanvases)
         {
@@ -143,7 +143,7 @@ public class HUDManager : MonoBehaviour
         puzzleGroup = null;
         inventoryOpen = false;
 
-        playerMovement.RotationSpeed = 0f;
+        //playerMovement.RotationSpeed = 0f;
 
         foreach (CanvasGroup group in allCanvases)
         {
@@ -173,6 +173,7 @@ public class HUDManager : MonoBehaviour
         HidePlayerHUDs();
 
         GroupSwapper.ShowCanvasGroup(HUD);
+        //playerMovement.RotationSpeed = rotSpeed;
 
         MouseModeGame();
     }

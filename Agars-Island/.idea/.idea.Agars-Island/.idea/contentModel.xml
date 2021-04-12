@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Lewis Arnold\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Lewis Arnold\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Agars-Island.867102265.00" t="ExcludeRecursive" />
-    <e p="D:\GitHub Tings\UrbanLizard-Lethe\Agars-Island" t="IncludeRecursive">
+    <e p="C:\Users\Lewis Arnold\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Agars-Island.1584637357.00" t="ExcludeRecursive" />
+    <e p="D:\GitHubTings\UrbanLizard-Lethe\Agars-Island" t="IncludeRecursive">
       <e p="Agars-Island.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Behaviour Tree" t="Include">
-          <e p="behaviourTree.cs" t="Include" />
-          <e p="Editor" t="Include">
-            <e p="BehaviourTreeViewWindow.cs" t="Include" />
-          </e>
-          <e p="localTree.cs" t="Include" />
-        </e>
         <e p="Materials" t="Include">
           <e p="Screen Effects" t="Include">
             <e p="SanityPostProcess.shader" t="Include" />
@@ -24,6 +17,13 @@
           <e p="InventoryState.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Behaviour Tree" t="Include">
+            <e p="behaviourTree.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="BehaviourTreeViewWindow.cs" t="Include" />
+            </e>
+            <e p="localTree.cs" t="Include" />
+          </e>
           <e p="Editor" t="Include">
             <e p="ChkpntMgrInspector.cs" t="Include" />
             <e p="NoteDataInspector.cs" t="Include" />
