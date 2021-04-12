@@ -90,7 +90,7 @@ public class CheckpointManager : MonoBehaviour
         taskCompText.text = "|COMPLETE| Fix the backup generator";
         taskCompAnim.SetTrigger("FadeIn");
         
-        taskText.text = "☐ Hide";
+        taskText.text = "☐ Answer the phone";
         enemy.SetActive(true);
         GeneratorOn = true;
         Player.GetComponent<PlayerSanity>().enabled = true;

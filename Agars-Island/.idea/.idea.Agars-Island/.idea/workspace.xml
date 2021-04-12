@@ -22,12 +22,14 @@
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Behaviour Tree.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/TextMesh Pro/Resources/Fonts &amp; Materials/Menu murder.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/TextMesh Pro/Resources/Fonts &amp; Materials/Menu murder.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FadeGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Switch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/A4546799-A4AB-4267-88E4-204C69507924/05/ba7a3b6d/020001E2.il" root0="SKIP_HIGHLIGHTING" />
@@ -91,7 +94,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/NoteDataInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameOverScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/AnimEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameEnd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Pekdata/PekdataCRTMonitor/Scripts/ExplodableMonitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/HidingSpot.cs" root0="FORCE_HIGHLIGHTING" />
@@ -114,9 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DragUIObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasParticleScript.cs" />
@@ -152,8 +154,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Other/AmbPointData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
@@ -165,6 +165,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameEnd.cs" />
+        <option value="$PROJECT_DIR$/Assets/FadeGroup.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameOverScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
       </list>
     </option>
   </component>
@@ -261,7 +266,8 @@
       <workItem from="1616420431267" duration="129000" />
       <workItem from="1617610361555" duration="2421000" />
       <workItem from="1617792577824" duration="3881000" />
-      <workItem from="1618224073633" duration="1393000" />
+      <workItem from="1618224073633" duration="1591000" />
+      <workItem from="1618228254159" duration="5447000" />
     </task>
     <servers />
   </component>
