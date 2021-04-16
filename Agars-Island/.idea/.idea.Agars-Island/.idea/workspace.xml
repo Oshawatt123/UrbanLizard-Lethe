@@ -20,16 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/FakeEnemyAnimations.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/FakeEnemyAnimations.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/SpawnAtLabs.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/SpawnAtLabs.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/TextMesh Pro/Resources/Fonts &amp; Materials/Menu murder.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/TextMesh Pro/Resources/Fonts &amp; Materials/Menu murder.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,14 +119,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/NoteData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasParticleScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/DragObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/WireEnd.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/UpdateWireMaterials.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ScrewTurnOnClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/MoveWire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/SpaceMorseButton.cs" />
@@ -154,7 +152,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Other/AmbPointData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" />
@@ -162,7 +159,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" />
@@ -170,6 +166,10 @@
         <option value="$PROJECT_DIR$/Assets/FadeGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/GameOverScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
       </list>
     </option>
   </component>
@@ -267,7 +267,8 @@
       <workItem from="1617610361555" duration="2421000" />
       <workItem from="1617792577824" duration="3881000" />
       <workItem from="1618224073633" duration="1591000" />
-      <workItem from="1618228254159" duration="5447000" />
+      <workItem from="1618228254159" duration="6047000" />
+      <workItem from="1618586436458" duration="4312000" />
     </task>
     <servers />
   </component>

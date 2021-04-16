@@ -29,5 +29,6 @@ public class FirstKeycardCheckpoint : GiveCheckPoint
         Debug.Log("IM A CHILD :D");
         if (!mgr.doorLockedTrigger) return;
         base.CheckPoint();
+        Debug.Log("checkpoint given");
     }
 }

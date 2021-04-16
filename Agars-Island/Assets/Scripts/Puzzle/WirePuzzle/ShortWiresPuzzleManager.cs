@@ -30,10 +30,10 @@ public class ShortWiresPuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (screwsComplete >= numberOfScrews)
+        /*if (screwsComplete >= numberOfScrews)
         {
             coverAnim.SetTrigger("Fall");
-        }
+        }*/
     }
 
     public void DeclareScrew()

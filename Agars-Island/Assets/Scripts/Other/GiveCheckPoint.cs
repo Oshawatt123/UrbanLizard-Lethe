@@ -42,5 +42,6 @@ public class GiveCheckPoint : MonoBehaviour
         
         triggered = true;
         triggerEvent.Invoke();
+        Debug.Log("Checkpoint triggered");
     }
 }

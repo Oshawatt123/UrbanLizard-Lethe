@@ -42,6 +42,7 @@ public class ItemPickup : Interactable
     {
         base.Interact();
         
+        Debug.Log("");
         if(chkpnt) chkpnt.CheckPoint();
 
         switch (PickupType)
