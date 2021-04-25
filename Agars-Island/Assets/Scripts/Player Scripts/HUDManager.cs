@@ -43,7 +43,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private CanvasGroup NotesGroup;
 
     private static float rotSpeed;
-
+    private bool PlayerDead;
 
     [Header("Hints")]
     [SerializeField] private CanvasGroup InteractHint;
@@ -66,6 +66,7 @@ public class HUDManager : MonoBehaviour
 
         playerMovement = GetComponent<PlayerMovement>();
         rotSpeed = playerMovement.RotationSpeed;
+        PlayerDead = false;
         
         TF = GetComponent<ToggleFlashlight>();
 
@@ -78,7 +79,7 @@ public class HUDManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && PlayerDead == false)
         {
 
             if (inventoryOpen)
@@ -104,7 +105,7 @@ public class HUDManager : MonoBehaviour
                 inventoryOpen = !inventoryOpen;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.Escape) && PlayerDead == false)
         {
             TogglePause();
         }
@@ -259,6 +260,8 @@ public class HUDManager : MonoBehaviour
 
     public void TriggerGameOver()
     {
+        PlayerDead = true;
+
         GroupSwapper.HideCanvasGroup(HUD);
         GroupSwapper.HideCanvasGroup(NotesGroup);
         GroupSwapper.HideCanvasGroup(inventoryGroup);
