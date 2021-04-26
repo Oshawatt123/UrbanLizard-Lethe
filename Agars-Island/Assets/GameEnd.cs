@@ -29,6 +29,8 @@ public class GameEnd : MonoBehaviour
     
     public void GameFadeOut()
     {
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+        GameObject.FindWithTag("Enemy").GetComponent<AIControl>().enabled = false;
         StartCoroutine(SceneFadeOut(fadeGroup, 4f));
     }
 

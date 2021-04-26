@@ -20,16 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/FakeEnemyAnimations.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/FakeEnemyAnimations.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/SpawnAtLabs.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/SpawnAtLabs.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Screen Effects/SanityEffectMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameEnd.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +89,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/ToggleFlashlight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CheckPointTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/FlashlightAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/DisplayBatteryLevel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/ToggleFloor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,6 +98,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/Editor/ToggleFloorInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameOverScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/AnimEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KeycardButtonCheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameEnd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Thirdparty/Pekdata/PekdataCRTMonitor/Scripts/ExplodableMonitor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,6 +106,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/64/ec60fc76/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/LightFlicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/CullLights.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy Scripts/RandomMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/PlayAudio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/EditParticleScale.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Other/CameraPostProcess.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,9 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Saving/LoadInventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/GasParticleScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/DrawLine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/DragObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/WireEnd.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/UpdateWireMaterials.cs" />
@@ -153,23 +154,26 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorInteractable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Button.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivateWorldCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ActivatePuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/NoteDetails.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/SceneLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameEnd.cs" />
         <option value="$PROJECT_DIR$/Assets/FadeGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/GameOverScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/FirstKeycardCheckpoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Other/GiveCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzle/WirePuzzle/ShortWiresPuzzleManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/CheckPointTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameEnd.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" />
+        <option value="$PROJECT_DIR$/Assets/KeycardButtonCheckPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
       </list>
     </option>
   </component>
@@ -269,6 +273,7 @@
       <workItem from="1618224073633" duration="1591000" />
       <workItem from="1618228254159" duration="6047000" />
       <workItem from="1618586436458" duration="4312000" />
+      <workItem from="1619455707541" duration="7497000" />
     </task>
     <servers />
   </component>
@@ -296,5 +301,9 @@
     <state x="-861" y="-247" width="676" height="1281" key="VCS.FileHistoryDialog/0.0.1920.1040/-1080.-659.1080.1880@-1080.-659.1080.1880" timestamp="1618224596056" />
     <state x="641" y="263" width="1201" height="613" key="VCS.FileHistoryDialog/0.0.1920.1040/-1080.-659.1080.1880@0.0.1920.1040" timestamp="1617796492649" />
     <state x="333" y="195" width="1201" height="613" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611450441688" />
+    <state x="-875" y="383" width="672" height="60" key="search.everywhere.popup" timestamp="1619457513087">
+      <screen x="-1080" y="-659" width="1080" height="1880" />
+    </state>
+    <state x="-875" y="383" width="672" height="60" key="search.everywhere.popup/0.0.1920.1040/-1080.-659.1080.1880@-1080.-659.1080.1880" timestamp="1619457513087" />
   </component>
 </project>

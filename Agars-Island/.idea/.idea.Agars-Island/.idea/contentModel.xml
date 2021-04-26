@@ -8,9 +8,11 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CheckPointTrigger.cs" t="Include" />
         <e p="FadeGroup.cs" t="Include" />
         <e p="GameEnd.cs" t="Include" />
         <e p="GameOverScreen.cs" t="Include" />
+        <e p="KeycardButtonCheckPoint.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="Screen Effects" t="Include">
             <e p="SanityPostProcess.shader" t="Include" />

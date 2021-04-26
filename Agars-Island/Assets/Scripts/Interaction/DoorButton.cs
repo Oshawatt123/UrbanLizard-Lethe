@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -25,6 +26,9 @@ public class DoorButton : Interactable
 
     [SerializeField] private AudioClip keycardAcceptAudio;
     [SerializeField] private AudioClip keycardDeniedAudio;
+    
+    [SerializeField] private TextMeshProUGUI feedbackText;
+    private Animator feedbackAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,9 @@ public class DoorButton : Interactable
         playerInv = GameObject.Find("Player").GetComponent<InventoryTracker>();
         lightAnim = GetComponentInChildOnly<Animator>(gameObject);
         audioSource = GetComponent<AudioSource>();
+
+        if(feedbackText)
+            feedbackAnim = feedbackText.gameObject.GetComponent<Animator>();
     }
 
     public override void Interact()
@@ -58,9 +65,11 @@ public class DoorButton : Interactable
         }
         else
         {
-            //feedback
+            //failure feedback
             lightAnim.SetTrigger("Fail");
             audioSource.PlayOneShot(keycardDeniedAudio);
+            feedbackText.text = "You need a higher level access card to unlock this.";
+            feedbackAnim.SetTrigger("FadeIn");
         }
     }
 

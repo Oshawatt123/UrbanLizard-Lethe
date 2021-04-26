@@ -63,4 +63,29 @@ namespace RadiatorGames
             }
         }
     }
+
+    namespace util
+    {
+        public class componentUtil : MonoBehaviour
+        {
+            private T GetComponentInChildOnly<T>(GameObject parent) where T : Component
+            {
+                T[] comps = parent.GetComponentsInChildren<T>();
+
+                if (comps.Length > 1)
+                {
+                    for (int i = 1; i < comps.Length; i++)
+                    {
+                        T comp = comps[i];
+                        if (comp.gameObject.GetInstanceID() != GetInstanceID())
+                        {
+                            return comp;
+                        }
+                    }
+                }
+
+                return null;
+            }
+        }
+    }
 }

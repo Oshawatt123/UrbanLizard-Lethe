@@ -48,27 +48,31 @@ public class HUDManager : MonoBehaviour
     [Header("Hints")]
     [SerializeField] private CanvasGroup InteractHint;
 
+    private PlayerSanity playerSanity;
+
     //Game Over Canvas
     public CanvasGroup GameOverCanvas;
     
     // Start is called before the first frame update
     void Start()
     {
+        
+        TF = GetComponent<ToggleFlashlight>();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerSanity = GetComponent<PlayerSanity>();
+        rotSpeed = playerMovement.RotationSpeed;
+        PlayerDead = false;
+                
         GroupSwapper.HideCanvasGroup(pauseGroup);
         GroupSwapper.HideCanvasGroup(inventoryGroup);
         GroupSwapper.HideCanvasGroup(NotesGroup);
         GroupSwapper.ShowCanvasGroup(HUD);
+        MouseModeGame();
 
         allCanvases.Add(HUD);
         allCanvases.Add(inventoryGroup);
         allCanvases.Add(pauseGroup);
         allCanvases.Add(NotesGroup);
-
-        playerMovement = GetComponent<PlayerMovement>();
-        rotSpeed = playerMovement.RotationSpeed;
-        PlayerDead = false;
-        
-        TF = GetComponent<ToggleFlashlight>();
 
         if (!playerMovement || !TF)
         {
@@ -267,5 +271,13 @@ public class HUDManager : MonoBehaviour
         GroupSwapper.HideCanvasGroup(inventoryGroup);
 
         GroupSwapper.ShowCanvasGroup(GameOverCanvas);
+        MouseModeUI();
+    }
+
+    public void ResetGameOver()
+    {
+        PlayerDead = false;
+        MouseModeGame();
+        Time.timeScale = 1f;
     }
 }
