@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c3e9197-2244-4586-a00e-ee4d44a5972e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Agars-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameEnd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/InventoryState.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayTestScene/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/CheckpointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/HUDManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSanity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +66,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/MorseCode/ResetMorsePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E6E2FA0A-4741-4CD2-AC33-237924761B45/f0/48a774d1/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/ResetTiles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7765070B-AFF7-442E-A7A7-D482361E5065/7f/eccb482e/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/LongWireController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/GasPuzzle/GasParticleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzle/LongWire/TileScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -140,7 +134,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerInteract.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCompass.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/FlashlightAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/DisplayBatteryLevel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Other/EditParticleScale.cs" />
@@ -174,6 +167,7 @@
         <option value="$PROJECT_DIR$/Assets/Thirdparty/Utils/RadiatorGames.cs" />
         <option value="$PROJECT_DIR$/Assets/KeycardButtonCheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/DoorButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/InventoryTracker.cs" />
       </list>
     </option>
   </component>
@@ -274,6 +268,7 @@
       <workItem from="1618228254159" duration="6047000" />
       <workItem from="1618586436458" duration="4312000" />
       <workItem from="1619455707541" duration="7497000" />
+      <workItem from="1619699483248" duration="169000" />
     </task>
     <servers />
   </component>
