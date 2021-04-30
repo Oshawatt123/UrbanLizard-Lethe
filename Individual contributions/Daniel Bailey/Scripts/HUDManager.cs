@@ -43,10 +43,12 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private CanvasGroup NotesGroup;
 
     private static float rotSpeed;
-
+    private bool PlayerDead;
 
     [Header("Hints")]
     [SerializeField] private CanvasGroup InteractHint;
+
+    private PlayerSanity playerSanity;
 
     //Game Over Canvas
     public CanvasGroup GameOverCanvas;
@@ -54,20 +56,23 @@ public class HUDManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        TF = GetComponent<ToggleFlashlight>();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerSanity = GetComponent<PlayerSanity>();
+        rotSpeed = playerMovement.RotationSpeed;
+        PlayerDead = false;
+                
         GroupSwapper.HideCanvasGroup(pauseGroup);
         GroupSwapper.HideCanvasGroup(inventoryGroup);
         GroupSwapper.HideCanvasGroup(NotesGroup);
         GroupSwapper.ShowCanvasGroup(HUD);
+        MouseModeGame();
 
         allCanvases.Add(HUD);
         allCanvases.Add(inventoryGroup);
         allCanvases.Add(pauseGroup);
         allCanvases.Add(NotesGroup);
-
-        playerMovement = GetComponent<PlayerMovement>();
-        rotSpeed = playerMovement.RotationSpeed;
-        
-        TF = GetComponent<ToggleFlashlight>();
 
         if (!playerMovement || !TF)
         {
@@ -78,7 +83,7 @@ public class HUDManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && PlayerDead == false)
         {
 
             if (inventoryOpen)
@@ -104,7 +109,7 @@ public class HUDManager : MonoBehaviour
                 inventoryOpen = !inventoryOpen;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.Escape) && PlayerDead == false)
         {
             TogglePause();
         }
@@ -259,10 +264,20 @@ public class HUDManager : MonoBehaviour
 
     public void TriggerGameOver()
     {
+        PlayerDead = true;
+
         GroupSwapper.HideCanvasGroup(HUD);
         GroupSwapper.HideCanvasGroup(NotesGroup);
         GroupSwapper.HideCanvasGroup(inventoryGroup);
 
         GroupSwapper.ShowCanvasGroup(GameOverCanvas);
+        MouseModeUI();
+    }
+
+    public void ResetGameOver()
+    {
+        PlayerDead = false;
+        MouseModeGame();
+        Time.timeScale = 1f;
     }
 }

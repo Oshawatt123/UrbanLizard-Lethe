@@ -26,7 +26,9 @@ public class CheckpointManager : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI taskCompText;
     private Animator taskCompAnim;
-    private TextMeshProUGUI newTaskText;
+    
+    [SerializeField] private TextMeshProUGUI newTaskText;
+    private Animator newTaskAnim;
     
     [SerializeField] private GameObject Player;
 
@@ -44,8 +46,14 @@ public class CheckpointManager : MonoBehaviour
 
         taskText.text = "☐ Find a light source";
         taskCompAnim = taskCompText.gameObject.GetComponent<Animator>();
+
+        newTaskAnim = newTaskText.gameObject.GetComponent<Animator>();
+        
         Player = GameObject.FindGameObjectWithTag("Player");
         doorLockedTrigger = false;
+
+        newTaskText.text = "Find a light source";
+        newTaskAnim.SetTrigger("FadeIn");
     }
 
     // Update is called once per frame
@@ -55,8 +63,8 @@ public class CheckpointManager : MonoBehaviour
     }
     
     /// 
-    /// Following is a series of public functins, called from different
-    /// gameobjects to indicate that a checkpoint has been reached
+    /// Following is a series of public functions, called from different
+    /// GameObjects to indicate that a checkpoint has been reached
     /// 
 
     public void FlashlightGot()
@@ -65,24 +73,28 @@ public class CheckpointManager : MonoBehaviour
         taskCompAnim.SetTrigger("FadeIn");
         
         taskText.text = "☐ Fix the backup generator";
+        newTaskText.text = "Fix the backup generator";
+        newTaskAnim.SetTrigger("FadeIn");
     }
 
     public void DoorLocked()
     {
-        taskCompText.text = "Find a way to get downstairs";
-        taskCompAnim.SetTrigger("FadeIn");
         doorLockedTrigger = true;
         
-        taskText.text = "☐ Search for a keycard to grant access to the lower level";
+        taskText.text = "☐ Search for a keycard to grant access to the rest of the facility";
+        newTaskText.text = "Search for a keycard to grant access to the rest of the facility";
+        newTaskAnim.SetTrigger("FadeIn");
     }
 
     public void FoundKeycard()
     {
-        taskCompText.text = "|COMPLETE| Found a keycard to gain access to lower level";
+        taskCompText.text = "|COMPLETE| Found a keycard";
         
         taskCompAnim.SetTrigger("FadeIn");
         
         taskText.text = "☐ Fix the backup generator";
+        newTaskText.text = "Fix the backup generator";
+        newTaskAnim.SetTrigger("FadeIn");
     }
 
     public void ReleaseEnemy()
@@ -90,9 +102,22 @@ public class CheckpointManager : MonoBehaviour
         taskCompText.text = "|COMPLETE| Fix the backup generator";
         taskCompAnim.SetTrigger("FadeIn");
         
-        taskText.text = "☐ Answer the phone";
+        taskText.text = "☐ Get back to the lobby";
+        
+        newTaskText.text = "Get back to the lobby";
+        newTaskAnim.SetTrigger("FadeIn");
+        
+        
         enemy.SetActive(true);
         GeneratorOn = true;
         Player.GetComponent<PlayerSanity>().enabled = true;
+    }
+
+    public void PlayPhone()
+    {
+        taskText.text = "☐ Pick up the phone";
+        
+        newTaskText.text = "Pick up the phone";
+        newTaskAnim.SetTrigger("FadeIn");
     }
 }

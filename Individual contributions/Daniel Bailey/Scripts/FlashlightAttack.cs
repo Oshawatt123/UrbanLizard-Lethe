@@ -45,7 +45,7 @@ public class FlashlightAttack : MonoBehaviour
     void Update()
     {
         //On right mouse press
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && LightScript.is_enabled)
         {
             //Check if enough battery to complete attack and that enemy isn't ambushing
             if(ThisToggle.Battery >= DrainAmount && Enemy.GetComponent<localTree>().InAmbush == false)

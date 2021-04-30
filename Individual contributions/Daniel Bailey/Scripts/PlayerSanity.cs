@@ -127,4 +127,10 @@ public class PlayerSanity : MonoBehaviour
             Gizmos.DrawWireSphere(Enemy.transform.position, DrainDistance);
         }
     }
+
+    public void KillAudio()
+    {
+        violinsSound.volume = 0f;
+        heartbeat.volume = 0f;
+    }
 }
